@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p style="text-align: center;color: rgb(0, 0, 0);font-size: 16px;"><u>&nbsp;
+        <strong>Change of Plate Number Endorsement</strong></u></p>
+    <p style="text-align: left;color: rgb(0, 0, 0);font-size: 16px;"><br><strong>Endorsement No:
+            {{endorsementNo}}</strong></p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;"><strong>Policy No: &nbsp;{{policyNo}}</strong>
+    </p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;"><strong>Name of insured:</strong>
+        <strong>{{nameOfInsured}}</strong></p>
+    <p><br></p>
+    <p><br></p>
+    <p style="line-height: 115%;text-align: justify;background: transparent;margin-bottom: 0.14in;">It is hereby
+        declared and agreed that the plate number under this Policy is amended to read as follows butnot as stated
+        thereon effective from <strong>{{Date}}</strong></p>
+    <dl>
+        <dd>
+            <table style="width: 3.4e+2pt" cellpadding="7">
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #000000;padding: 0in 0.08in;">
+                            <p
+                                style="line-height: 115%;text-align: center;margin-bottom: 0.1in;background: transparent;">
+                                <strong>No.</strong></p>
+                        </td>
+                        <td style="border: 1px solid #000000;padding: 0in 0.08in;">
+                            <p style="line-height: 115%;text-align: left;margin-bottom: 0.1in;background: transparent;">
+                                <strong>Previous Plate Number</strong></p>
+                        </td>
+                        <td style="border: 1px solid #000000;padding: 0in 0.08in;">
+                            <p
+                                style="line-height: 115%;text-align: center;margin-bottom: 0.1in;background: transparent;">
+                                <strong>Amended Plate Number</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #000000;padding: 0in 0.08in;">
+                            <p
+                                style="line-height: 115%;text-align: center;margin-bottom: 0.1in;background: transparent;">
+                                1</p>
+                        </td>
+                        <td style="border: 1px solid #000000;padding: 0in 0.08in;">
+                            <p
+                                style="line-height: 115%;text-align: justify;margin-bottom: 0.1in;background: transparent;">
+                                02-B38892 A.A</p>
+                        </td>
+                        <td style="border: 1px solid #000000;padding: 0in 0.08in;">
+                            <p
+                                style="line-height: 115%;text-align: justify;margin-bottom: 0.1in;background: transparent;">
+                                03-B19194 A.A</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </dd>
+    </dl>
+    <p style="line-height: 115%;text-align: justify;background: transparent;margin-bottom: 0.14in;"><br>&nbsp;</p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;"><span size="2" style="font-size: 15px;">Subject
+            otherwise to the terms, conditions and exceptions stated in the Policy or endorsed thereon.&nbsp;</span></p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;"><br>&nbsp;</p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: medium;"><span size="3" style="font-size: 16px;">Signed
+            in <strong>{{city}}</strong></span><span size="3"
+            style="font-size: 16px;"><strong>&nbsp;</strong></span><span size="3" style="font-size: 16px;">on
+            this<strong>&nbsp;{{yearAndMonth}}&nbsp;</strong></span><span size="3" style="font-size: 16px;">day of
+            <strong>{{day}}</strong></span><strong>.</strong></p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: medium;"><br></p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;"><br></p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;">Prepared by: ______________ &nbsp;</p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;"><br></p>
+    <p style="text-align: justify;color: rgb(0, 0, 0);font-size: 16px;">Examined by: ______________ &nbsp;</p>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal;
+         letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal;
+          text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: 
+          center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold; '>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+    </h1>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold; '>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">Zemen Insurance Company
+                S.C</span></span>
+    </h1>
+
+</body>
+
+</html>

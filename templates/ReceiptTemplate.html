@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zemen Insurance S.C. Receipt </title>
+</head>
+<style>
+    @font-face {
+        font-family: 'Berlin Sans FB';
+        src: url("./fonts/BRLNSR.TTF");
+    }
+    body {
+        font-family: 'Berlin Sans FB';
+    }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<div class="flex">
+    <div class="w-[85%]">
+        <div class="tc-flex-row">
+            <div id="crv-container" class="w-full flex justify-center">
+                <div
+                    style="background-color: white;border-radius: 5px; margin-top: 0em; width: 100%;padding: 1em 0.5em;margin-right: 10px;">
+                    <div style="display: flex;">
+                        <!-- <img style="height: 180px; width: 220px; display: flex;" src="../assets/logo_long.png" alt=""> -->
+                        <div style=" flex:1; ">
+                            <p style="color: black; font-size: 18px; font-weight: bold;text-align: center;"> ዘመን ኢንሹራንስ
+                                አማ <br /> Zemen Insurance S.C.</p>
+
+                            <!-- <p style="margin-top: 5px; color: black;" class="text-[25px] text-center font-bold"> ጸደይ ባንክ</p> -->
+                            <p style="color: black; font-size: 10px; font-weight: bold;text-align: center;">Address: A.A
+                                S/City Bole H.No 2nd Floor 3140 <br />
+                                Tel: 0115575464/0911575850</p>
+                            <p style="color: black; font-size: 10px; font-weight: bold;text-align: center;">Date: {{todayDate}}</p>
+
+                            <div style="text-align: center;  font-size: medium; font-weight: 700;">
+                                <span class=" px-5 underline text-primary_lt"
+                                    style="padding:0  1.25rem; color: #000000;"> <b><u>Value Added Tax Cash Sales Invoice</u></b></span>
+                            </div>
+                        </div>
+
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="padding: 0 0.5rem;" class="px-2 border-b-[#E2E8F0] border-solid  text-[#444] flex">
+
+    <div style="width: 100%; position: relative; font-size: x-small;">
+        <div sty="display: flex;  justify-content: space-between; padding: 5px; margin-top: 0.5em;">
+            <div style="width: 100%; position: relative;"> 
+
+                 <div style="display: flex; justify-content: space-between; margin-top: 0.5em;">
+                    <div style="font-size: x-small;">From: &nbsp; <span
+                            style="color: #070707; font-size: x-small; font-weight: 500;">ZEMEN INSURANCE S.C. </span>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 50%; float: left;">
+                <div style="font-size: x-small;">Address &nbsp; Region &nbsp; <span
+                        style="color: hwb(0 17% 83%); font-weight: 500; font-size: x-small;">A.A. S/City Bole W.02 H.No
+                        2nd Floor 3140 </span>
+                </div>
+                <div style="font-size: x-small;">Supplier VAT Reg. No: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">18171590010 </span>
+                </div>
+                <div style="font-size: x-small;">Supplier VAT Reg. Date:  &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">21/Jan/2022</span>
+                </div>
+                <div style="font-size: x-small;">Supplier TIN No: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">0056898819 </span>
+                </div>
+                <div style="font-size: x-small;">Supplier TIN Reg. Date: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">22/May/2020</span>
+                </div>
+            </div>
+            <div style="width: 50%; float: left;">
+                <div style="font-size: x-small;">To &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{insuredName}}</span> </div>
+                <div style="font-size: x-small;">Address:- &nbsp; City: &nbsp;  <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{address}}</span> &nbsp; Zone/Sub City: &nbsp; <span style="color: #000000; font-weight: 500; font-size: x-small;"> {{subCity}}</span></div>
+                        <div style="font-size: x-small;"> Woreda/Kebele: &nbsp;  <span
+                            style="color: #000000; font-weight: 500; font-size: x-small;">{{woreda}}/{{kebele}}</span> &nbsp; H. NO: &nbsp; <span style="color: #000000; font-weight: 500; font-size: x-small;"> {{houseNo}}</span></div>
+                        <div style="font-size: x-small;">Customer VAT Reg. No: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{tin_no}} </span> </div>
+                <div style="font-size: x-small;">Customer VAT Reg. Date: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{customerVatRegDate}} </span>
+                </div>
+                <div style="font-size: x-small;">Customer TIN Reg. No: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{vat_reg_no}} </span> </div>
+                <div style="font-size: x-small;">Customer TIN Reg. Date: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{customerTinRegDate}} </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div style="width: 100%; position: relative; font-size: x-small;">
+        <div sty="display: flex;  justify-content: space-between; padding: 5px; margin-top: 0.5em;">
+            <div style="width: 50%; float: left;">
+                <div style="font-size: x-small;">Branch Name: &nbsp; <span
+                        style="color: hwb(0 17% 83%); font-weight: 500; font-size: x-small;">{{branchName}} </span>
+                </div>
+                <div style="font-size: x-small;">Branch Code: &nbsp; <span
+                        style="color: hwb(0 17% 83%); font-weight: 500; font-size: x-small;">{{branchCode}} </span>
+                </div>
+                <div style="font-size: x-small;">Type of Business: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{typeOfBusiness}} </span>
+                </div>
+                <!-- <div style="font-size: x-small;">Type of Business: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{sourceOfBusiness}}
+                    </span> </div> -->
+            </div>
+            <div style="width: 50%; float: left;">
+                <div style="font-size: x-small;">Customer ID &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{customerID}} </span> </div>
+                <div style="font-size: x-small;">Policy No: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{policyNo}}</span> </div>
+                <div style="font-size: x-small;">Claim No: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{claimNo}} </span> </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div>
+        <div
+            style="display: flex;  justify-content: space-between; padding: 5px; margin-top: 0.5em; font-size: x-small;">
+            <div style="width: 80%; float: left;">
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <div style="width: 100%; font-size: x-small;">
+        <div sty="display: flex;  padding: 5px; margin-top: 0.5em;">
+            <div style="width: 50%; float: left;">
+                <div style="font-size: x-small;">Name of intermediary: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{intermediaryName}}
+                    </span> </div>
+                <div style="font-size: x-small;">Received from: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{insuredName}} </span>
+                </div>
+                <div style="font-size: x-small;">city: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{riskCity}}</span> &nbsp; Woreda:
+                    &nbsp;
+                    <span style="color: #000000; font-weight: 500; font-size: x-small;">{{riskworeda}}</span> &nbsp; House
+                    No. &nbsp;
+                    <span style="color: #000000; font-weight: 500; font-size: x-small;">{{riskhouseNo}}</span>
+                </div>
+                <div style="font-size: x-small;">Vat Reg No: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{vat_reg_no}}</span> &nbsp; Tin:
+                    &nbsp;
+                    <span style="color: #000000; font-weight: 500; font-size: x-small;">{{tin_no}}</span>
+                </div>
+                <div style="font-size: x-small;">The sum of Birr: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{sumOfBirr}} </span>
+                </div>
+                <div style="font-size: x-small;">Period insurance from: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{startDate}} &nbsp; </span>
+                    To: &nbsp; <span style="color: #000000; font-weight: 500; font-size: x-small;">{{endDate}}</span>
+                </div>
+                <div style="font-size: x-small;">Sum Insured: &nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{sumInsured}} </span>
+                </div>
+                <div><br /></div>
+                <div>Premium Type: &nbsp; <span style="color: #000000; font-weight: 500;">{{premiumType}} </span> </div>
+                <div><br /></div>
+                <div>Certificate No: &nbsp; <span style="color: #000000; font-weight: 500;">{{certificateNo}} </span>
+                </div>
+                <div>Endorsement No: &nbsp; <span style="color: #000000; font-weight: 500;">{{endorsementNo}}
+                    </span> </div>
+                <div><br /></div>
+                <div>Excess: &nbsp; <span style="color: #000000; font-weight: 500;">{{excess}} </span> </div>
+            </div>
+            <div style="width: 50%; float: right;">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><span style="color: #000000; font-weight: 500;">Amount </span></td>
+                    </tr>
+                    {{#each fees}}
+                    <tr>
+                        <td>{{this.reason}}</td>
+                        <td><span style="color: #000000; font-weight: 500;">{{this.amount}} </span></td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td>Basic Premium:</td>
+                        <td><span style="color: #000000; font-weight: 500;">{{premium}}</td>
+                    </tr>
+                    <tr>
+                        <td>3rd part fund levy:</td>
+                        <td><span style="color: #000000; font-weight: 500;">{{fundLevy}}</td>
+                    </tr>
+                    <tr>
+                        <td>FLOOD: </td>
+                        <td> <span style="color: #000000; font-weight: 500;">{{flood}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>TE: </td>
+                        <td> <span style="color: #000000; font-weight: 500;">{{te}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>YC: </td>
+                        <td> <span style="color: #000000; font-weight: 500;">{{yc}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>TP COMO: </td>
+                        <td> <span style="color: #000000; font-weight: 500;">{{tpComo}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>TP FUND LEVY: </td>
+                        <td> <span style="color: #000000; font-weight: 500;">{{tpFundLevy}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>EXCESS CONT/RECOVERY: </td>
+                        <td> <span style="color: #000000; font-weight: 500;">{{excessCont}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>REVENUE STAMP:</td>
+                        <td><span style="color: #000000; font-weight: 500;">{{revenueStamp}} </td>
+                    </tr>
+
+                    <tr>
+                        <td>OTHER: </td>
+                        <td><span style="color: #000000; font-weight: 500;">{{other}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>Sum: </td>
+                        <td><span style="color: #000000; font-weight: 500;">{{sum}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>VAT 15%: </td>
+                        <td><span style="color: #000000; font-weight: 500;">{{vat}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>Total: </td>
+                        <td><span style="color: #000000; font-weight: 500;">{{total}} </span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div>
+        <div sty="display: flex;  justify-content: space-between; padding: 5px; margin-top: 0.5em;">
+            <div style="width: 80%; float: left;">
+                <br/>
+                <br/>
+                <br/>
+                <div style="font-size: x-small;">Being:&nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small; text-decoration: underline;">{{being}}
+                    </span> </div>
+                <div style="font-size: x-small;">Cash/Cheque No. ____________________&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+                        style="color: #000000; font-weight: 500; font-size: x-small;">{{checqueNo}}</span> Cashier's
+                    signature: &nbsp;
+                    <span style="color: #000000; font-weight: 500;">{{officerName}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p
+        style='text-align: center; background: transparent; font-family: "Book Antiqua", serif; font-size: 16px; line-height: 115%; margin-bottom: 0.14in;'>
+        <u>&nbsp;<strong>Mortgage Endorsement</strong></u></p>
+    <p
+        style='text-align: left;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;line-height: 115%;margin-bottom: 0.14in;'>
+        <br><strong>Endorsement No: {{endorsementNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Attaching to and forming part of Policy No: &nbsp;{{policyNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Name of insured:</strong> <strong>{{nameOfInsured}}</strong></p>
+    <p
+        style='color: rgb(0, 0, 0);text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;line-height: 150%;margin-left: 1.25in;text-indent: -1.25in;'>
+        <strong>Period of Insurance:</strong><strong>&nbsp;</strong><strong>From {{from}}&nbsp;</strong><strong>To
+            {{to}}</strong></p>
+    <p
+        style='color: #000000;text-align: justify;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;line-height: 115%;'>
+        It is hereby declared and agreed that with effect from
+        {{<u><strong>02/06/2021}}</strong></u><u><strong>,</strong></u> {{<u><strong>Berhan Bank S.c.}}, {{Gerji
+                Branch}}&nbsp;</strong></u>hereinafter referred to as the Mortgagee) are the Mortgagee of the vehicle(s)
+        described here below and that the said vehicle(s) is (are) the subject of a Mortgage Agreement made between the
+        Mortgagee on one part and the Insured on the other part and, it is further declared and agreed that, the said
+        Mortgagee are interested in any monies which but for this Endorsement would be payable to the Insured under this
+        Policy in respect of loss of or damage to the said Vehicle(s) (which loss or damage is not made good by repair,
+        reinstatement or replacement) and such monies shall be paid to the said Mortgagee as long as they are the
+        Mortgagee of the Vehicle(s) and their receipt shall be full and final discharge to Zemen Insurance Share Company
+        in respect of such loss or damage.</p>
+    <table style="width: 500pt; border-collapse: collapse; border: 1px solid rgb(0, 0, 0);" cellpadding="7">
+        <tbody>
+            <tr>
+                <td colspan="9" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        <strong>DESCRIPTION OF VEHICLE (S)</strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Plate No.</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Chassis No.</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Engine No.</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Make and&nbsp;<br>&nbsp;Type of Vehicle</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        C.C.</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Year<br>&nbsp;of Manu-facture</p>
+                </td>
+                <td colspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Carrying&nbsp;<br>&nbsp;Capacity</p>
+                </td>
+                <td rowspan="2" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: center;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Insured&apos;s estimate of value including accessories (In Birr)</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Goods<br>&nbsp;(In Qtl)</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        Passengers&nbsp;<br>&nbsp;including the driver</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -03-77398 E.T -03-23201 E.T&nbsp;</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -WJME3TRE4 0C307468 -TT-1448-15</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -F3BEE681G* B220-234010* -</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -Iveco-Tanker - MIE</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -12880 -</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -2014 -2015</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -18000 ltr -25000 Ltr</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        -1+1 -&nbsp;</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style='color: #000000;text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.08in;margin-right: 0.08in;'>
+                        *3,500,000.00 (Tanker) *1,000,000.00 (Trailer) Total= *4,500,000.00</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p
+        style='color: rgb(0, 0, 0);text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.5in;text-indent: -0.5in;'>
+        <br></p>
+    <p
+        style='color: rgb(0, 0, 0);text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.5in;text-indent: -0.5in;'>
+        * Estimated Duty Paid Value</p>
+    <p
+        style='color: rgb(0, 0, 0);text-align: left;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-left: 0.5in;text-indent: -0.5in;'>
+        Excess: Birr&nbsp;<strong>7,500.00&nbsp;</strong> or <strong>5%</strong> of the repair cost or the sum insured
+        or the market value Whichever is higher in case of total loss.</p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-right: -0.19in;margin-bottom: 0.14in;">
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span size="2" style="font-size:15px;">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed thereon.&nbsp;</span></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <br>&nbsp;</p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <span size="3" style="font-size:16px;">Signed in <strong>{{city}}</strong></span><span size="3"
+            style="font-size:16px;"><strong>&nbsp;</strong></span><span size="3" style="font-size:16px;">on
+            this<strong>&nbsp;{{yearAndMonth}}&nbsp;</strong></span><span size="3" style="font-size:16px;">day of
+            <strong>{{day}}</strong></span><strong>.</strong></p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Prepared by: ______________ &nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Examined by: ______________ &nbsp;</p>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;  '>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+    </h1>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;  '>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">Zemen Insurance Company
+                S.C</span></span></h1>
+</body>
+
+</html>

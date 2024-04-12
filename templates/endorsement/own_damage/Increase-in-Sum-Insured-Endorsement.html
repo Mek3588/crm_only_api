@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body class="fr-no-selection" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p
+        style='text-align: center; background: transparent; font-family: "Book Antiqua", serif; font-size: 16px; line-height: 115%; margin-bottom: 0.14in;'>
+        <u>&nbsp;<strong>Increase in Sum Insured Endorsement</strong></u></p>
+    <p
+        style='text-align: left;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;line-height: 115%;margin-bottom: 0.14in;'>
+        <br><strong>Endorsement No: {{endorsementNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Attaching to and forming part of Policy No: &nbsp;{{policyNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Name of insured:</strong> <strong>{{nameOfInsured}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p><span style="color: rgb(0, 0, 0);">It is hereby declared and agreed that the Sum Insured in respect of the under
+            mentioned vehicle(s) is increased and the schedule of this policy is revised accordingly with effect from
+            <strong>{{date}}</strong></span><span style="color: rgb(0, 0, 0);">.</span>&nbsp;</p>
+    <p><br></p>
+    <table style="width: 470pt; border-collapse: collapse; border: 1px solid rgb(0, 0, 0);" cellpadding="7">
+        <tbody>
+            <tr>
+                <td colspan="8" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top;">
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;">
+                        DESCRIPTION OF VEHICLE(S)</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: left;margin-bottom: 0.08in;background: transparent;">S/No
+                    </p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: left;margin-bottom: 0.08in;background: transparent;">Make of
+                        Vehicle</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: left;margin-bottom: 0.08in;background: transparent;">Type of
+                        Vehicle</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: left;margin-bottom: 0.08in;background: transparent;">Plate
+                        No</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;">
+                        Chassis No</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;">
+                        Engine No</p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;background: transparent;margin-bottom: 0in;">Previous
+                        Sum Insured</p>
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;">(ETB
+                    </p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;background: transparent;margin-bottom: 0in;">Adjusted
+                        Sum Insured</p>
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;">
+                        (ETB))</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="8" style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;">As
+                        Per Attached List</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p
+        style="line-height: 115%;text-align: justify;background: transparent;margin-right: -0.79in;margin-bottom: 0.14in;">
+        <br></p>
+    <p style="line-height: 115%;text-align: left;margin-bottom: 0.08in;background: transparent;">In view of the above,
+        the annual Premium of <strong>ETB {{etb}}</strong><strong>&nbsp;</strong>and Revenue
+        Stamp<strong>&nbsp;</strong>of<strong>&nbsp;ETB {{stamp}}&nbsp;</strong>has been collected from the insured.</p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-right: -0.19in;margin-bottom: 0.14in;">
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span size="2" style="font-size:15px;">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed thereon.&nbsp;</span></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        &nbsp;</p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <span size="3" style="font-size:16px;">Signed in <strong>{{city}}</strong></span><span size="3"
+            style="font-size:16px;"><strong>&nbsp;</strong></span><span size="3" style="font-size:16px;">on
+            this<strong>&nbsp;{{yearAndMonth}}&nbsp;</strong></span><span size="3" style="font-size:16px;">day of
+            <strong>{{day}}</strong></span><strong>.</strong></p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Prepared by: ______________ &nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Examined by: ______________ &nbsp;</p>
+    <p
+        style='color: #000000;line-height: 100%;margin-bottom: 0in;background: transparent;font-family: "Times New Roman", serif;font-size:16px;'>
+        <br></p>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: justify; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;  '>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+    </h1>
+    <p><span size="2" style="font-size: 15px;"><span style="font-weight: normal;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Zemen
+                Insurance Company S.C</span></span></p>
+</body>
+
+</html>

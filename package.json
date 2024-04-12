@@ -1,0 +1,59 @@
+{
+  "name": "ezra",
+  "version": "1.0.0",
+  "description": "crm api",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/crm91/crm_api.git"
+  },
+  "author": "Ezra Arega <ea@etechsc.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "axios": "^1.2.0",
+    "bcryptjs": "^2.4.3",
+    "canvas": "^2.11.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.0.0",
+    "helmet-csp": "^3.4.0",
+    "html-docx-js": "^0.3.1",
+    "html-pdf": "^3.0.1",
+    "imap-simple": "^5.1.0",
+    "jinja2": "^0.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mailparser": "^3.6.1",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.8.0",
+    "number-to-words": "^1.2.4",
+    "pdf-creator-node": "^2.3.5",
+    "pdf-merger-js": "^4.3.0",
+    "pdfkit": "^0.13.0",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3",
+    "to-words": "^4.0.1",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/crm91/crm_api/issues"
+  },
+  "homepage": "https://gitlab.com/crm91/crm_api#readme"
+}

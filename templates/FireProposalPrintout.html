@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zemen Insurance S.C. Fire premium proposal</title>
+</head>
+
+<style>
+    body {
+        margin: 0 1em;
+    }
+
+    td {
+        width: noraml;
+        font-size: 10px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    table tr {
+        line-height: normal;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .left-mg {
+        width: 25%;
+    }
+    .li{
+        font-size: 10px
+    }
+
+    .rate {
+        background: #0000001f;
+        padding: 3px 2em;
+    }
+
+    .discount {
+        text-align: end;
+    }
+
+    .start {
+        text-align: start;
+    }
+
+    .premium {
+        width: 10em;
+    }
+
+    .space {
+        padding-left: 10em;
+    }
+
+    .li {
+        font-size: 0.6em
+    }
+</style>
+<body>
+  
+    <div class="align center center">
+        <h4>Zemen Insurance S.C.</h4>
+        <h5>Fire and Lightining Proposal</h5>
+        </br>
+    </div>
+    <table>
+        <tr>
+            <td><b>Name of Proposer</b></td>
+            <td style="padding-left: 20px;"><b>{{name}}</b></td>
+        </tr>
+        <tr>
+            <td><b>Proposal No:</b></td>
+            <td><b>{{proposal_no}}</b></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Address City: {{city}}</td>
+            <td>Woreda: {{woreda}}</td>
+            <td>Kebele: {{kebele}}</td>
+            <!-- <td>H.No.: {{house_no}}</td> -->
+        </tr>
+        <tr>
+            <td>Risk address: City: {{riskCity}}</td>
+            <td>Woreda: {{riskWoreda}}</td>
+            <td>Kebele: {{riskKebele}}</td>
+            <td>H.No.: {{riskHouseNo}}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Purpose of the building:</td>
+            <td> {{purpose}}</td>
+        </tr>
+        <tr>
+            <td>Distance </td>
+            <td>{{distance}}</td>
+        </tr>
+        <tr>
+            <td>Response time :</td> 
+            <td>{{responseTime}}</td>
+        </tr>
+        <tr>
+            <td> When was the building constructed?</td>
+            <td>{{constractionDate}}</td>
+        </tr>
+        <tr>
+            <td>What modifications/alterations carried out:</td>
+            <td>{{alterationsMade}}</td>
+        </tr>
+        <tr>
+            <td>What lightning system are used?</td>
+            <td>{{lightingSystems}}</td>
+        </tr>
+        <tr>
+            <td>Have there been losses in the past?</td>
+            <td>{{pastLosses}}</td>
+        </tr>
+    </table>
+    <h5><u>Building construction Material</u></h5>
+    <p>
+    <ul>
+        <li style="font-size: 10px;"><b>External walls: </b>{{wall_type}}</li>
+        <li style="font-size: 10px;"><b> Roofs:</b> {{roof_type}}</li>
+        <li style="font-size: 10px;"> <b>Floors: </b>{{floor_type}}</li>
+        <li style="font-size: 10px;"> <b>Partitions:</b> {{partitionsMaterial}}</li>
+    </ul>
+    </p>
+    <h5><u>Additional covers: </u></h5>
+    <p style="font-size: 10px;">{{alliedPerils}}</p>
+    <table>
+        <tr>
+            <td>Duration</td>
+            <td>{{insuranceCoverFor}}</td>
+            <tr>
+            <td>Effective from</td>
+            <td>{{effectiveFrom}}</td>
+            </tr>
+        </tr>
+    </table>
+    <h5><u>Description of property to be insured</u></h5>
+    <table>
+        <tr>
+            <td><b><u>Description</u></b></td>
+            <td><b><u>Sum to be insured</u></b></td>
+        </tr>
+        <tr>
+            <td>Buildings</td>
+            <td>{{building}}</td>
+        </tr>
+        <tr>
+            <td>Gates and fences</td>
+            <td>{{gatesFences}}</td>
+        </tr>
+        <tr>
+            <td>House holds and goods</td>
+            <td>{{goods}}</td>
+        </tr>
+        <tr>
+            <td>Others</td>
+            <td>{{other}}</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>{{sumInsured}}</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br/>
+    <h5><u>Declaration</u></h5>
+    <p style="font-size: 10px;">I/WE HEREBY DECLARE that the above answers, particulars, and statements are true and
+        complete and that no
+        material facts (important informations) has been suppressed or withheld. I/WE further agree that the proposal
+        and declaration shall be the basis of the contract between me/us and the Insurance company and I/We are willing
+        to accept a policy subject to terms, comditions and exceptions therein.</p>
+    <table>
+        <tr>
+            <td>
+                Date ________________________
+            </td>
+            <td>
+                Date ________________________
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Source of business
+            </td>
+            <td>
+                Underwriter's
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Office/Agent/broker: ___________
+            </td>
+            <td>
+                Decision: ______________________
+            </td>
+        </tr>
+    </table>
+    <h5></h5>
+</body>
+
+</html>

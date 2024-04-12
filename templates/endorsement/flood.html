@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p
+        style='text-align: center; background: transparent; font-family: "Book Antiqua", serif; font-size: 16px; line-height: 115%; margin-bottom: 0.14in;'>
+        <u><span style="font-size: 12px;"> <strong>Flood Cover Endorsement</strong></span></u>
+    </p>
+    <p
+        style='text-align: left;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;line-height: 115%;margin-bottom: 0.14in;'>
+        <span style="font-size: 12px;"><br><strong>Endorsement No: {{endorsementNo}}</strong></span>
+    </p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><strong>Attaching to and forming part of Policy No:
+                &nbsp;{{policyNo}}</strong></span>
+    </p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><strong>Name of insured:</strong> <strong>{{nameOfInsured}}</strong></span>
+    </p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><strong>Period of Insurance: {{from}} {{to}}<br></strong></span>
+    </p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><br></span>
+    </p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;">It is hereby declared &amp; agreed that the above mentioned policy covers loss or
+            damage arising out of Flood with in the territory of Ethiopia.&nbsp;</span>
+    </p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-right: -0.19in;margin-bottom: 0.14in;">
+        <span style="font-size: 12px;"><br></span>
+    </p>
+    <p
+        style="text-align: center; background: transparent; line-height: 100%; margin-right: -0.19in; margin-bottom: 0.14in;">
+        <span style="font-size: 12px;">Particulars of the vehicle (s)</span>
+    </p>
+    <p
+        style="text-align: center; background: transparent; line-height: 100%; margin-right: -0.19in; margin-bottom: 0.14in;">
+        <span style="font-size: 12px;">Covered under this Endorsement: &nbsp;</span>
+    </p>
+
+
+
+
+    <p style="color: rgb(0, 0, 0); background: transparent; line-height: 1;  text-align: center;">
+        <span style="font-size: 12px;"><strong>Description of the Vehicle&nbsp;</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Make of Vehicle: &nbsp;{{makeOfVehicle}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Type of Vehicle: {{vehicleType}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Plate Number: {{plateNumber}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Chassis Number:{{chassisNo}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Engine Number: {{engineNo}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>C.c: {{cc}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Year of manufacture: {{yearOfManufacture}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Passenger Carrying capacity(including the driver):
+                {{carryingCapacity}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Goods: {{goods}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <span style="font-size: 12px;"><strong>Sum Insured(ETB): &nbsp;{{sumInsured}}</strong></span>
+    </p>
+    <p style="color: rgb(0, 0, 0); background: transparent;  text-align: justify; line-height: 1;">
+        <br>
+    </p>
+
+
+    <!-- <table style="border: none;">
+        <tbody>
+            <tr>
+                <td style="border-width: 2px 1px 1px;border-style: double solid solid;border-color: rgb(0, 0, 0);vertical-align: bottom;"
+                    rowspan="2"><span style="font-size: 12px;"><strong><span style="color: rgb(0, 0, 0);">Type of
+                                Vehicle</span></strong></span></td>
+                <td style="border-width: 2px 1px 1px;border-style: double solid solid;border-color: rgb(0, 0, 0);vertical-align: bottom;"
+                    colspan="2" rowspan="2"><span style="font-size: 12px;"><strong><span
+                                style="color: rgb(0, 0, 0);">Plate No.</span></strong></span></td>
+                <td style="border-width: 2px 1px 1px;border-style: double solid solid;border-color: rgb(0, 0, 0);vertical-align: bottom;"
+                    rowspan="2"><span style="font-size: 12px;"><strong><span style="color: rgb(0, 0, 0);">Chassis
+                                No.</span></strong></span></td>
+                <td style="border-width: 2px 1px 1px;border-style: double solid solid;border-color: rgb(0, 0, 0);vertical-align: bottom;"
+                    rowspan="2"><span style="font-size: 12px;"><strong><span style="color: rgb(0, 0, 0);">Engine
+                                No.</span></strong></span></td>
+                <td style="border-width: 2px 1px 1px;border-style: double solid solid;border-color: rgb(0, 0, 0);vertical-align: bottom;"
+                    rowspan="2"><span style="font-size: 12px;"><strong><span
+                                style="color: rgb(0, 0, 0);">C.C.</span></strong></span></td>
+                <td style="border-width: 2px 1px 1px;border-style: double solid solid;border-color: rgb(0, 0, 0);vertical-align: top;"
+                    colspan="2"><span style="font-size: 12px;"><strong><span style="color: rgb(0, 0, 0);">Carrying
+                                Capacity</span></strong></span></td>
+                <td style="border-width: 2px 2px 1px 1px;border-style: double double solid solid;border-color: rgb(0, 0, 0);vertical-align: bottom;"
+                    rowspan="2"><span style="font-size: 12px;"><strong><span size="3" style="color: rgb(0, 0, 0);">Sum
+                                Insured&nbsp;</span></strong></span></td>
+            </tr>
+            <tr>
+                <td style="border-width: 1px;border-style: solid;border-color: rgb(0, 0, 0);vertical-align: top;"><span
+                        style="font-size: 12px;"><strong><span style="color: rgb(0, 0, 0);">Passengers including the
+                                driver</span></strong></span></td>
+                <td style="border-width: 1px;border-style: solid;border-color: rgb(0, 0, 0);vertical-align: bottom;">
+                    <span style="font-size: 12px;"><strong><span
+                                style="color: rgb(0, 0, 0);">Goods</span></strong></span>
+                </td>
+            </tr>
+            <tr>
+
+
+                <td
+                    style="border-width: 1px 1px 2px 2px;border-style: solid solid double double;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">1</span>
+                </td>
+                <td
+                    style="border-width: 1px 1px 2px;border-style: solid solid double;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span size="3" style="color: rgb(0, 0, 0);">{{vehicleType}}&nbsp;</span>
+                </td>
+                <td style="border-width: 1px 1px 2px;border-style: solid solid double;border-color: rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="2"><span style="color: rgb(0, 0, 0);">{{plateNumber}}</span></td>
+                <td
+                    style="border-width: 1px 1px 2px;border-style: solid solid double;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">{{engineNo}}</span>
+                </td>
+                <td
+                    style="border-width: 1px 1px 2px;border-style: solid solid double;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">{{chassisNo}}</span>
+                </td>
+                <td
+                    style="border-width: 1px 1px 2px;border-style: solid solid double;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">{{cc}}</span>
+                </td>
+                <td
+                    style="border-width: 1px 1px 2px;border-style: solid solid double;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">{{engineNo}}</span>
+                </td>
+                <td
+                    style="border-width: 1px 2px 2px 1px;border-style: solid double double solid;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">{{goods}}</span>
+                </td>
+
+                <td
+                    style="border-width: 1px 2px 2px 1px;border-style: solid double double solid;border-color: rgb(0, 0, 0);vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0); font-size: 12px;">{{sumInsured}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><br></span>
+    </p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span style="font-size: 12px;">In consideration of the above an additional premium of Birr
+            <strong>{{birr}}</strong> is collected from the insured.</span>
+    </p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span size="2" style="font-size: 12px;">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed thereon.&nbsp;</span>
+    </p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span style="font-size: 12px;">&nbsp;</span>
+    </p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <span size="3" style="font-size: 12px;">Signed in <strong>{{city}}</strong><strong>&nbsp;</strong>on
+            this<strong>&nbsp;{{yearAndMonth}}&nbsp;</strong>day of <strong>{{day}}</strong></span><span
+            style="font-size: 12px;"><strong>.</strong></span>
+    </p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <span style="font-size: 12px;"><br></span>
+    </p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><br></span>
+    </p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;">Prepared by: ______________ &nbsp;</span>
+    </p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><br></span>
+    </p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <span style="font-size: 12px;">Examined by: ______________ &nbsp;</span>
+    </p>
+    <p
+        style='color: #000000;line-height: 100%;margin-bottom: 0in;background: transparent;font-family: "Times New Roman", serif;font-size:16px;'>
+        <span style="font-size: 12px;"><br></span>
+    </p>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: justify; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold; text-indent: 0.5in;'>
+        <span size="2" style="font-size: 12px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+    </h1>
+    <p><span size="2" style="font-size: 12px;"><span style="font-weight: normal;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Zemen
+                Insurance Company S.C</span></span></p>
+</body>
+
+</html>

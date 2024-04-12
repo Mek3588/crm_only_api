@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zemen Insurance S.C. Motor premium calculation sheet</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<style>
+ body {
+        box-sizing: border-box;
+        font-family: Verdana;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        /* margin-left: 10%; */
+        /* border: solid 1px black; */
+        border-radius: 5px;
+    }
+
+header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        /* border: solid 1px black; */
+        /* margin: 10px 20px; */
+    }
+
+    .header-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: solid 2px black;
+        border-width: 5px;
+        /* border-radius: 50px;
+         */
+        /* border: solid 1px red; */
+        /* padding: 10px; */
+    }
+
+    .header-address {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+        /* border: solid 1px red; */
+        text-align: justify;
+    }
+
+    .header-text {
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 0;
+        margin-top: 0;
+
+    }
+
+    .text-amharic {
+        font-family: geez;
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+
+    .text-english {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        color: red;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+
+    table {
+        float: right;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    table tr {
+        width: 100%;
+    }
+
+    /* table tr td {
+        font-family: Arial, Helvetica, sans-serif;
+    } */
+
+    .branch-name {
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+        font-size: 12px;
+    }
+
+    .secttion-intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .branch-amharic {
+        margin-right: 9rem;
+    }
+
+    .policy-number,
+    .branch {
+        text-align: right;
+        font-weight: bold;
+        font-size: 10px;
+        clear: both;
+    }
+
+    .policy-intro {
+        text-align: justify;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    p {
+        text-align: justify;
+        margin-right: 10px;
+        font-size: 8px;
+    }
+
+    li {
+        font-size: 8px;
+    }
+
+    h1,
+    h2,
+    h3,
+    li,
+    p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+    h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .loss-damagel-title {
+        font-size: 10px;
+    }
+    .loss-damage {
+        font-size: 8px;
+    }
+
+    .section-one {
+        list-style-type: none;
+    }
+
+    .exceptions {
+        padding-left: 30px;
+    }
+
+    .insured-list {
+        list-style: none;
+        font-size: 13px;
+
+    }
+
+    .insured-list li {
+        padding-bottom: 8px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+
+    .exception-list {
+        list-style: lower-alpha;
+        font-size: 13px;
+        ;
+    }
+
+    @page {
+        size: A4 portrait;
+    }
+
+    @media print {
+        .himage {
+            /* display: none; */
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        .text-amharic {
+            font-family: geez;
+            font-size: 20px;
+        }
+
+        .text-english {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: red;
+        }
+
+        table {
+            float: right;
+            font-size: 8px;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+
+        table tr {
+            width: 100%;
+        }
+    }
+
+
+    table tr {
+        border-bottom: solid 1px black;
+        border-radius: 5px;
+    }
+    #table td {
+        border-right: 1px solid black;
+        /* font-size: x-small; */
+        /* border-bottom: 1px solid black; */
+
+    }
+
+    #table th {
+        border-right: 1px solid black;
+        /* font-size: x-small; */
+        border-bottom: 1px solid black; 
+
+    }
+
+    #car_cap {
+        border-bottom: 1px solid black;
+
+    }
+
+    #car_cap th {
+        border-bottom: 1px solid black;
+
+    }
+
+    #fourth-table td {
+        /* text-align: center; */
+        vertical-align: middle;
+    }
+
+    /* .tab  tr > td {
+        text-decoration: underline;
+    } */
+
+    #side-data {
+        height: 30px;
+    }
+
+    #side-data div {
+        /* writing-mode:vertical-rl; */
+        /* transform: rotate(-1.250turn); */
+        border-bottom: solid 1px black;
+        height: 30px;
+    }
+
+    .lastCell {
+        border-right: none;
+    }
+
+    *{
+        font-size: x-small;
+    }
+    /* .tab td{
+        font-size: x-small;
+    } */
+
+    #bottom-content{
+        margin-top: 10px;
+        
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header-info">
+            <img src="../assets/logo_long.png" alt="Logo" width="200px" >
+            <div class="header-address">
+                <div style="display: flex; flex-direction: column;">
+                <div>
+                    <p class=" text-amharic">ዘመን ኢንሹራንስ አ.ማ.</p>
+                    <p class=" text-english">Zemen Insurance S.C.</p>
+                </div>
+
+                <div>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fas fa-map-marker-alt"></i>
+                                ዋና መስሪያ ቤት፦ አዲስ አበባ, ኢትዮጵያ</td>
+                            <td>ክፍለ ከተማ፦ ቦሌ</td>
+                            <td>ወረዳ፦ 02</td>
+                        </tr>
+                        <tr>
+                            <td>Head Office፦ Addis Ababa, Ethiopia</td>
+                            <td>Sub City፦ Bole</td>
+                            <td>Wereda፦ 02</td>
+                            <td></td>
+                            <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                            <td>አለም ህንጻ 2<sup>ኛ</sup> ፎቅ</td>
+                            <td>የመ.ሣ.ቁጥር፦</td>
+                            <td>ፋክስ፦</td>
+                            <td></td>
+                           
+                        </tr>
+                        <tr>
+                            <td>Alem Building, 2<sup>nd</sup> Floor</td>
+                            <td>P.O.Box፦ 23029</td>
+                            <td>Fax: 011615001</td>
+                        </tr>
+                        <tr>
+                            <td>ኢሜይል፦</td>
+                            <td></td>
+                            <td>ስልክ: 0115675850</td>
+                        </tr>
+                        <tr>
+                            <td>Email፦ info@zemeninsuranceeth.com</td>
+                            <td></td>
+                            <td>Tel፦ 0116151415</td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     
+    </header>
+    <!-- ////////////////////TOP LEFT SIDE CONTENT ///////////////////////////////////// -->
+    <table style=" float: left; margin-left: 60px; text-align: left; "  class="tab">
+        <tr>
+            <th>Policy Number</th>
+            <td>{{policy_number}}</td>
+        </tr>
+        <tr>
+            <th>Policy Period</th>
+            <td>{{start_date}} &nbsp;  &nbsp; {{end_date}}</td>
+        </tr>
+       
+    </table>
+    <!-- ////////////////////MIDDLE SIDE CONTENT ///////////////////////////////////// -->
+
+    <table style="width: 95%; border: 1px solid black;margin: auto; border-right: 1px;" id="table">
+
+        <tr style="height:10px;">
+            <th style="width: 12.5%">S. No.</th>
+            <th style="width: 12.5%">Plate No.</th>
+            <th style="width: 12.5%">Chassis No.</th>
+            <th style="width: 12.5%">Engine No.</th>
+            <th style="width: 12.5%">Type of Vehicle</th>
+            <th style="width: 12.5%">C.C.</th>
+            <th style="width: 12.5%">Year of Manufacture</th>
+            <th colspan="2" style="width: 25%; " id="car_cap">Carrying Capacity
+                <table>
+                    <tr style="border-top: solid 1px black;">
+                        <th style="width: 6.5%; border-top: solid 1px; border-bottom: none;">Goods (In Qtl)</th>
+                        <th style="width: 7%; border-top: solid 1px black; border-right: none; border-bottom: none;">Passengers including the driver</th>
+                    </tr>
+                </table>
+            </th>
+
+            <th style="width: 12.5%">Insured's estimate of value including accessories</th>
+
+        </tr>
+
+        <!-- <tr style="height:10px;" id="car_cap">
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th style="width: 6.5%">Goods (In Qtl)</th>
+            <th style="width: 7%">Passengers including the driver</th>
+            <th></th>
+        </tr> -->
+        {{#each vehicle_information}}
+        <tr id="side-data">
+            <td>
+                <div>1</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        {{/each}}
+        <!-- <tr id="side-data">
+            <td>
+                <div>2</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        <tr id="side-data">
+            <td>
+                <div>3</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+
+        <tr id="side-data">
+            <td>
+                <div>4</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        <tr id="side-data">
+            <td>
+                <div>5</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        <tr id="side-data">
+            <td>
+                <div>6</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        <tr id="side-data">
+            <td>
+                <div>7</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        <tr id="side-data">
+            <td>
+                <div>8</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        <tr id="side-data">
+            <td>
+                <div>9</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr>
+        <tr id="side-data">
+            <td>
+                <div>10</div>
+            </td>
+            <td>
+                <div >{{plate_no}}</div>
+            </td>
+            <td>
+                <div>{{chassis_no}}</div>
+            </td>
+            <td>
+                <div>{{engine_no}}</div>
+            </td>
+            <td>
+                <div>{{vehicle_type}}
+                </div>
+            </td>
+            <td>
+                <div>{{cc}}</div>
+            </td>
+            <td>
+                <div>{{year_of_manufacture}}</div>
+            </td>
+            <td>
+                <div>{{goods}}</div>
+            </td>
+            <td>
+                <div>{{passangers}}</div>
+            </td>
+            <td>
+                <div>{{insured_estimate}}</div>
+            </td>
+        </tr> -->
+        <!-- <tr id="side-data" >
+            <td >
+            
+            </td>
+            <td >
+        
+            </td>
+            <td >
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+                
+            </td>
+            <td>
+              
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td style="font-weight: bold; font-size: 14px;">
+                Total
+            </td>
+            <td style="font-weight: bold; font-size: 14px;">
+               {{total_sum_insured}}
+            </td>
+        </tr> -->
+    </table>
+
+        <!-- ////////////////////LIMMITED COVERS CONTENT ///////////////////////////////////// -->
+
+
+    <!-- <table style="width:20%; margin-left: 5%; float: left; margin-top: 50px; " id="fourth-table" class="tab">
+        {{#each limited_covers}}
+        <tr>
+            <th>{{this.name}}</th>
+            <th>{{this.value}}</th>
+        </tr>
+        {{/each}}
+        
+
+    </table> -->
+   <!-- <div id="bottom-content">
+    <div style="float: left; clear:both; margin-left: 5%; ">
+        <p><span style="font-weight: bold;">Signed in {{Branch Name}} on this {{day}} of {{month}}, {{year}} </span></p>
+    </div>
+        <div style="float: left; clear:both; margin-left: 5%; ">
+            <div style="display: flex; flex-direction: row;">
+                <p>Prepared by: <span style="text-decoration: underline;"> {{pepared_by}}</span></p>
+                <p><span style="text-decoration: underline;"> ________________________</span></p>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+            <p>Prepared by: <span style="text-decoration: underline;"> {{pepared_by}} {{signature}}</span></p>
+            <p><span style="text-decoration: underline;"> ________________________</span></p>
+            </div>
+        </div>
+
+        <div style=" display:flex; flex-direction: row; float: right; clear: left; margin-right: 5%;">
+            <p> <br> For and on behalf of Zemen Insurance Share Company</p>
+            <p><span style="text-decoration: underline;"> ________________________</span></p>
+
+        </div>
+    </div> -->
+</body>
+
+
+</html>

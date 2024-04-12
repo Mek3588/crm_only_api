@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zemen Insurance S.C. motor premium proposal</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'Berlin Sans FB';
+        src: url('/fonts/BRLNSR.TTF');
+    }
+    body {
+        margin: 0 1em;
+        font-family: "Berlin Sans FB";
+    }
+
+    td {
+        font-size: 10px;
+
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    table tr {
+        line-height: 15px;
+    }
+
+    table td {
+        width: noraml;
+        font-size: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .left-mg {
+        width: 25%;
+    }
+
+    ul {
+        list-style-type: circle;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ulMargin {
+        margin-left: 2em
+    }
+
+    .rate {
+        background: #0000001f;
+        padding: 3px 2em;
+    }
+
+    .discount {
+        text-align: end;
+    }
+
+    .start {
+        text-align: start;
+    }
+
+    .premium {
+        width: 10em;
+    }
+
+    .space {
+        padding-left: 10em;
+    }
+
+    .li {
+        font-size: 0.6em
+    }
+</style>
+
+<body>
+    <div class="align center center">
+        <h4>Zemen Insurance S.C.</h4>
+        <h5>Motor Proposal</h5>
+
+    </div>
+    <table>
+        <tr>
+            <td >Branch: {{branch}}</td>
+            <td> Proposal No: {{proposalNo}}</td>
+
+        </tr>
+
+    </table>
+    <table>
+        <tr>
+            <td >Name of Proposer: {{name}}</td>
+            
+
+        </tr>
+
+    </table>
+    
+    <table>
+        <tr>
+            <td>Country: {{country}}</td>
+            <td>Region: {{region}}</td>
+
+        </tr>
+        <tr>
+            <td>City: {{city}}</td>
+            <td>Sub city: {{subcity}}</td>
+        </tr>
+
+        <tr>
+
+            <td>Woreda: {{riskworeda}}</td>
+            <td>Kebele: {{riskkebele}}</td>
+
+        </tr>
+        <tr>
+            <td>Primary Email: {{riskprimaryEmail}}</td>
+            <td >Primary Phone: {{primaryPhone}}</td>
+        </tr>
+        <tr>
+            <td>P.O.Box: {{riskpoBox}}</td>
+
+        </tr>
+    </table>
+
+
+    <h5> Particulars of Motor Vehicle to be insured </h5>
+    <table>
+        <tr>
+            <td>Plate Number: <u>{{plateNumber}}</u></td>
+            <td>Chassis No: <u>{{chassisNo}}</u></td>
+        </tr>
+
+        <tr>
+            <td>Engine No: <u>{{engineNo}}</u></td>
+            <td>Year Of Manufacture: <u>{{yearOfManufacture}}</u></td>
+        </tr>
+
+        <!-- <tr>
+            <td>Make of Vehicle: {{makeOfVehicle}}</td>
+            <td>Year of Purchased :{{yearOfPurchased}}</td>
+        </tr> -->
+
+        <!-- <tr>
+            <td>Type of body:{{typeOfBody}}</td>
+            <td>Price paid by the proposer:{{pricePaidByTheProposer}}</td>
+        </tr> -->
+
+        <tr>
+            <!-- <td>Present estimation :{{proposersPresentEstimateValue}}</td> -->
+            <td>Carrying capacity: <u>{{carryingCapacity}}</u>
+            <!-- <td>Type of body:{{typeOfBody}}</td> -->
+        </tr>
+
+
+        <tr>
+
+            <td>Horse Power: <u>{{cc}}</u></td>
+
+           
+                <!-- <br />
+
+                <ul class="font-size: small ulMargin">
+                    <li>Goods:{{goods}} </li>
+                    <li> Passengers including driver {{GOODS}}</li>
+                </ul> -->
+            </td>
+
+        </tr>
+    </table>
+    <br />
+
+    <table>
+        <tr>
+            <td>Cover Type: <u>{{coverType}}</u></td>
+
+        </tr>
+        {{#if isThereAdditionalCoverForInternalItems}}
+        <tr>
+            <td>Is cover required for radios, tap recorders, record players, bull bar or rooftop rak fitted
+                to the vehicle?
+                <br />
+                <ul class="font-size: small ulMargin">
+                    <li>Item:{{additionalCoverForInternalItems}}</li>
+                    <li>Make:{{additionalCoverForInternalItemsMake}}</li>
+                    <li>Value: {{additionalCoverForInternalItemsValue}}</li>
+                </ul>
+            </td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td colspan="2">
+                Is the Vehicle in a good state of repair: <u>{{isVehicleState}}</u></td>
+
+
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                Where is the vehicle left overnight: <u>{{whereIsTheVehicleLeftOvernight}}</u>
+            </td>
+        </tr>
+        {{#if isThereOtherowner}}
+        <tr>
+            <td colspan="2">
+                Other owners of the vehicle
+
+                <ul class="font-size: small ulMargin ">
+                    <li> Name: <u>{{otherOwnersName}}</u> </li>
+                    <li>Address: <u>{{otherOwnersAddress}}</u></li>
+                </ul>
+            </td>
+
+        </tr>
+        {{/if}}
+
+
+        {{#if isThereFinanciallyIntrusted}}
+        <tr>
+            <td colspan="2">
+                Is the vehicle being acquired under a hire purchase agreement if it is state the name and address
+                <ul class="font-size: small ulMargin ">
+                    <li> Name: <u>{{financiallyIntrustedCompanyName}}</u> </li>
+                    <li>Address: <u>{{financiallyIntrustedAddress}}</u></li>
+                </ul>
+            </td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td>Purpose of the Vehicle: &nbsp; <u>{{purpose}}</u></td>
+
+        </tr>
+        <tr>
+
+            <td colspan="2">
+                How long have you and any other person have been driving regularly? <u>{{drivingSince}}</u>
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td colspan="2">
+                If you or your driver have been driving form the past 4 years, specify the place where the license was
+                issued: <u>{{driverLicenseIssuedFrom}}</u>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Do you or any other person, to your knowledge will drive suffering from any physical infirmity or from
+                any
+                defective vision or hearing?: <u>{{physicalInfirmity}}</u>
+
+            </td>
+        </tr>
+
+        <tr>
+
+
+            <td colspan="2">
+                Do you or any other driver to your knowledge has been convicted of any offense in while driving motor
+                vehicle for the last 12 moths?: <u>{{OffenseInPastYear}}</u>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Are you now or have been insured in respect of any motor vehicle? If so, please state the name of company: <u>{{previousInsurance}}</u>
+            </td>
+
+        <tr>
+            <td colspan="2">
+                Has any insurance company ever
+
+                <ul class="ulMargin">
+                    <li> declined your proposal: <u>{{proposalHasBeenDeclinedBefore}}</u> </li>
+                    <li> refused to renew your policy: <u>{{refusedToRenewPolicyByAnyInsurance}}</u> </li>
+                    <li> canceled your policy: <u>{{insuranceCompanyHasCancelledYourPolicy}}</u> </li>
+                    <li>increased your premium: <u>{{insuranceCompanyHasIncreasedYourPremium}}</u></li>
+                    <li> required you to carry the first portion of any loss: <u>{{requiredToCarryTheFirstPositionInALoss}}</u> </li>
+                    <li> imposed special conditions: <u>{{imposedSpecialCondition}}</u> </li>
+                </ul>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b> State accidents that has occurred during the past two years in connection with vehicle owned or driven
+                by you or your driver</b>
+
+                <ul class="ulMargin">
+                    <li> Damage on vehicles: <u>{{accidentOnTheVehicle}}</u> </li>
+                    <li>
+                        Personal injury(Claims by third parties): <u>{{personalInjury}}</u>
+                    </li>
+                    <li>
+                        Property Damage (Claims by third parties): <u>{{propertyDamage}}</u>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                Are you entitled to a no claim bonus in respect to any of the vehicles described in this Proposal: <u>{{noClaim}}</u>
+            </td>
+        </tr>
+
+    </table>
+    <!-- <h5>Building constriuction Material</h5> -->
+
+    <br />
+
+
+
+    <h6>Declaration</h6>
+    <p style="font-size: x-small;">I the undersigned declare that the vehicle(s) described is (are in good )
+    condition and will continue to be so maintained and i hereby warrant that the above statement and Particulars are true
+    and i herby agree that the declaration shall be deemed to be a promissory nature and effect and the basis of the contract between me and the Company and that i have not
+    withheld any important information which should be communicated to the company and that I am willing to accept
+    a policy subject to the terms, conditions and exceptions therein and to pay the premium agreed upon.
+    
+    .</p>
+    <table>
+        <tr>
+            <td>
+                Date ________________________
+            </td>
+            <td>
+                Branch ________________________
+              
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Signature of the proposer  ________________
+            </td>
+            <td>
+            Underwriter ________________
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Source of business: ________________
+            </td>
+            <td>
+            Office/Agent/broker: ________________
+            </td>
+        </tr>
+    </table>
+    <h5></h5>
+</body>
+
+</html>

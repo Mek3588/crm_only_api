@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemen Insurance S.C.</title>
+</head>
+
+<style>
+    header {
+        display: flex;
+        flex-direction: column;
+        /* border: solid 1px black; */
+        /* margin: 10px 20px; */
+    }
+
+    .header-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: solid 1px red; */
+        /* padding: 10px; */
+    }
+
+    .header-address {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+        /* border: solid 1px red; */
+        text-align: justify;
+    }
+
+    .header-text {
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 0;
+        margin-top: 0;
+
+    }
+
+    .text-amharic {
+        font-family: geez;
+        font-size: 16px;
+    }
+
+    .text-english {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: red;
+    }
+
+
+    table {
+        float: right;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    table tr {
+        width: 100%;
+    }
+
+    /* table tr td {
+        font-family: Arial, Helvetica, sans-serif;
+    } */
+
+    .branch-name {
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+        font-size: 12px;
+    }
+
+    .secttion-intro {
+        display: flex;
+        flex-direction: column;
+    }
+    .warranty-text {
+        font-family: 'Helvetica', sans-serif;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    
+    .signature-block {
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        color: #333;
+        margin-top: 20px
+        /* margin-right: 20px;
+        margin-left: 20px; */
+    }
+    .branch-amharic {
+        margin-right: 9rem;
+    }
+    .big-line {
+        border-top: 4px solid #000; 
+    }
+
+    .small-line {
+        border-top: 4px solid #000; 
+    }
+
+    .policy-number,
+    
+
+</style>
+
+<body>
+    <header>
+        <div class="header-info">
+            <img src="../assets/logo_long.png" alt="Logo" width="200px" height="200px">
+            <div class="header-address">
+                <p class="header-text text-amharic">ዘመን ኢንሹራንስ አ.ማ.</p>
+                <p class="header-text text-english">Zemen Insurance S.C.</p>
+                <table>
+                    <tr>
+                        <td>ዋና መስሪያ ቤት፦ አዲስ አበባ, ኢትዮጵያ</td>
+                        <td>ክፍለ ከተማ፦ ቦሌ</td>
+                        <td>ወረዳ፦ 02</td>
+                    </tr>
+                    <tr>
+                        <td>Head Office፦ Addis Ababa, Ethiopia</td>
+                        <td>Sub City፦ Bole</td>
+                        <td>Wereda፦ 02</td>
+                        <td></td>
+                        <td></td>
+                       <td></td>
+                    </tr>
+                    <tr>
+                        <td>አለም ህንጻ 2<sup>ኛ</sup> ፎቅ</td>
+                        <td>የመ.ሣ.ቁጥር፦</td>
+                        <td>ፋክስ፦</td>
+                        <td></td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Alem Building, 2<sup>nd</sup> Floor</td>
+                        <td>P.O.Box፦ 23029</td>
+                        <td>Fax: 011615001</td>
+                    </tr>
+                    <tr>
+                        <td>ኢሜይል፦</td>
+                        <td></td>
+                        <td>ስልክ: 0115675850</td>
+                    </tr>
+                    <tr>
+                        <td>Email፦ info@zemeninsuranceeth.com</td>
+                        <td></td>
+                        <td>Tel፦ 0116151415</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+     </div>
+    </header>
+
+
+    <div class="big-line" style="width: 100%; height: 2px; margin-top: 5px;"></div>
+    <div class="small-line" style="width: 100%; height: 1px;"></div>
+
+    <section class="section-intro" style="text-align: center; padding: 20px; font-family: Berlin Sans FB; background-color: #f0f0f0;">
+
+        <br>
+        <h1 style="font-weight: bold; font-size: 24px; text-decoration: underline;">Warranty</h1>
+        <br>
+
+
+        <div style="padding-left: 3.2%; padding-right: 3%;">
+            <p style="line-height: 15%; text-align: left; font-size: 20px; margin-bottom: 0.14in;">
+                <br><strong>Name of Insured: <u>{{endorsement_No}}</u></strong>
+            </p>
+            <p style="line-height: 115%; text-align: left; font-size: 20px; margin-bottom: 0.14in;">
+                <br><strong>Policy_No: <u>{{Policy_No}}</u></strong>
+            </p>
+            <p style="line-height: 115%; text-align: justify; font-size: 20px; margin-bottom: 0.14in;">
+                <strong>Endorsement_No: &nbsp;<u>{{Endorsement_No}}</u></strong>
+            </p>
+            <p style="line-height: 115%; text-align: justify; font-size: 20px; margin-bottom: 0.14in;">
+                <strong>Period of Insurance: <u>{{date}} to {{date}}</u></strong>
+            </p>
+        </div>
+        <br>
+
+        <p style="text-align: left; margin: 2; font-size: 20px; margin-left: 40px;">Warranted that during the currency of the policy:-</p>
+        <li class="loss-damage" style="margin-top: 6px; list-style-type: none;">
+            <ol type="a" class="exception-list" style="margin-top: 6px; font-family: 'Berlin Sans FB'; text-align: left; margin-left: 90px; font-size: 20px;">
+                <li>No Candle making be carried on.</li>
+                <li>No artificial heat is used other than Steam Heat.</li>
+                <li>No extraction by application of petrol or Chemical Solvents be carried on.</li>
+            </ol>
+        </li>
+        
+        <div class="warranty-text" style="margin-top: 30px;font-family: 'Berlin Sans FB'; text-align: left; font-size: 20px;  margin-left: 40px">
+            <p>Subject otherwise to the terms, conditions, and exceptions stated in the Policy or endorsed there on.</p>
+            <p>Signed in <strong>Addis Ababa</strong> on this <strong>{{date}}</strong>.</p>
+        </div>
+        <br>
+        <br>
+
+        <span style="width: 15pt;font-size: 20px; font-family: 'Berlin Sans FB'; font-weight: normal; margin-left: 450px;">For and on behalf of </span>
+        </h1>
+        <p style="margin: 0; text-align: justify; font-size: 20px;  margin-left: 40px">
+            Prepared by: ______________
+            <span style="width: 12.01pt; display: inline-block;">&#xa0;</span>
+            <span style="width: 36pt; display: inline-block;">&#xa0;</span>
+            <span style="width: 255pt; display: inline-block;">&#xa0;</span>
+            <span style="font-family: 'Berlin Sans FB';">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span>
+            Zemen Insurance Share Company
+        </p>
+        
+        <p style="margin: 0; text-align: justify; font-size: 20px;">&#xa0;</p>
+        
+        <p style="margin-top: 25pt; text-align: justify; font-size: 20px;  margin-left: 40px">
+            Examined by: ______________
+            <span style="width: 12.45pt; display: inline-block;">&#xa0;</span>
+            <span style="width: 36pt; display: inline-block;">&#xa0;</span>
+            <span style="width: 36pt; display: inline-block;">&#xa0;</span>
+			<span style="width: 255pt; display: inline-block;">&#xa0;</span>
+            <span style="font-family: 'Berlin Sans FB';">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</span>
+			__________________
+        </p>
+        
+        <p style="margin: 0; font-size: 11pt;">&#xa0;</p>
+        <p style="margin: 0; font-size: 11pt;">&#xa0;</p>
+        <p style="margin: 0; margin-left: 252pt; margin-bottom: 0; text-indent: 36pt; text-align: justify; font-size: 11pt;">
+            &#xa0;&#xa0;&#xa0;&#xa0;&#xa0; 
+        </p>
+        
+    </section>
+    
+</body>
+</html>

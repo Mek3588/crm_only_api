@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemen Insurance S.C.</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: "Berlin Sans FB";
+        src: url("fonts/BRLNSR.TTF");
+    }
+    @font-face {
+        font-family: "Berlin Sans FB";
+        src: url("fonts/BRLNSR.TTF");
+    }
+    body {
+    box-sizing: border-box;
+    font-family: "Berlin Sans FB";
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* margin-left: 10%; */
+    /* border: solid 1px black; */
+    border-radius: 5px;
+}
+
+
+.header-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: solid 1px red; */
+    /* padding: 10px; */
+}
+
+.header-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    /* border: solid 1px red; */
+    text-align: justify;
+}
+
+.header-text {
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 0;
+
+}
+
+/* .text-english {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: red;
+} */
+
+
+table {
+    float: right;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+table tr {
+    width: 60%;
+}
+
+/* table tr td {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* .branch-name {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    font-size: 12px;
+} */
+
+
+.policy-number,
+.branch {
+    text-align: right;
+    font-weight: bold;
+    clear: both;
+}
+
+.policy-intro {
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+p {
+    text-align: justify;
+    /* margin-right: 10px; */
+    font-size: 6pt;
+    font-family: "Berlin Sans FB";
+
+}
+
+
+
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+h1 {
+    font-size: 8pt;
+    text-align: left;
+}
+h2 {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 7pt;
+    margin-bottom: 0;
+}
+
+.section-one {
+    list-style-type: none;
+}
+
+.exceptions {
+    padding-left: 7px;
+}
+
+
+
+/* .insured-list li {
+    padding-bottom: 8px;
+    line-height: 20px;
+    font-weight: bold;
+} */
+
+.exception-list {
+    list-style: lower-alpha;
+    font-size: 6px;
+    
+}
+
+
+@font-face {
+    font-family: "Berlin Sans FB";
+    src: url("../../fonts/BRLNSR.TTF");
+}
+@font-face {
+    font-family: "Berlin Sans FB";
+    src: url("../../fonts/BRLNSR.TTF");
+}
+
+.center {
+    text-align: center;
+}
+.watermark {
+    position: absolute;
+    top: 250px;
+    left: 20px; 
+    width: 100%;
+    height: 100%;
+    z-index: -1000; 
+    opacity: 0.3;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.watermark img {
+width: 70%;
+height: 21%;
+margin-top: 1%;
+margin-bottom: 28%;
+align-items: center;
+page-break-before: avoid; 
+page-break-after: avoid; 
+}
+
+
+.watermark-text {
+    position: absolute;
+    font-size: 120px;
+    color: hsl(0, 75%, 49%);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    opacity: 0.;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+hr{
+    width: 90%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+.header-address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+}
+
+.header-text {
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 0;
+
+}
+
+img {
+    text-align: left;
+}
+
+/* .text-amharic {
+    font-family: geez;
+    font-size: 20px;
+    margin-bottom: 0;
+} */
+
+/* .text-english {
+    font-family: 'Berlin Sans FB';
+    font-size: 20px;
+    color: red;
+    margin-top: -1px;
+    margin-bottom: 0;
+} */
+
+
+table {
+    float: right;
+    font-size: 9px;
+    font-weight: normal;
+}
+.branch-name {
+
+    font-family: 'Berlin Sans FB';
+    font-size: 6px;
+    font-weight: bold;
+    /* color: black;
+    margin-top: -1px;
+    margin-right: 5rem;
+    text-align: right; */
+}
+
+.secttion-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.branch-amharic {
+    margin-right: 9rem;
+    text-align: right;
+}
+.amharic-title {
+    font-family: 'Berlin Sans FB';
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.policy-number,
+.branch {
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 7rem; 
+}
+
+.policy-intro {
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+.section-one {
+    list-style-type: none;
+}
+
+.exceptions {
+    padding-left: 30px;
+}
+
+
+/* .insured-list li {
+    padding-bottom: 8px;
+    line-height: 20px;
+    font-weight: bold;
+} */
+
+.exception-list {
+    list-style: lower-alpha;
+    font-size: 13px;
+    ;
+}
+
+@page {
+    size: A4 landscape;
+}
+
+@media print {
+    .himage {
+        /* display: none; */
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    /* .text-amharic {
+        font-family: geez;
+        font-size: 20px;
+        text-align: right;
+        font-weight: bold;
+    } */
+    .textlist-amharic {
+        font-family: geez;
+        font-size: 11px;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    /* .text-english {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: red;
+        text-align: right;
+    } */
+
+    .container-table {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /* table {
+        float: right;
+        font-size: 6px;
+        font-weight: normal;
+    }
+
+    table tr {
+        width: 60%;
+    } */
+}
+.watermark-text {
+    position: absolute;
+    font-size: 120px;
+    color: hsl(0, 75%, 49%);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    opacity: 0.3;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+table tr th {
+    font-size: 4px;
+}
+#table td {
+    border-right: 1px solid black;
+}
+#table th {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black; 
+
+}
+
+#car_cap {
+    border-bottom: 1px solid black;
+
+}
+#car_cap th {
+    border-bottom: 1px solid black;
+}
+#fourth-table td {
+    vertical-align: middle;
+}
+#side-data {
+    height: 30px;
+}
+
+#side-data div {
+    border-bottom: solid 1px black;
+}
+
+.lastCell {
+    border-right: none;
+    
+}
+.tab{
+    font-size: 12px;
+}
+
+#bottom-content{
+    margin-top: 10px;
+    
+}
+
+#bottom-content p, span{
+    font-size: 6px;
+}
+
+sup {
+    font-size: 5px;
+}
+
+    /* .p {
+        margin-bottom: 1px;
+        font-family: 'Berlin Sans FB';
+        font-size: 11px;
+        color: black;
+    } */
+    .heading{
+    font-family: 'Berlin Sans FB';
+    font-size: 6pt;
+    color: black;
+    font-weight: bold;
+    clear: both;
+}
+
+.branch-and-policy{
+    font-family: 'Berlin Sans FB';
+    font-size: 7px;
+    color: black;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 7rem;
+    font-weight: bold;
+    text-align: right;
+}
+/* .policy-number,
+.branch {
+    text-align: right;
+    font-weight: bold;
+    font-size: 8px;
+    clear: both;
+    margin-right: 12rem;
+} */
+.text-title {
+    font-family: 'Berlin Sans FB';
+    font-size: 7pt;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.text-title2 {
+    font-family: 'Berlin Sans FB';
+    font-size: 6.5pt;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.li {
+    font-family: 'Berlin Sans FB';
+    font-size: 6pt;
+    font-weight: bold;
+    text-align: justify;
+    /* margin-right: 4px; */
+}
+li {
+    font-family: 'Berlin Sans FB';
+    font-size: 6pt;
+    text-align: justify;
+    /* margin-right: 4px; */
+}
+.li-header {
+    font-size: 6pt;
+    text-align: left;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+ol.custom-list {
+    list-style-type: none;
+    counter-reset: custom-counter;
+    margin-left: 0%;
+        margin-right: 0%;
+  }
+
+  ol.custom-list li::before {
+    content: counter(custom-counter, upper-hex);
+    counter-increment: custom-counter;
+    font-size: small;
+    margin-left: 0%;
+        margin-right: 0%;
+    /* margin-right: 0.5em; */
+  }
+
+  .ul {
+        list-style-type: "- ";
+        margin-left: 1px;
+    }
+    ol {
+        font-size: 6pt;
+        margin-left: -20pt;
+        margin-right: 0%;
+    }
+    .text-amharic {
+        font-family: geez;
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    .text-english {
+        font-family: 'Berlin Sans FB';
+        font-size: 22px;
+        color: red;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .top-table {
+        float: right;
+        font-size: 5px;
+        font-weight: normal;
+    }
+    
+</style>
+
+<header class="header-info">
+    <!-- <div style="display: flex; flex-direction: row;justify-content: space-between;"> -->
+    <table>
+        <tr>
+
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAADoCAYAAABCdB6DAAAAAXNSR0IB2cksfwAA
+            AAlwSFlzAAALEwAACxMBAJqcGAAANCtJREFUeJztXQeYJEXZHs6AhOPS7sx01cx0
+            d9UIqCQJvwiYCCpBBAOi/KAgEsXwAyKgeCAKgkqUHCQIeChIlCRIlJy8Q5Icx6Xd
+            ne6e3b3j4I672/97q7t3eyf27s1t7+7V+zz93O10d3V199tfffXVF1IpDQ0NDQ0N
+            DQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NjVEIb4qY1Mv5
+            tKT7oaHREpTa2ia6zP6uy+V9Dpf/crn9c3cqzyXdLw2NYaOUtT7rMjmTSL3SzRX7
+            +jcuPZeLH72WSq2ddB81NGKhI5NJd3Hr2ySd/1FF6IrN4/J1l4mTy8z8eF8q9b6k
+            +66hUQUi5lpE5u+4vPiSlyu+24zUEem9gghecri4xmOskPR9aGgoONNyvMzt/YnU
+            z8YicmOSv+0Y4kJSX7bry2TWS/reNNZAzEq1r+8Z4ng3J2c5OfnuKpN6gNwrSeK7
+            9O+dXsb+EkaCpO9VY5wDJCu15Zln2IeQhJ7fMjI3JvqjrmF9oWeD3NSk719jHMKd
+            yvKY6BHRXiA9+r0RIXWw0Uf0Do0MDzlM/kCrKBotAUnpD3qseKSXk95IkrmBBO8l
+            FWi/p1OpDyT9bDTGGJTKweyNPCZ/QkR6KbaFY+TIvcLj4nnq37GlNnujpJ+XxhhA
+            H00KHSZ+Q+rGfCLQ8sRJ3Jjgy0lN6SSS/6HUZhpJPzuNUYYHUqn3O4b5EY+Jnzo5
+            uTBxwg6d4CtJ/+6kD/K0klHYSq9oaqQWGIZJxLiYttneaJfQsTa50OHi1nLW+iyp
+            VBOSfr4aIwhMvHwd2j7Da6UNenRty0iK39KRsbZ1p07dIOlnrrGaUTLE1i6Tl5KE
+            njPqJoWrYSMd/G03J+52mTgQnoZJP3+NFqMznc6QlL7MG2Eb9GjaSEV52cnIHZN+
+            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
+            xh/tftOqd6LRApDkuTlQRao2LyP2aN4CTF5y7+CcGXNTuXWwgqfsyfSbk5HKIZ8I
+            fox/jDir/zwmTkOx0qDy7qv09+W9QbQ4VBLUPqd9r9IHdob6MHB+aGYjHVe1z8Wv
+            B9+P2IHOeZIk9ALYrktt5paOOk/OVCOD/0HRefKq4PhC0K/nutqliqwpcbEHJDxt
+            C+k683EvHhtILk8fyaFoD3MCIv0b1L8b5tQp6qqREJxpOd4dDLmVW9zSzfDpxvEw
+            dwWTrAmwruC3BYFT1FzSp4M20+F5MJ91p/OyM21vBhtxVBXC0riXkZt0Br8vmMja
+            gvZUMsl59AHg796K5JJKzaF7Iun7MVgpQOZQpfD7NXUD/H9xoA9DXcHfC7OWFb0+
+            /ElwfbRT6Uei2mEy38ntzeGL3qf9yzU0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0
+            NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0Vgv+H0RpSeFPH+DXAAAAAElF
+            TkSuQmCC" alt="My Image" width="130px">
+        </tr>
+        <!-- <div style="display: flex; flex-direction: column;"> -->
+        <tr>
+
+
+            <td>
+                <div class="display: flex; flex-direction: column;"></div>
+                <p class="text-amharic">ዘመን ኢንሹራንስ አ.ማ. </p>
+                <p class="text-english">Zemen Insurance S.C. </p>
+                </div>
+            </td>
+
+
+
+        </tr>
+        <tr>
+            <td>
+                <table class="top-table " style="float: right;">
+
+                    <tr>
+                        <td>ዋና መስሪያ ቤት፦ አዲስ አበባ, ኢትዮጵያ</td>
+                        <td>ክፍለ ከተማ፦ ቦሌ</td>
+                        <td>ወረዳ፦ 02</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>Head Office፦ Addis Ababa, Ethiopia</td>
+                        <td>Sub City፦ Bole</td>
+                        <td>Wereda፦ 02</td>
+
+
+                    </tr>
+                    <tr>
+                        <td>አለም ህንጻ 2<sup>ኛ</sup> ፎቅ</td>
+                        <td>የመ.ሣ.ቁጥር፦</td>
+                        <td>ፋክስ፦</td>
+
+                        <td></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>Alem Building, 2<sup>nd</sup> Floor</td>
+
+                        <td></td>
+                        <td>Tel፦ 0116151415</td>
+                    </tr>
+                    <tr>
+                        <td>ኢሜይል፦</td>
+                        <td></td>
+                        <td>ስልክ: 0115675850</td>
+                    </tr>
+                    <tr>
+                        <td>Email፦ info@zemeninsuranceeth.com</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</header>
+    <body>
+    <!-- main div -->
+    <div style="font-family: 'Berlin Sans FB'; margin-left:5pt; "> 
+        <div class="secttion-intro">
+            <table style="width:10%; float: right; text-align: left; margin-left: 87%; " class="tab">
+                <tr>
+                    <td>
+                        <p class="branch-amharic" style="font-family:'Berlin Sans FB'; text-align: left;">ቅርንጫፍ</p>
+                        <p class="branch-name" style="font-family:'Berlin Sans FB'; text-align: left;">Branch: <u>{{branch_name}}</u></p>
+                    </td>
+                </tr>
+            </table>
+            
+            <i class="fa-solid fa-phone"></i></p>
+            <p class="branch-and-policy" style="font-family:'Berlin Sans FB';">Policy No.<u> {{policy_no}}</u></p>
+        </div>
+        <!-- <h1 class="text-title">Vehicle Insurance Policy against Third Party Risks</h1>
+        <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt">
+            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+        </p> -->
+        {{#if status}}
+        <div>
+            <p class="watermark-text">Draft</p>
+        </div>
+        {{else}}
+            <div class="watermark">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAADoCAYAAABCdB6DAAAAAXNSR0IB2cksfwAA
+                AAlwSFlzAAALEwAACxMBAJqcGAAANCtJREFUeJztXQeYJEXZHs6AhOPS7sx01cx0
+                d9UIqCQJvwiYCCpBBAOi/KAgEsXwAyKgeCAKgkqUHCQIeChIlCRIlJy8Q5Icx6Xd
+                ne6e3b3j4I672/97q7t3eyf27s1t7+7V+zz93O10d3V199tfffXVF1IpDQ0NDQ0N
+                DQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NjVEIb4qY1Mv5
+                tKT7oaHREpTa2ia6zP6uy+V9Dpf/crn9c3cqzyXdLw2NYaOUtT7rMjmTSL3SzRX7
+                +jcuPZeLH72WSq2ddB81NGKhI5NJd3Hr2ySd/1FF6IrN4/J1l4mTy8z8eF8q9b6k
+                +66hUQUi5lpE5u+4vPiSlyu+24zUEem9gghecri4xmOskPR9aGgoONNyvMzt/YnU
+                z8YicmOSv+0Y4kJSX7bry2TWS/reNNZAzEq1r+8Z4ng3J2c5OfnuKpN6gNwrSeK7
+                9O+dXsb+EkaCpO9VY5wDJCu15Zln2IeQhJ7fMjI3JvqjrmF9oWeD3NSk719jHMKd
+                yvKY6BHRXiA9+r0RIXWw0Uf0Do0MDzlM/kCrKBotAUnpD3qseKSXk95IkrmBBO8l
+                FWi/p1OpDyT9bDTGGJTKweyNPCZ/QkR6KbaFY+TIvcLj4nnq37GlNnujpJ+XxhhA
+                H00KHSZ+Q+rGfCLQ8sRJ3Jjgy0lN6SSS/6HUZhpJPzuNUYYHUqn3O4b5EY+Jnzo5
+                uTBxwg6d4CtJ/+6kD/K0klHYSq9oaqQWGIZJxLiYttneaJfQsTa50OHi1nLW+iyp
+                VBOSfr4aIwhMvHwd2j7Da6UNenRty0iK39KRsbZ1p07dIOlnrrGaUTLE1i6Tl5KE
+                njPqJoWrYSMd/G03J+52mTgQnoZJP3+NFqMznc6QlL7MG2Eb9GjaSEV52cnIHZN+
+                FxqrCNIxP+Axub3D7HNIOnesCRK66YZnwOVjNNE8YoFhm0m/I40hotTGNiKV4yaa
+                TJU1oWuQm3Rw+ncuqSjT+/Riz+jGghRb18VkiYuLXF5cnDiBxsoGW7hhn+Bl8pvA
+                9Jn0e9SIANEqDpN/I0I7WkIPi9zLMaEmFeVPndzePOn3uUajq719fUhomLU0mVu3
+                eTm5zOPyKliQ+lK5dZJ+z2sM4MvRaYiveLx4C+nQ3fQyNKlbvalJZtGB0CjTs9ZO
+                V6sZXtrezMmJpxJ/8WvShuAHJp9xMtYnkn7/4wp9pHI4hrl3mYu/kBRZlPiLXkM3
+                Jwe/cHG3k7UP6EzbmaR5MWYBXwcvK3Ynfe8ZV62gJf9y9aa2pQ6XrznMPore0YeS
+                5smYATImlbjYgyYxd410tMqgjcsV6oPisuQvwRf/Qx/Zsx7Ctfz0Cne4TM5wWfEK
+                +v/ZtJ0CH26P2Ue6WevAUsba12HWXl1Zc1cnY+7YZdifcrn5SZJ4/1My8lvDE6+b
+                Nvwfv2GfR8eoY3EOnVti1r4uEweRrvt9B96HXP6K/n8e/XuVy8Vf6fp/d3jxn7Q9
+                Qdd/kaTq69T3+fRvj+vbqlfv/IPLl0j4HN7VLj6sU0jUAdwtXWYfjJUxmhQuGSHy
+                YiVuEZHzPyCJy+2LibgnOlnr29SXz7vc2raLW1sQyTYuZy0Lfs9zN8hN7chk1sPC
+                RpLBthjR8MzgA9LLWBsyTHWn89LNFj8Giwb19zNu1v56idtH08dwLn0Yt9JznemC
+                9K0kvJ9C4jWPifM7Mqad1PMYVQAxFtBLoQe/Fz2cF1tM2uUkZXtJunV4ueJ/6e9/
+                k0S9iwh8jkNSBpIRZFjTFiUgWVUMZ9rexTXED+l5XIKYSoxI9IzeUlHypG4Mh/z0
+                rJfQR3UWJPjslLVmqinKDo0HqyQ0DZurKnlzshuzd5Ic12Gp2OH2AYjwRqYlvEis
+                TCZ9z6MVkP7dkwpTernYEOoQJD1Cz3w1Szzu+qpN3CRAK9VqJhPX0iix8xrjF66y
+                Jvl26NKqEBl6JOnid9DH8aNy2t58Vir1waTvbbxiBkl5GuW2cQz7RBIYjw0llwqN
+                xvciQinpe1htQE4Oh4vDiZSPxI4nxOSRy9mYrJWYvJQkwHE0OftST3uuqBcNkgOC
+                F2DXxpyIiHuOP4klPbvOyAsVhba/0kjwtY7UOEkhgRuhGzoa+ltTlQPDGKNhz5B3
+                0AM7qiOT23RRRqYxQdKz7tEJjMCYTC/KZts7puQ3IbIfA+HlQU+vHGV9gr9WYuJb
+                Y3ZuAyuCa9jfUzPxWhMR35zWQcPa0/TvDJdm7whl6tBJYcYFOtezM5DQNMpe4E9O
+                I4LNf/dPqkSeNP9Juq+x0NVuZUkXO5U6/XKVyoEbYsU3PC4uwGpiZ9reDNEtWhqP
+                X0Cio6ID9Owys74cBE/PDSb8S2mEfgkpL6CqJt3XKigTEpN5mkH/H2bEkaHnbbW4
+                wcTDpF8f72YLH026rxrJA/Z3J1PYiXhxGVIvIxk+cqQ4hvxZZzov+0aDmoKOkF51
+                JnXulcDUs4RI/ihJ5pNJMu+hJ3oajbBo/Wx7l2F/usQkdPP7YE8vgfCklo64qRDm
+                n/Jka7JjiNNU0kRErDA5s0STxI71M+kR7YzGuAJ0bpLcvyJpjlwvV3eRYByR8DW4
+                jpKEPgVSGVErMMHB10FLZY1WYrYSnHJvDynnDPFj17C+iEW9ll8I2fuJxJcTmW92
+                DfOrmCSOpwgLf+HI/l+stNHD/NO8ibp83WgAtAPkBy+3mx+n93NCKWt+bpUbhY6z
+                YAoreFlzN4/Z34czUAv6OipBKtWOKqp9wILz2LhZTBhH6GX2Rk5G7LxgsmEOK8vV
+                7MmTJzvTrI0hqWGuWQ19TAyQznNTqXWi3nmevyq6cmC1rNhV4mLDJPu5KkBu7/Fa
+                6gP3BVJ7U6ZMWkiTz9jmYpw4Hh+KSqKTNXcldeM5miNguX5uyRCHzU6lPkTzhl28
+                UGIr6454spZOhza6MwWBlbZhXH+Ciqjn8hZVkInLiyE8WvWs1QvPFj7mu+CqVb65
+                LisePN4dkcbsKmargAAGt7I6AZfvONw+FW6WRPL96O/ry4b4Xb2k6iXD/p6qQcPE
+                Q40I2dsmNoQ/RdQmi4/HCe38A9d/2cvkNq08H6NkJ31AQ1GHsE5A9/fvivbfRjhX
+                3DY0xgBAqqjXn8PFjfV8VKIrXzBl0gTyOJLaD3tYXKL5RaiOKRurv/j0br1c1Ipg
+                WGXNFZd5Wblr+LuHkaLW9Q35y4E+F9emD+x3YTgcqUS9XYb9s7kxJuoel4fWijrC
+                x1TvHLQbBE7o1d+xAFTJJWKe7ebEdV00o8Zvvm9xHffKIApbmTNz8qkK4q8ggj+I
+                yXMw1F8KX/J614ZPs+dHlizvYvZ3+3/HEnJN107xJ+yHTzSNBLdXl6mGl6P4fbN7
+                RgGm4IOq9JJcXGN0WQvBFtTHfyIIg+7pt5hXDetha4wcHN8vYbkiCUlAtewPZ6u6
+                Etsvd+H4L7q2Uz2Td/Uxti7aColSJjJ0puX23czcEtIWv2Gk6PIdgI6ITrzrFjrl
+                8hTsh75f99qkMmGVN3qPHevLtMPNHTvTfvYmGpF2Utmwqs4VF1U+H3hMqtLYkY+X
+                PoyfrL43otESEFG3hMMVvWiXdNvvKmecDOnYfLCOjZVTxxC/xjnldmuLRiFRKOUR
+                1D5fqwuROUz+uT9PoO9yu5C2U+rVhEE4Fl2vq1rHFpv6/jak5jRw60XRVLQD3dtX
+                iQau7eFemTgQ11eedErKFxeR+nMrLECVfYFtmPY/P6j9nDh/9b4VjVWGqi1DqkNJ
+                SVJfP4W+Df8VpZJgUsXl64h/7Avi8zxEhTf0Fy8uKnHzc/BUo/NfrSNZl4NM0b4g
+                TQEmo8408yNeVuxG7dwYpPO9AKSenkpNgJSn365seH0mTlbuwEw8UvsDlD1E/sPQ
+                P9jloV71TuTT8KFhDhG1jmClWEXXR9QVnRRnFAETn16kNeDyO1jaX8AGxzZC1/aU
+                taP4Fxqqn0TaBKQMoN+rIqo7WWH7hhKbpC1ybrtId9CIgEq62ifgw6JrXhjEDIZS
+                vdPJid8gortS71VO+vXayxWXLsyKbVSKh4ZpKWSPH0kv0wibIx369fDayiLD7DMg
+                8XE9mDm9rHkEfYi/dqaxcbv4NuYAEtOLOode+ruhHkpE+nVfYK1QgalKOg8mgufr
+                3i+WmL1ntD1IdDq/LmmV/m2Ir8aK4PYj5F+rd6yDnBxG/lO4LhZTyob9ac+Qp9YL
+                yvCCCSZNQP/W7Np+bGKduYLyiYfDWguWpjVWD7ycvZlbZRcuzoNEIqKYJL1mNSaB
+                9HpICkbbRNAqtTlvECl8C0cJFhEVvd2M1DE3atPx85dU2J4H3897SMwDi4m6Zy4f
+                aNpujKh/UoMWdgeSW2OUQUVOc9lbSVZUBaPt2Jqmr8HSiyZd4g/RRRS1epc2t0O+
+                DSLR/dT+A0Tmczsy+U2wv9RAXRgeuZtku+LizW4jv3XYvyDz1KonvMFcgInjknhv
+                Gk0APxa3ItGOw4uPIwlPQyk4eHsjXDpfRPp4N5Pf6MpaB3am+ebwR4BZ7IGK1cNW
+                EjvORurRq+WgZozL7X2g5rSkbSbuRptwE1Crosw+Cu6h430JfkwgWKb+J5aS6d/7
+                EY2hfue1F0NqDttTeQ7L6m5U+vuLIjdWejSCBHSdJ0eU3CgvTXozrg/HH5rsXVNz
+                NGIqhVl3/LblTKhtDlO5CPvbo1Hk+R6aiCfxPjUigGSdz2Q+WsvQif2CEQEkb6+Z
+                ANMPdXu1PHmgwhakO3wvhkagVd9o0vg0kXt/LBL1h+H5fcTCyiySvichDK/uIlDN
+                kYAmt7lidRYBZUERjyfzNjUagqTOrTGl4cpmOivp2GeohD9MnFa5wDPQBqkHXM71
+                VC0c+eYISnN4Ir5QauMbYlWU/v7zEO67+l6ixNd27dEH5cnXRBf1/FS7TUvmeUjP
+                y+ULDZa7V0BiQm2BY5SHFAMjKM2DPszxEN3EVVLJONJ6iZL+jY/5TtLvUaMCflpi
+                cXnddGq+PfchenlXt8LKQOrAU1imxrWVIxUXS1pivVgNG+z49LHeXPJdDOp+rOXA
+                eUxjlAE6d4mJk10/ec+K4IWt9KAqGOL33ZMmTfHdU2PmEmwo3YqLkd01vHa3Ib7q
+                wHekvoRNiPQqK+25fan29VXGW6TKqNE3mDqTfHcaTQDTFRKjl9oKWzlpay/YqFFD
+                JbRdL8oWPkoEXPXaNmrCZZ+Idj3fS++/VVlJcQyTHW4OaY7lfUkQm67/dDiyAHPg
+                KsvFPYPC4mBd0cmNxj46YeWoVW8dzv5Mzo1PGnFBmcnzao0A8AzEKmNfEPjQzc0d
+                qzz9RmLjxXlQlaL33xeGxhn2IQid0ymZxxFU/Rcu/kK6p0f/IjXbY6SmfJMmhD+I
+                TWzfN6TuaidWMWcHBYn6lPeh/f2Gq6O+5aLx6ulQJTYvLipni59N+HFrjDSCQOb+
+                MCl4ysWxWStHLN6sdg59NPDQQ5JGJn7jVB6vSIyyc3Q9LmdjBEA+u5bq48r1VioH
+                KDiRwQsQ/RmPwdsaTUATqVObVjBj4t6mTleoU5m1vxZEkdcI4ZJLPcM6tMzNz4Vu
+                rfiwHNSHaZ3Unh8UjNqL1KO/IY0zJorw9Q4drTTWEKgcFlzc5tYqMae878SDmJA2
+                97yT3aR+nNNQVWDiSlwTpFZRQPUCgAerK/ElOpOPwU+7zr57h5WERmPsAlE4HmIY
+                ubgVjlceFmz8EnpHh0GwKOrUUF3hxeeIuOc3JqooQxWia33LbVanh8sFdM3rVZHX
+                GKT2YKUxxI+9+rGXbyNvedLPWiMBQC+dx/m0noF6j/26KezmRPbatd6h2xr5rZVa
+                01iq96gACVIZYkjfWSrZT1pu5zV10S2+hzR1SM/bH9FTU/o3j4bXWAOBysLw5aaJ
+                4asqFMsPrL0njFgpM3vPBqt9K7F44vkmw5jl51QOktouumhP2dLlTNjWYYnpUYEU
+                9V0NUCwp6WeoMUoBWzXcQWEvhv9INAUDEtS49RP3vKhyi1REjzfVsetL6cVQnxYw
+                UehPF4HIIlQRqH3OshKzvpnck9MY61grkLRvIg8IFm9Isj4U5gchCbsgNrGbkL5k
+                DFYtVBoKJn/iVJb1VoHG4j5UaUvmkWiMC2CCiGz9LjO3K3N782jlYOXb0gpi59Si
+                0NzKa2NlkSTzvjSRvdvBBFQl6RTTwygdDY0hIagdvy5UE0w061WBoIng9S1dlGFy
+                bJSc0xh7UMl6DHkorCZqxZEX5yEHYGVWV0hupJCIE2ked4umRutpz30YAQS6YoNG
+                S1BCqcAa1WqRzbUj0GvLfu7sV+DP0UKJ3TPDzzX4ftconuWnq5Ceqq+o4xo1VgVI
+                Eu/WDQCW75SY/SXUiI/l7cfl2zT5e4b04rOa+rD4q5I3oA9B8dC3o/tJ5bkj6Wej
+                MYaBkh+kWrzRgIAXNV1l9LeVXdzeZ3G7lVVmQ0QINTje40UH6d/QB6Rcq+GWWzdv
+                toZGU7iM5b36iyioKx6H1D5ZDXlI2C7I7TBxrSoKNZi0S2FZKUfSmCFP9yC93Y+S
+                eTaZJ6IxLgDrB1YUaxHVYWp1cl5snZmkO/Tl+Sj0yeHSKm6EvkzS+ynsgzus8jOh
+                /dE+oHwh7b9z4AOQPSj/l9Qz0RgnQI5qZF5CuJgfTKs8BT1P1ZYs1q20ULUxeZ3K
+                zZ2rjqekj+S8ZiU9SlnrM8gXvmRajo/UvWuMc8BhSflBk6RFtYPudF7CkWpQZYEm
+                m8PFX+s5WjmYHGbtfZK+T401AEpSc/toF+RFHRsuju+rKMoE9SE2sZm8BSa8BqrK
+                I0ndq8Y4QskQWyvvOi7O7qsIglWedKxGVA106rS9y/RUaoLSfVErPJ4aMpO2Y7xK
+                e/igTS5M6FFojCcEbqhIjvNItOAp0j6o5JX1CzXN6iZdl/Tr5/w4x4YTRpXGDGU6
+                oMrU9af2j304yeehMU6gsq9mCjvP4zwX/d1j1jebSOCVwRbDEiLuAanRLiS8KjlS
+                m9RLPCb3reyj125/CupOvaKsGhqx4RjimtiWjiYbKoTNiETOo2CUmkBWVF1wDHkq
+                JqPRfsD3JFyhdCqKPmloDBll1qQC2FA2XnTL3Noi2j4I7Br294jgN6gA4WzhY/X6
+                gthMUosWoRrD6r9zjXENL2vu3sJkN8ucrBx2PXSlLjFr42hlBg2NYSEoSHp3ayQ2
+                lr/94qUoiORmxYEo2YGa70nfp8Y4AQirTHxZex8vK3dFPpHoftTFQcUDj8urvRzM
+                gIOsIitVosqhuqSqZJbidNLbT4t66Dm8OB8xin1aEmusItYK8u0hgeUKpDXDhAzF
+                nLDTyRR2CiLGa9uZuZzrMLkX0pcNUcd+z7eV16rbWHTKQd0dDY1hIahS9kKlNEXa
+                Mi8jN6G//9uEpEtVbg9kYhqK/s3lkrq+2n4Q7slJPxuNMQzUj0RJjEpyedw+kVSF
+                P8VSMbh8qzOdzqiKwXGJrSoz1E/JQKPGH5J+NhpjGL1+/cjHKi0WJVWrPb4ELjP5
+                Az9tcZOIGd9X+07fUap4W61jPFWOWv4k6WejMcZRypq7q5JzWOUDMQ3xO/g1D01n
+                FrcjmY6n6lPWUS9Q0csQFzmBeymuUauKL7Ux28uITZN+LhrjAMjWhBwcKJGnqoQZ
+                xSESG+U65MJaUh5Wk1LWPqarPffh1yJegCoYN2t/nSR31wD5xfNeJrepzm2tMWyA
+                PLNT1odqlWPuyea3aW0eEHFQPbLio/KY2AEmx75Uce1ax2hoxALqi7tM3kTkfZQm
+                iTeVMvaeUYI/rWqRy3r58Ia+cfkPJLdM8p41xjHgX01E/mmlbgt/aI/bJwTHrOXH
+                E4rfxyBsvCTtvDi/p10Wo/1AYkno29EyIhoawwKWrYmIdXylZQ/yXasVSCRej1Mr
+                kssX6bxmtm5MCLtgWkQf/FhJeamnCjcVXyoZ1qH1UqNpaDSFiizn8qomRH21aW0a
+                XwK/V+Liwo5UZj06Z0aMD+AFN/DvxvL8oMkll6+HvtkaGkNGXy63jsOLt7ZIZ15B
+                hPwj2i3zwUStc/xvwzCzUlW9GLmwJyc+nOjD0Ri78CeE9h9bZe2AXl5O25sjkJf0
+                8b/UO450+rkwI4b9QPUw6sNABQJMYnUBJI1VAZHoG05dHXtYkvsilRMEAQJI+u7/
+                Bt0cMYz/pf9fGS0HHcKZxjYmwp/mMnESJqpJPAuNMQ5YOZAaDFLRzwMifuq2KqUv
+                F2U/0Xo0pKu4yGHyqK52WaxMy6Ch0TL4yR7lJd1tYuvwNyL3ziUub/e4eM7h4jaa
+                CB5W31oyjI3JmdGKBhoaqwUIoYKO3ZU1d4NLKFSATmZ/HkvcA3brYvx8e823laTP
+                H5z0fWuMcxB51yX14G+VE0e4pqLEBvKHkOS+t4XEhppyZdL3rTGOAf8LUjkurEPA
+                ZQ63T1CVt7Li8FYSm67566TvXWMcoTzZsrqVQ5EfN4il7Eargw6pIDiuj6Q2qSiz
+                40njYi9J5FcaWEuWN0qfoKERG30qZ7U4PUwvhjqLyCmtAnUbpRCjrZyx90SCyeaE
+                hm9IcT5CweCGCjfTKldVFfZVLa0xKtA1riCV6AdJPB+NMQqVJzrq36EyKdkneDl7
+                M1UqurEEdpsu3HDZTUS+CFmbQk/ABYZt+plV5Xy16MLlk6TaHBDN+ReiTwUOi6cR
+                yDDyT0djzKIra3+tSs9l8jwskDj1Ilvi6sskzZt54dXy69bQWGUgZQJJzllRKQwp
+                jn0llKVjiHKp1K9JbYkXsLtk4frZ9vBaMBM6GbEzkr27hvUFHfGi0TKoMstGfmtU
+                3YIvBiRmzwYbTPWYfR4R7jYEEyBoNjTnLcxmLVXfhQsXQbekB1/jl9WI6TtCBMZ1
+                gyCE66LnobYjImGSfiYaYxzI1qQcj0IXU8QcRkpawDmJyHeOylXtJ8N5k/6+y+Pi
+                sN6JfBp8otVxXH4ult+1T94dcA4mhm6NdMG0//w+7VetsSpQpZ4rSsGVuHwB+yBZ
+                VYWBamsF0pFB9bgzLFjUkRGb1ipqVGNyuRh+JpD+bq52GTxq+ykUNk32yWiMaRA5
+                T6lB3N4gs1Pt+ouDNnkmpGufyu9R3+W037rC5VW4rjdFTKLfqkt1+Pr6M4uCUtMa
+                GsOCY5h7q2SQgwl4R5nbP/PiJLrhcg78ogPb8kFE9Lp6tsOLr9P1PoLrBia7C+q0
+                +cdZFTVrNDSGhOk0UXQN+5dE4jdhoybyPaH0at48/rBfLUlbe5Wy9tFORT3yqPpB
+                pL9pcTo9KPsq1BE65wHHr1Oz0q9XI15AKbyEHofGWMZ0IvOCiawNdcfD5XL4PGNl
+                sZd+h1VkaIkhxeNepdSPbkzOQhKdWn2ZC9s4s77sZMURjiH3rhVMoKHREBjeXUN8
+                1UNEuJ/7DlJyHlYVS6m2idFjPS682MRuvi0DeZO6b41xjKCs8xVu/fzUj7rZwkfD
+                4+nYy1pIbLT/yyTvX2OcwmP2+bUSN0Z1ZagU4XI3POrCilqNNpUVtZ5uPVhd+X20
+                P3CqQl1GXYZOY9goc0wGxeJYkpXZ38U5b7eZhsPkzXVXE/2k6v9BMsj+4Nv6H81y
+                z5CHoF3k+KPzfqEmlP6Hgcysv9JZnDSGDM+PQ4y1KohFF8cQXyHyPef7SlcTm4iI
+                WjEXw3oRFEq6vEmbc0I1p+RX662cmC7Fsn3Sz0ljjIGI9PPYfhyQpNFcHVWb7Cm1
+                FbYa1P7UqRvQOf+qyvykrinLqE0zqC812vWYPDPaph8Rb1kgPAo1LahjVdFYg0Fq
+                yI9bWFexj1SUW7DaiMBeksBfKjF5ClKeIcVYsAS/yIXfNhc3dhExox57ZSYOrNVm
+                mVkHhseoxR5Dfs/184msCFYsXysx81vJPEGNUQnSm3cJo2FasiGYwE84+UL1frmw
+                q0GlLuUjwuUrSjVSNRrlcoeLJ6Lk70zbm1E7C2rp9aU2viGOUbb2jLUtnftXlaaY
+                i9vhWqsLka5BWMDYug4T98TQr2OqK9DXZU+DieXsRnGK/qKMPIq2c1Hq2Z3qJ5kM
+                QR/OPm6dRDyQ+OoYJo9RkTiDP7heROHoiegaBDj3e9HggWpJ65H0e7I1El0VFX0q
+                lMLQwZVPCrOPdDJip+D3tbDqWSuwgFSbfetmamX2wV3t5scbmBiXldPWXiP+gDWS
+                AVQAz1DWkQEpR+RxSHVAISMkwPEUoVpXVgPFQ/3k8LJUQfy3/JIbxWgdmQkdmUy6
+                M52XXlbsXju2UvbAiYok/XkNr83kTToSZw0ALAquSmIzWH0gCf0KnP7DDKVKZeHi
+                5Zbp4jAZ1lnpJOIuomsfobJHscIORNYZHi8+Tx/aa7TvVadqTkC6e1bsloJXIBcN
+                UxjTh/RwNFABqomXoUmuIfbrrHDE0hij6EtZHyIiXFm7JDNN3AxxPKTlnEmFKTTM
+                f55IcX8DFWMFSfn/0EfSfKUxxoY4SYfbp4aLNbU3udTJitPD0neAo1JDNJTY14XH
+                ItSN7v/FyD28CWevyueE/ICoVQknLF0VYQygM1MQ0J8bkGAmVAYULQKJ6pOadF4m
+                rsOkkIh1ZcukerwA4BdDP26grGIuqwOKg49lCawlOC7wEZ9eeT2kY4s+oy5Si9Qo
+                gIrAXD4C06VHo8hIvyuNIaAH4V2NSbMiXo2Y4nulrPk5tOlNEYWqlL9RopIkVquT
+                LSQ/kfH86H2pamXKVu57KfpBEdLzIrZuFSzM5R+r2xPPYz8qI5A6dH2day7BvCPU
+                1RHf2dWuqyWMGqgiR3GX02NITvhVz4DOatiH1FQhiPAl2kc68syWEdtvtxNzgPC+
+                YDKECy6pT2fSqPNbkrjHlwy5VWVOEiLxjyraWUmT5HNxXInJYxtdU+n5afOTqh1m
+                X0Ifj6fVlFECBMXGi12MQ67iew6zj1Ll7WDZGJQtqtiLtGjlybaJRRLl6NRaYq/s
+                ZvYuCIQgkv3W9SN+EDX/FknzKzpSqfVq3f9rMDUy0e/MRZPUZ+DjomIuq2u/V5Ob
+                2eeoj8AobIUUEyP9/jTqAJEyJV+6Vvt/DMe0V29pHuoCF/cSuQu4bleqfX1HrQi2
+                znyoJo1MPlpHBZqL0anec/AychNI39DEqLwX4XLb/H7vRE6VaFvIrdKRkWm9EJQQ
+                ytzaAqkMSlweioURkqJ3B34cXpCo5q1WS1Uarh8IzYfQyb2WJoFHzr8GHwqTd8Wt
+                2htE4TePEuLFe6L5A910YReXFR90VVk+cVZUPdIYIThZ+39IKr0Ct9XwN6gJM8Jg
+                Al58vqXE9sm9BLov2ofvdWfa3A4Bu0Gyyjehp5MqcQZszS2/dk4u7Q10YmSTQuo0
+                6stZdM0bSkyc1E3qRJgHBWY9L8b9l3LisjAutNQmNnSjZUjUKGWfOPJvVoNehmnA
+                5BeUZB60GucYTYqQDlNq06TsDDVpZfJ6VMwN9PHZ8PYLI2aQq88bSmGmmCoNfcxH
+                drXnilAhqpflsXIpLpw3kU+DGtHUHo4RKCt37X9eTB5Vdb2cfH2k3+kajx71gpVt
+                VpGC9N+bkdIs3O+m7V1aZjGJvmxVlbeGLq6yTInbMWLMpQ9N6eBx2supwIZH45Df
+                Y/b3G+bn9iN/TsL9lydbk33PwIpngHZyxaVYPIo+T49Zg10O/P8/ONLvdY2Gy1he
+                1TGveGFEpn/0BcOxO7W4ga8mtG6CF4N8K0g9+KG6Pre2VRabBtf3Vyflr8pZ67NN
+                +8llL0x5MY7zwpqQyjpCRFcCICcXOIj2IWnvGWK/ymeKSSRJ+Wv7EwzB/TZYDNIY
+                IajwrhrSGAsZnu9zoVDOIplkzHjI1pG7ND2wNyu9lSZ9NY9jspNGmW8hbYQKQcvR
+                5LeRZGfi1rj5u+m+D5iukgVZX3RU0k1xUZnZe0J1g8NYPScqkNuleUNX1t4H7rba
+                2WqEgTIWdQmQFYeHx6nydY2WyP2VxBfhsEREi5V0Ms4IUJ48eTIsCiVDHkJ9HeRO
+                C29DIuh3kKc77Cd8XpBJitq+z63UzeHzwuSzXdzaQoWoxSA2qSxn0P3cUDE6LHH8
+                wOL+RZiSGinEPVithF8NJsQj/S41IoBDk1vLsw6kC4ZPmOW8nLy5ZloGVMVFkkkm
+                DoR3oO93Ib/RKCWD8thTNvNGMZOqD2XYk5GemHTZqqV3hIE5zNoYfQTJiLQ/oWMf
+                Ugsqhvg9YihV0DGXL6kUacw+EpIWx0NViDVqsOIbNUc0emZe5MN3/eRCK4Nn8p7H
+                B/ZpJADYc0nK3FGRWHKpZ/jZTgHPsA6rJ12JTJ09Ed8IlHxWqRaYeKNCmi93sOrI
+                i8+qcDHD/pTyAKxP6hUlbv/cN0UW6y6QUL+vnqV8OSp8rzEBNeRF0aVzmPZ6MtYn
+                Sm1so1LW3N2rlxSon7yN7eEwkeLaMI1WffTM/vNIv0uNCmACqeqdc3k7YgLx/xKz
+                j0XRIthzG9lxIUlLpN+indBLrio/H5OPEAm+jZhKUm+2CaTouw1CxvAh3InJq2PY
+                +ze0yDDZg5QNNReR4JAVuJ76ZbDF5Z6vjiyE3zVJ8PPqtU0f0yLPTzjfSKLPg9OT
+                eoZqUjmg8rjM+kaS71SjBlyuiiYtRVgVaqA3XFKOJLnBJMlFxHi1ZFsSLl44tcji
+                p19YolxJmez1DHFtuDKootUbSE0i6jIsgdfz1S7Th4F24AsD1WVgpBF/UBM8Ji9R
+                4WNh0DD0cvpYiPzfn4Xl/ob13uXMcLnczzxbfBzWEvjJJPXuNBpAVSjwo2icTkWa
+                BonaSbKFtWLgNOTCDFaD/OFyszIbVhOku9Mw9wZBoad7mfwmqL+OhQ6VOCcnyw0k
+                9t9LXK30za4xmixDJDuui0klHXNx8BEt6Az6DFXFIfWEPrjDvZw4rmwU9++MpCf2
+                1EhWPbdQhDfMr1Y+O+0XMooBvbEnm98GwbCQtKogKQhca8hm8tm+gLSo7EWErF4C
+                J7UibJuG92tqEPCNMH0wrkcfUrhwQ9LTOsmtFzkPnZ10dXUOs8+pHAVQ9Gl6RMf2
+                UzpY22LFMS4B8UFSW1dWtL2E5gnHzNAkHtvA5AjDq+cnulkekGoxHH8qMy8506yN
+                YSMmvbxE+0t0zu2hJQKAVPYGS/VlpBacFlYmwDJ2VEdHASW4oNLk8AbHDxhYroiV
+                K86iD+6wUMXB+WXD+mGgv9/rGuLHld52w4WyjadVONyJsLzAl0TbpccJ8HJR8hmR
+                4V7O/l8vLbevV44Ov8NWjCSXsydbk6vaYebHaWL6S/hre1lz176IVxwIg+GfVIPF
+                yBgF/2b8Dlu2R2oFvA89Vtgebq+1yIWCTHNz/oqphsaoAwiadB80NDQ0NDQ0NDQ0
+                NDQ0NDQ0kgf3l9jr5rQuFJTpUVfp1RhbsAuFPwvTvC6TyayXS+XWiW5WPv9lUTBd
+                NoUVku6nhsaQIHKFk4m8K0TevFMWrFuimzCtN2mfl0pgNdA0jI+IgnW2nTNRRU1n
+                fxptsAqFHxJpLs9FVu1sxjYiSXkVDfP7xGnDzOV2peMvNRnbMuZlJ9j5wlV0ztV2
+                wbrYzOcPKkyaVHM1086bvyPyLiXpfDj9/0xpWn3096N07gH09wP0/3dSQ/DdyLXn
+                inTuNXS/n6hxD1eLfOFKK1f4Be2Hr/mEOs2kpk6duoEsmIvo2c3Jt+VZ3OtrjBDo
+                xdxEku+dYpDEBrDz+U8rKZkrnBanDfo4jlOEy+W+Eud4EAHHEzHm0vX/CqlL2/2p
+                GgSlvhwdSMWUNM1dA2JfS39OgNS0C+Yl7e3t2Xh3S30l9YWu+57ghT0GXyf8aKxb
+                af9L9EzKIHujtuhDOIT6spL6qHOHjDa0gthEiiOJFCsFzx/W/GgiF0lLkIg+iJ/S
+                nx8QhcJ0ECSfzW9T43CQfa0CL+xkm+a/AmIvJKk6nX5fJ9wf57oAXesiIm7JqpDY
+                pMdfT/fxL/rv2iStP4P+0LFn12uHMVag/VfSccsxamAugA8tbj80VjNaIrHz+S8Q
+                4XpJej5GhPmMxfkWNuebBxaL6uNJwtJxKEiqJLQsFL6tiM7y+9Y4/P0in/8xCESE
+                nIdrkFR9kfr8LpHpwXxbW2w1gPqzFZFxLpH4cRYJBFZ94nzbQuDcBdKqDyhvXler
+                Hagp1M6LIDT16Vnqy+O0dQYfjC60OhrQCmLDYkEkO4fIsAxqBb3g+fTvm7n29mKs
+                PuTM/UAkkpg/N01zy2w2297fF9L30RZtsyHRiVRTOec5kvanQ6Wgc46Jcw1r8uTJ
+                1MbDOMdsojKFqhIdfy/6U6lvE6lvxIdF7eyNjxQfCT2zz9MHM4c+ulfNtjajQfMa
+                I4GQ2PRy8mLKlEnYZM7cdSjEDoE27FzuWKWWFMz7rJipCGxe+BrMdgGZ3iXJKsJ9
+                BX8f9NijK077oK+bFx5p0vxaBaOwFU1W8bGVa7RTBavdytIH4OC5BJL7glRgS4dd
+                Hc9G5gt3VZw2gX6/hrbFzXRzjRGAIrbSE62HaHJ2f7A9q3TMIRKbsFZgxVgeECiW
+                7guJR+rMYWpCWUEYSHGlplToxKrvpIrQtUqN2jY5/yRJ0lfwEdCo8vVUvMWcD0hu
+                7kjP4TF1bVK1+ttjbDs1uhTMc2v056dqYpofqCKskRACib2MJmOn0fA+HRtMXsMh
+                NoZgItFz6lzT7CJCfDMVsxKuUmWIFJIXDh30e2CtsBjbuKrvBfN2dU7e/G240TX7
+                aziamYxN99ZDx3WSumTXuOz7gv5VWWMw+iipXbDeiu6HyuGPLIXTq+7BNI/0be6W
+                zi2SNFqhY/e3VSjsQectoe0R2maiDSLmryyrsUpCOiynPrwAAtJQv2F0nwyIDV27
+                +nrm7YFV4kbow4Eqc42VSn2IiLmuWrWk/hDZvzPoPFbYgT7kk4i4lxBxr6R/L01V
+                jC50LycrFciX8v2IELvq2WhijyK0lNh582aQAVYREBRmOdretg3jU43OI510NzXx
+                zJvXpyoIFoPY79J/P8AnTpymLDOm+XdYY9Sk07TmEGlfZ5Hk6zQHOAp9AuGJtPcF
+                E92VPJIQHosv0JWJvK+mKhZpNLHHCFpFbFhAsEJIL/yh8Dci2A6KRPnC3akG+jap
+                LTcTWZbCHFe5Lyax/X5zvjlWUkFM6OQgp+0v5ijggxNYFCLCQ/emnyaolVfSvwuR
+                2u6C9H1/gpg/s/KamthjBK0iNpEXCx/v0bA/aOKkSIsJVZuvYrSRHp5n+c+H+/OZ
+                zCZElHehSqRqkH8oxI4iIPbbIkrsQuFHqi/+wouSxBapLTDptQeBxYG0hlrTW+B8
+                p8p2NbHHCFpBbH8VznwDWyUB4eOBtixe+FFu2jSujilYFwe7J9D1L1NqSC5XlW8a
+                GC6x8/m8pPuCNaSzwArbB2a6a9CWyc3d6z+P/DZYaMECDKtRP0YTe4ygFcQmHflb
+                WLAgUqCi7SAriMiZuyl91ffEe8b3KSn8AvvyaSJfwXwTejCIWKvt4RIb/bB5YX+l
+                Q/urgjDddaEtOELVfR6FwunKqpM3D6q1XxN7jIBe/tetnPLZWDv8DRIYjj2kh+4Y
+                p40CL+xh582f1fKVUIs2+fwx2A91Rb34gBQMEzy6tllHWgOCsZ1xbm6D3NTKfViC
+                p7aOb9K9D9qk+mCFEu1gS/k+JjXhTy5VmzXnBIVMRqh7rfFs8oaxtc3zJxaM6rmC
+                xvjGB4nk59k1JmUaGi2FylHHigfX2qJJGhsBebJxfDlT3LOv+YLM+4qR0UFDY7UA
+                SSFdv7TFwBak7w3zXzeDyoHt59x7vE8X7NQYDXgtVVzbY3L7cEO1XJVhFbXJg+Tp
+                zaCJrTHqgUL3fh5o8UTcczSxNUY1/Ez/4mHUVQmrFcRBJbGRDRWlLFAMFbmzkWm1
+                IyM36c6YgxyR8HupjW+IejML1x/wwQZ6GWvD+WGFrr62ton4G7mu8Xcp+BsFoHC9
+                nnZZnDdxYFkcKhbafbsiHrEvl1sH580JggqQqhjFpMoV2WGR5bWbFbdEvfm+Gu63
+                qFDWQ+fhnnRq4VEOqCKkhjioae4YZuwwp0pig5T9BZSy9jEuk08FFQyWonY6zulT
+                NW7Ebf0VerlcUjLs74VFkcLaMl2G/eng74uDigIX+n8XzwrO+6ObtU5CFQPa9lNJ
+                3pm4LJwnOLniu15WHtvfV1QU80t9PIAipChWGlZICNMjo04jak0OlAURz0U/EAej
+                Wlj5DHm7DfE7XdFgFMNl9imKaFze0DeElAINic3lv4lEVzk5OT8g5pU4h0aF24L9
+                LzuseC3926FqmTOxs+pLXGLn5ELa9w6155ZAVCaPcVH9LFd8A1V4UUcHNW5Qj1H1
+                NSA2ndPtFzwNip7S+Sixh5o1QS3IpajtTv9/JCD3rTi/3G5+nK75jiojwotXQAio
+                Kgq6DN7ohaptiMJEAQniohGxuzLWN1RlBC7PDgh1w4IUW7dfUhvyi35ZEHmIX27a
+                /qXqS3yJXQIhoZK8nIK0ln8PJPKJkP4eE6cFEvkm1deQ2Ew8pGpJZgsfC8t/oApZ
+                tyG3CmpVzl/cbmUXrS/Twce+AuoV/X6yf7y4AlKaPsTjfGLL+2OYOjVGGqpEsiqR
+                IZ+d3iCfRi00IjaKJKljmDg9JDZquChJpwhmX4Lqv0SKdVCxIBwp4hIbtW2ifSll
+                xB5E2oPoumoJ3kNxU3Ve8Qm/Hz6xqZ1/4O/udFEOELv40W4UdkVNeS5fC3Vnv0y1
+                fLI7UxAeK/4pMIVOV/sMe3/UjaRjnu2psTqqkSBU8dGcnKWKh2asbw71/KESG3+j
+                2JFSPyANmXjQS+c2i7YZXxUpXl6rT9CJSVr/JqxmRqrQU34/GhPbY9a+QT9fDNtC
+                aetF2WJ7HwqmkkoS7se9UDv/8lR9HjmzpBPnjC5Ar1V6I+m7qNk45POHQWz1G6rv
+                0ggBcqsCSiQtw0nYcImNWubU7gEo6acKPTH50lCIXeb2/oGq8XzlfT6gKpvJ24P7
+                eJSOOSvcUPzVmyImDfXZaawmYOj3X45ciaKew9ETh0tswK8OLM8NCpl2RYg8LGJD
+                p8ckVFU6Y/YuZSZ/MDSJLUOJ/e/IM1or3Kivt/gqUPGE6P6UNvmNLkC/pZf4itIr
+                A4vEUDEcYqPCF3RSSGjYup3QSsLkGdg/XGLTcTPCySP+JmIfNRRiqyKu/mSwX8em
+                v+eFk0vUcA8mn8r11s3aX/NNpMUn8CyH8/w0VgNIqh3s1zAXzw3FxBfFUImtJJ9v
+                w54DM5xvNfELnJIO+wfVr4DY3VzshGV/+vuOOMQmiftQ8IGcgtGH9OwLAmI/7fej
+                MbFLrLilsm2T/t+RMW0swPgVeuXSOZMmTSkxeWwwyb7e74f4P78GpXg8Wt5PI2H0
+                F7nHJEvpjZGNhvI4bQxHYnv+IgesD4to+7fj26Lfo+OOUPt5UJudJmlE+idJUr4b
+                h9hOKFF5cZGqoW7IJwMJ/rrfj8bEDvr+RDCpfQP28aAfM3A8qvv6pkq5jPY962Ch
+                xh/tftOqd6LRApDkuTlQRao2LyP2aN4CTF5y7+CcGXNTuXWwgqfsyfSbk5HKIZ8I
+                fox/jDir/zwmTkOx0qDy7qv09+W9QbQ4VBLUPqd9r9IHdob6MHB+aGYjHVe1z8Wv
+                B9+P2IHOeZIk9ALYrktt5paOOk/OVCOD/0HRefKq4PhC0K/nutqliqwpcbEHJDxt
+                C+k683EvHhtILk8fyaFoD3MCIv0b1L8b5tQp6qqREJxpOd4dDLmVW9zSzfDpxvEw
+                dwWTrAmwruC3BYFT1FzSp4M20+F5MJ91p/OyM21vBhtxVBXC0riXkZt0Br8vmMja
+                gvZUMsl59AHg796K5JJKzaF7Iun7MVgpQOZQpfD7NXUD/H9xoA9DXcHfC7OWFb0+
+                /ElwfbRT6Uei2mEy38ntzeGL3qf9yzU0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0
+                NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0Vgv+H0RpSeFPH+DXAAAAAElF
+                TkSuQmCC" alt="Watermark img" width="130px" />
+            </div>
+            {{/if}}
+        <div> 
+            <br>
+            <div style="clear:both; display: flex; justify-content: space-between; ">
+                <table style="width:52%; float: left; text-align: left; " class="tab">
+                    <tr>
+                        <td>
+                            <div>
+                                <h1 class="text-title" style="text-align: left;"><u>Vehicle Insurance Policy against Third Party Risks</u></h1>
+                            </div>
+                            <div>
+                                <p>
+                                    Whereas, the insured by the proposal and declaration which shall be
+                                    the basis of this contract and is deemed to be incorporated herein
+                                    has applied to LUCY INSURANCE SHARE COMPANY (hereinafter
+                                    called the "Insurer") for vehicle insurance cover against third parlity
+                                    risks in compliance with the relevant provisions of Proclamation
+                                    No.799/2013,
+                                </p>
+                                <p>
+                                    Whereas, the insured has paid or agreed to pay the premium in
+                                    consideration of provision of such an insurance cover
+                                </p>
+                                <p>
+                                    Now, therefore, this policy together with the Schedule and Certifi- cate
+                                    of Insurance witnesses the cover granted in respect of events occurring
+                                    during the period of insurance, and subject to the terms exceptions and
+                                    conditions contained herein together with any endorsements attached
+                                    hereon (hereinafter collectively referred to asthe terms of this policy).
+                                </p>
+                                
+
+
+                                <div style="font-size: 6pt; font-family: Berlin Sans FB; margin-left: 0px;">
+                                    <h2 class="text-title2" style="text-align: left; margin-top: 5px;">Liability Covered </h2>
+                                    <ol type="1" class="ol">
+                                        <li class="li">Cover for the insured</li>
+                                        <p>
+                                            Subject to the limits of liability stated in the schedule hereto, the insurer
+                                            will cover the insured against liability in respect of death or bodily injury
+                                            to any person or damage to property arising from collision,
+                                            roll/overturning, fire or explosion caused by the insured vehicle and/or
+                                            liability for damage or injury caused by falling of objects carried by
+                                            the vehicle, its accessories or tools being used in connection with the
+                                            vehicle.
+                                        </p>
+                                        <li class="li"> Cover for other Persons</li>
+                                        <p>
+                                            Subject to the terms and limits of this policy, the insurer will also
+                                            provide cover under Section 1 above for any person driving the insured
+                                            vehicle on the insured's order or with the insured's permis- sion provided
+                                            that:
+                                        </p>
+                                        <div style="font-size: 6pt; font-family: Berlin Sans FB">
+                                            <ul class="ul">
+                                                <li>
+                                                     The certificate of insurance allows that person to drive the insured vehicle;
+                                                </li>
+                                                <li>
+                                                     Such person is not entitled to the same cover under any other policy; and
+                                                </li>
+                                                <li>
+                                                     Such person complies with the terms, exceptions, conditions, and endorsements of this policy.
+                                                </li>
+                                            </ul>
+                                            
+                                        </div>
+                                        <li class="li"> Emergency Medical Treatment</li>
+                                        <p>
+                                            The insurer will pay Emergency Medical Treatment expense, up to a
+                                            maximum amount stated in the Schedule, in respect of any injury
+                                            sustained by any person as a result of an accident involving the insured
+                                            vehicle.
+                                        </p>
+                                        <br>
+                                        <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <br>
+                                        <br>
+                                        <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <br>
+                                        <li class="li" style="page-break-before: avoid;">Payments made outside the terms and conditions of the policy</li>
+                                        <p>
+                                            If the insurer hasto make payment in or towards the
+                                            discharge of any liability of any person which is covered by this
+                                            policy by virtue only of the Proclamation to provide for
+                                            Vehicle Insurance Against Third Party Risks which would not
+                                            otherwise have been covered by this policy, the insurer retains
+                                            the right to recover such payment from the insured.
+                                        </p>
+                                    </ol>
+                                </div>
+                                <br>
+                                        <br>
+                                <div style="font-size: 6pt; font-family: Berlin Sans FB; margin-left: 0px;">
+                                    <h2 class="text-title2" style="text-align: left; margin-top: 5px; margin-left: 0px;">Exceptios</h2>
+                                    <p>The insurer will not be liable for</p>
+                                    <ol type="1">
+                                        <li style="margin-left: 10px">Loss of or damage to the insured motor vehicle; </li>
+                                        <li style="margin-left: 10px">Lossof or damage to any property belonging to or held in
+                                            trust or in the custody or control of the insured person
+                                            under this policy;
+                                        </li>
+                                        <li style="margin-left: 10px">Death of or bodily injury to the insured person or
+                                            member of the insured person's family;
+                                        </li>
+                                        <li style="margin-left: 10px">Death or bodily injury caused to anyone hired by the
+                                            insured person and occurred in the course of such
+                                            employment;
+                                        </li>
+                                        <li style="margin-left: 10px">Lossof or damage to property carried in or on the
+                                            insured vehicle;
+                                        </li>
+                                        <li style="margin-left: 10px">Damage to any bridge, weighbridge or via duct or to any
+                                            road or anything beneath by vibration or by weight of
+                                            the insured motor vehicle or of the load carried by the
+                                            insured motor vehicle;
+                                        </li>
+                                        <li style="margin-left: 10px">Death, bodily injury or damage to property caused by
+                                            sparks or ashesfrom the insured motor vehicle;
+                                        </li>
+                                        <li style="margin-left: 10px">Death, bodily injury or damage to property caused by or
+                                            arising from the bringing of the load to the insured motor
+                                            vehicle for loading or the' taking away of the load from the
+                                            insured motor vehicle after unloading by any person;
+                                        </li>
+                                        <li style="margin-left: 10px">Any accident, loss, or liability caused, sustained or
+                                            incurred:
+                                            <ol type="a">
+                                                <li style="margin-left: 10px">Outside the territory of Ethiopia;</li>
+                                                <li style="margin-left: 10px">
+                                                    Whilst the insured motor vehicle is engaged in
+                                                    racing, pace making, reliability trial, or speed
+                                                    testing or whilst the insured motor vehicle is
+                                                    being used otherwise than for the purpose
+                                                    mentioned in the Schedule and the Certificate of
+                                                    Insurance;
+                                                </li>
+                                                <li style="margin-left: 10px">
+                                                    Whilst the driver of the insured motor vehicle is
+                                                    under the influence of intoxicating liquor or drug;
+                                                </li>
+                                            </ol>
+                                            
+                                        </li>
+                                        <li style="margin-left: 10px">Any contractual liability;</li>
+                                        <li style="margin-left: 10px">
+                                            Any form of liability arising whilst the insured motor vehicle under 
+                                            this policy is being driven by any person who has no driving license 
+                                            permitting him to drive the insured motor vehicle or is disqualified 
+                                            from holding or obtaining such license;
+                                        </li>
+                                        <li style="margin-left: 10px">
+                                            Any liability directly or indirectly proximately or remotely occasioned by 
+                                            or contributed to by or traceable to or arising out of or in connection with 
+                                            flood, typhoon, hurricane, windstorm, volcanic eruption, earthquake or other 
+                                            convulsion of nature;
+                                        </li>
+                                        <li style="margin-left: 10px">
+                                            <p>Any form of liability arising from war, invasion, act of foreign enemy, hostilities 
+                                                or war-like operations (whether war be declared or not), civil war, mutiny, riot, strikes, 
+                                                civil</p>
+                                                <br>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <br>
+                                            <br>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <br>
+                                            <br>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <p style="page-break-before: avoid;"></p>
+                                            <br>
+                                            <p style="margin-top:1pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <br>
+                                            <!-- <p style="margin-top:0pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <br> -->
+                                            <p >commotion, military or popular rising, insurrection, rebellion, revolution, military or 
+                                            usurped power, martial law or state of siege, armed or unarmed robbery, shifta action, hold-up 
+                                            or any act of banditry or any of the events or causes which determine the proclamation or maintenance 
+                                            of martial law or state of siege;</p>
+                                        </li>
+                                        <li style="margin-left: 10px">
+                                            Any form of liability whilst the insured motor vehicle is towing any trailer or any disabled mechanically 
+                                            propelled motor vehicle not specifically insured by the insurer;
+                                        </li>
+                                        <li style="margin-left: 10px">
+                                            Any liability caused by overloading or strain or the number of persons exceeding the seating capacity of 
+                                            the insured motor vehicle as specified in the ownership booklet issued by the relevant licensing authority.
+                                        </li>
+                                        <li style="margin-left: 10px">
+                                            Any legal liability of whatsoever nature directly or indirectly caused by or contributed to by:
+                                            <ol type="a">
+                                                <li style="margin-left: 10px">
+                                                    Ionizing radiation or contamination by radioactivity from any nuclear fuel or from any nuclear 
+                                                    waste from the combustion of nuclear fuel;
+                                                </li>
+                                                <li style="margin-left: 10px">
+                                                    The radioactive, toxic explosive or other hazardous properties of any explosive nuclear assembly 
+                                                    or nuclear component.
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li style="margin-left: 10px">
+                                            Any form of liability caused by or arising out of the explosion of a boiler or air pressure vessel forming 
+                                            part of or attached to or on the insured motor vehicle.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div>
+                                    <h2 class="text-title2" style="text-align: left; margin-top: 5px;">Conditions</h2>
+                                    <ol type="1">
+                                        <li>
+                                            <p class="li-header">Duty of the Insured</p>
+                                            <p>The due observance and fulfillment of the terms and conditions 
+                                                of this policy insofar as they relate to anything to be done or 
+                                                not to be done by the insured or any person claiming to be indemnified 
+                                                and the truth of the statements and answers in the proposal or the 
+                                                accident report shall be conditions precedent to any liability of the 
+                                                insurer under this policy.</p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header">Care of Motor Vehicle</p>
+                                            <p>The insured, his employee or any authorized driver or anyone in charge 
+                                                of the insured motor vehicle shall take all reasonable steps to maintain 
+                                                the insured motor vehicle in efficient and roadworthy condition. The insurer 
+                                                shall have at all times free and full access to examine the insured motor 
+                                                vehicle or any part hereof or any driver or employee of the insured.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header">Misrepresentation</p>
+                                            <p>No person may, for the purpose of obtaining a vehicle insurance policy, 
+                                                make any false statements which may result in non-applicability of such 
+                                                policy or commit any act which disentitles him to claim under such policy.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header">Fraud</p>
+                                            <p>If any claim is fraudulent in any way or if fraudulent means are used by the 
+                                                insured or by anyone acting on their behalf to obtain any benefit under this 
+                                                policy, all benefits under this policy shall be forfeited.
+                                            </p>
+                                        </li>
+                                        <!-- <br>
+                                        <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <br>
+                                        <br>
+                                        <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt; page-break-before: avoid;">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt; page-break-before: avoid;">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <br> -->
+                                        <li>
+                                            <p class="li-header">Notification of Accident and Claim for Compensation</p>
+                                            <p>Write and/or summons shall be forwarded to the insurer immediately on 
+                                                receipt by the insured. Notice shall also be given in writing to the 
+                                                insurer immediately where the insured shall have knowledge of any impending 
+                                                prosecution, inquest, or fatal inquiries in respect of any accident which 
+                                                may give rise to a claim under this policy.
+                                            </p>
+                                        </li>
+                                        <div>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt; page-break-before: avoid;">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> <br><br><br> <br><br><br><br><br>
+                                    </div>
+                                        <li>
+                                            <p class="li-header">Conduct of Claim/Subrogation</p>
+                                            <p>No admission, offer, promise, or payment shall be made by or on behalf of 
+                                                the insured or any person claiming to be indemnified without the written consent 
+                                                of the insurer, which shall be entitled, if it so desires, to take over and conduct 
+                                                in the name of the insured the defense in civil cases or the negotiation and settlement 
+                                                of any claim or to institute civil action in the name of the insured for its own benefit
+                                                 any claims for indemnity or damages or otherwise against any third party and shall have
+                                                  full discretion in the conduct of any proceedings and in the settlement of any claim, 
+                                                  and the insured shall furnish all such information and assistance as the insurer may 
+                                                  require.
+                                                </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header">Other Insurance</p>
+                                            <p>If at the time of the occurrence of an event that gives the right to any claim under 
+                                                this policy there is any other insurance covering the same loss or damage or liability, 
+                                                the insurer shall not be liable to pay or contribute more than its ratable proportion of
+                                                 any loss or damage or compensation costs and expenses.
+                                                </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header">Arbitration</p>
+                                            <p>If any difference arises as to the amount to be paid under this policy (liability being 
+                                                otherwise admitted), such difference shall be referred to the decision of any arbitrator 
+                                                to be appointed in writing by the parties in difference or, if they cannot agree upon a 
+                                                single arbitrator, to the decision of two arbitrators, one to be appointed in writing by 
+                                                each of the parties, within one calendar month after having been required in writing so to 
+                                                do by either of the parties, or in case the arbitrators do not agree, of any umpire to be 
+                                                appointed in writing by the arbitrators before entering upon the reference. The umpire shall
+                                                 sit with the arbitrators and preside at the meeting. The making of an award shall be a condition 
+                                                 precedent to any right of action against the insurer.
+                                                </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header">Cancellation</p>
+                                            <ol type="a">
+                                                <li>
+                                                    <p>The insurer may cancel this policy by giving the insured fifteen day's notice by 
+                                                    registered letter to the insured at his last known address and in such an event will 
+                                                    return to the insured the premium paid less the pro-rata portion for the period the policy 
+                                                    has been in force. The policy may also be cancelled at any time by the insured by written 
+                                                    notice and provided no claim has arisen during the current period of insurance the insured 
+                                                    shall be entitled to a return of premium less the premium at the insurer short period rates for 
+                                                    the period the policy has been in force.</p>
+                                                </li>
+                                                <li>
+                                                    <p>The Certificate of Insurance shall remain the property of the insurer and must be returned to 
+                                                    the insurer immediately upon cancellation of the policy to which it relates.</p>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    
+                                </div>
+                                <!-- <div>
+                                    <br><br><br>
+                                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt">
+                                        <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</span></strong>
+                                    </p> 
+                                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt">
+                                        <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</span></strong>
+                                    </p> 
+                                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt">
+                                        <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</span></strong>
+                                    </p> 
+                                </div> -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width: 47%; float: right; text-align: left;" class="tab">
+                    <tr>
+                        <td>
+                            <div>
+                                <h1 class="text-title" style="text-align: left;"><u>የተሽከርካሪ አደጋ የ3ኛ ወገን መድን ውል</u></h1>
+                            </div>
+                            <div>
+                                <p>
+                                    መድን ገቢው ለዚህ ውል መሠረት የሆኑትንና ከዚህ በኂላ የዚህ ውል አካል ተደርገው
+                                    የሚወሰዱትን‹‹መድን ዋስትና መጠየቂያና መግለጫ ቅጽ›› በማቅረብ በአዋጅ ቁጥር
+                                    799/2005 በተደነገገው መሠረት በሶስተኛ ወገኖች ላይ ለሚደርስ አደጋ ዋስትና
+                                    የሚሰጥ የተሽከርካሪ የመድን ሽፋን እንዲሰጠው ዘመን ኢንሹራንስ አ.ማ. ከዚህ በኃላ
+                                    መድን ሰጪው ተብሎ ለሚጠራው ጥያቄ በማቅረብ፤
+                                </p>
+                                <p>
+                                    ለዚሁም የመድን ሽፋን መክፈል አረቦን በመክፈሉ ወይም ለመክፈል በመስማማቱ፤
+                                    በዚህ መሰረት ይህ የመድን ውል ከተያያዘው ሠንጠረዥና ከመድን ዋስትና
+                                    ሠርተፊኬቱ እንዲሁም አባሪ ከተደረጉ ማሻሻዎቹ ጋር በአንድ ላይ የያዝዋቸው
+                                    ድንጋጌዎች፤ማግለያዎችና ቅድመ ሁኔታዎች (በአንድነት የዚህ ውል ድንጋጌዎች
+                                    ተብለው በሚታወቁት) እንደተጠበቁ ሆነው ዋስትናው ፀንቶ በሚቆይበት ጊዜ ውስጥ
+                                    ለሚደርሱት አደጋዎች የተሰጠ ሽፋንን ያረጋግጣል፡፡
+                                </p>
+                                <h2 class="text-title2" style="text-align: left; margin-top: 5px;"> ዋስትና የተሰጠው የኃላፊነት ሽፋን </h2>
+                                <div style="font-size: 6pt;  font-family: Berlin Sans FB">
+                                    <ol type="1">
+                                        <li class="li"><u>ለመድን ገቢው የተሰጠው ሽፋን</u></li>
+                                        <p>
+                                            ከዚህ ውል ጋር በተያያዘው ሠንጠረዥ ውስጥ ከተመለከተው የኃላፊነት
+                                            መጠን ገደብ ሳያልፍ መድን ሰጪው ለመድን ገቢወ የመድን ሽፋን
+                                            በተሰጠው ተሸከርካሪ ግጭት፤መገልበጥ፤መቃጠል ፤ፍንዳታ ፤ እና/
+                                            ወይም ይኸው ተሸከርካሪ በጫነው ጭነት መውደቅ ምክንያት ወይም
+                                            በተሽከርካሪ መለዋወጫዎችና መሣሪያዎች ምክንያት በሶስተኛ ወገኖች
+                                            ላይ ለሚደርስ ሞት ፤የአካል ጉዳት ፤የንብረት ጉዳት ለሚፈጠር ኃላፊነት
+                                            ዋስትና ይሰጣል ፡፡
+                                        </p>
+                                        <li class="li"> <u>ለሌሎች ሰዎች የተሰጠ ሽፋን</u></li>
+                                        <p>
+                                            በዚህ የመድን ውል ውስጥ የተጠቀሱት ደንቦችና የኃላፊነት ገደቦች
+                                            እንደተጠበቁ ሆነው መድን ሰጪው ከላይ በአንቀጽ 1 የተገለጸውን
+                                            የመድን ሽፋን ከዚህ በታች የተገለጹት ሁኔታዎች ተሟልተው እስከተገኙ
+                                            ድረስ መድን የተገባለትን ተሽከርካሪ በመድን ገቢው ፊቃድ ወይም
+                                            ትዕዛዝ ለሚያሽከረክር ማንኛውም ሰው ይሰጣል ፡፡
+                                        </p>
+                                        <!-- <ul type = " ">
+                                            <li> -->
+                                                <p >
+                                                    ሀ) በመድን ሠርተፍኬቱ ላይ አሽከርካሪው መድን የተገባለትን ተሽከርካሪ
+                                                    እንዲያሽከረክር የተፈቀደ እንደሆነ፤</p>
+                                            <!-- </li>
+                                            <li> -->
+                                                <p>ለ) አሽከርካሪው በሌላ በማንኛውም የመድን ውል ካሳ ሊያስከፍለው
+                                                    የሚችል ተመሣሣይ የሆነ የመድን ሽፋን የሌለው እንደሆነ፤እና</p>
+                                            <!-- </li>
+                                            <li> -->
+                                                <p>ሐ) ይኸው አሽከርካሪ በዚህ የመድን ውል ውስጥ የተጠቀሱትን ደንቦች፤
+                                                    ማግለያዎች፤ ቅድመ ሁኔታዎችን የሚያከብርና የሚፍጽም እንደሆነ፡፡</p>
+                                            <!-- </li>
+                                        </ul> -->
+                                        <li class="li"> <u>አስቸካይ የህክምና አገልግሎት</u></li>
+                                        <p>
+                                            መድን ሰጪው የመድን ሽፋን በተሰጠው ተሽከርካሪ በተፊጠረ አደጋ
+                                            ምክንያት በማንኛውም ሰው ላይ ለደረሰ ጉዳት ለሚያስፈልግ አስቸካይ
+                                            የህክምና አገልግሎት በተያያዘው ሠንጠረዥ ላይ እንደተመለከተው
+                                            የገንዘብ መጠን ድረስ ይከፍላል፡፡
+                                        </p>
+                                        <br>
+                                        <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <br>
+                                        <br>
+                                        <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <p style="margin-top:5pt; margin-bottom:4pt; font-size:11pt; page-break-before: avoid;">
+                                            <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                        </p> 
+                                        <br>
+                                        <br>
+                                        <li class="li"><u>ከውሉ ድንጋጌዎችና ቅድመ ሁኔታዎች ውጪ ሰለተፈፅሙ ክፍያዎች</u></li>
+                                        <p>
+                                            በዚህ የመድን ውለታ ሽፋን የተሰጠው ማንኛውም ሰው
+                                            በውለታው/ያልተሸፈነ ነገር ግን በሕግ ሊያስጠይቀው የሚችል
+                                            ማንኛውንም ኃላፊነት የተሸከርካሪ አደጋ ሦስተኛ ወገን መድን
+                                            ዋስትና አዋጅ ድንጋጌዎች ለመፈፀም ብቻ ሲባል መድን ሰጪው
+                                            እንዲከፍል የተደረገ ወይም የከፈለ እንደሆነ መድን ሰጪው በዚህ
+                                            አኳኋን ያወጣውን ወጪ መድን ገቢው የመጠየቅና የማስከፈል
+                                            መብት አለው፡፡
+                                        </p>
+                                    </ol>
+                                </div>
+                                <br>
+                                        <br>
+                                        <br>
+                                <div style="font-size: 6pt; font-family: Berlin Sans FB">
+                                    <h2 class="text-title2" style="text-align: left; margin-top: 5px;">የማግለያ አንቀጸች</h2>
+                                    <p>መድን ሰጪው ለሚከተሉት ኃላፊነት አይኖርበትም፡-</p>
+                                    <ol type="1">
+                                        <li style="margin-left: 10px">መድን የተገባለትን ተሽከርካሪ መጥፋት ወይም መጎዳት</li>
+                                        <li style="margin-left: 10px">የመድን ገቢው የግሉ የሆነ ወይም በአደራ ባስቀመጠው
+                                            ወይም በርሱ ቁጥጥር ወይም ኃላፊነት ሥር የሚገኝ
+                                            ማንኛውም ንብረት መጥፋት ወይም መጎዳት
+                                        </li>
+                                        <li style="margin-left: 10px">በመድን ገቢው በራሱ ወይም በመድን ገቢው ቤተሰብ
+                                            አባላት ላይ በሚደርሰ የአካል ጉዳት ወይም ሞት፤
+                                        </li>
+                                        <li style="margin-left: 10px">የመድን ገቢው ተቀጣሪ የሆነ ሰው በስራው ላይ የሚርስበት
+                                            የሞት አደጋ ወይም የአካል ጉዳት የሚያስከትለው ጉዳት ፤
+                                        </li>
+                                        <li style="margin-left: 10px">የመድን ሽፋን በተሰጠው ተሽከርካሪ ውስጥ ወይም ላይ
+                                            ተጭኖ እያለ ለጠፋ ወያም ጉዳት ለደረሰበት ንብረት ፤
+                                        </li>
+                                        <li style="margin-left: 10px">ዋስትና የተሰጠው ተሽከርካሪ በሚፈጥረው ንብረት ወይም
+                                            ተሽከርካሪው በጫነው ጭነት ወይም በራሱ በተሽከርካሪው
+                                            ክብደት የተነሳ በማንኛውም ድልድይ፤ሚዛን ድልድይ፤ቅስት
+                                            ድልድይ ፤መንገድ ወይም ከምድር በታች ያለ ነገር ላያ
+                                            ለሚደርስ ጉዳት ፤
+                                        </li>
+                                        <li style="margin-left: 10px">መድን ከተገባለት ተሸከርካሪ በሚነሳ የእሳት ፍንጣሪ ወይም
+                                            አመድ ምክንያት ለሚከሰት ሞት የአካል ወይም የንብረት
+                                            ጉዳት ፤
+                                        </li>
+                                        <li style="margin-left: 10px">መድን ከተገባለት ተሽከርካሪ ለመጫን ጭነቱን ወደ
+                                            ተሽከርካሪው በማቅረብ ወይም ከተሽከርካሪው የተራገፈ
+                                            ጭነት በማጓጓዝ ሂደት ለሚደርስ ሞት የአካል ወይም
+                                            የንብረት ጉዳት ፤
+                                        </li>
+                                        <li style="margin-left: 10px">ማናቸውም ከዚህ በሚከተሉት ሁኔታዎች ለደረሰ፤ ኪሳራ
+                                            ወይም ህጋዊ ኃላፊነት 
+                                            <p>ሀ) ጉዳቱ የደረሰው ከኢትዮጵያ ክልል ከሆነ</p>
+                                            <p>ለ) መድን የተገባለት ተሽከርካሪ በእሽቅድድም ላይ ወይም
+                                                አሽቀዳዳሚ ሆኖ እያለ፤ጥንካሬውንና አስተማማኝነቱ
+                                                ሲፈተሽ፤ የፍጥነት ፍተሻ ሲደረግለት ወይም የመድን
+                                                ዋስትና የተሰጠው አገልግሎት ውጪ ጥቅም ላይ ሲውል ፤</p>
+                                                <p>ሐ) አሽከርካሪው በአደጋው ጊዜ በመጠጥ ወይም
+                                                    በአደንዛዥ ዕፅ ተፅዕኖ ሥር ከነበረ፤</p>
+                                            <!-- <ol type="">
+                                                <li></li>
+                                                <li>
+                                                    
+                                                </li>
+                                                <li>
+                                                </li>
+                                            </ol> -->
+                                            
+                                        </li>
+                                        <li style="margin-left: 10px">ለማንኛውም ከውል ጋር በተገናኘ የሚነሳ ኃላፊነት ፤</li>
+                                        <li style="margin-left: 10px">በዚህ የመድን ውል ዋስትና የተሰጠው ተሽከርካሪ መንጃ ፍቃድ
+                                            በሌለው ወይም መንጃ ፈቃድ በሌለው ወይም መንጃ ፈቃድ
+                                            ለመያዝ ወይም ለማውጣት በታገደ ሰው ሲሽከረከር
+                                            ለሚያስከትለው ማንኛውም አይነት ኃላፊነት፤
+                                        </li>
+                                        <li style="margin-left: 10px">ማንኛውም በቀጥታ ሆነ በተዘዋዋሪ መንገድ በቅርበትም ሆነ
+                                            በርቀት ከውሃ መጥለቅለቅ፤ ከኃያለኛ አውሎ ንፋስ፤ከውሽንፍር ፤
+                                            ከእሳተ ገሞራ ፍንዳታ፤ ከመሬት መንቀጥቀጥ ወይም ሌላ
+                                            ከተፈጥሮ ቁጣ ጋር በተያያዘ ምክንያት ለሚፈጠር ህጋዊ ኃላፊነት ፤
+                                        </li>
+                                        <li style="margin-left: 10px"><p>ማናቸውም ከጦርነት ፤ወራሪ፤ የውጭ አገር የጠላት ድርጊት ፤
+                                            የጠላት እንቅስቃሴ ወይም ጦርነት መሰል ድርጊት (ጦርነት
+                                            ቢታወጅም ባይታውጅም)የርስ በርስ ጦርነት፤አድማ </p>
+                                            <br>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <br>
+                                            <br>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <br>
+                                            <br>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <br>
+                                            <br>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p> 
+                                            <p style="page-break-before: avoid;"></p>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p>
+                                            <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                            </p>
+                                            <p >
+                                            የህዝብ መነሳሳት ፤የሥራ መቆም አድማ ሕዝባዊ እንቅስቃሴ፤
+                                            ሕዝባዊ ወታደራዊ መነሳሳት ፤አመፅ፤ አብዮት ፤ሥልጣን በኃይል
+                                            የመያዝ እንቅስቃሴ፤የአስቸካይ ጊዜ አዋጅ፤ወታደራዊ አዋጅ
+                                            ወይም ወታደራዊ ከበባ፤በጦር መሳሪያ ወይም ያለመሳሪያ
+                                            የተደረገ ዘረፋ፤የሽፍትነት እርምጃ፤እገታ ወይም ማንኛውም
+                                            የውንብድና እንቅስቃሴ ወይም ማንኛውም ወታደራዊ አዋጅ
+                                            ወይም ከበባ ለማውጅ ከሚያበቃ ሁኔታ ለሚፈጠር ማናቸውም
+                                            ኃላፊነት፤
+                                            </p>
+                                        </li>
+                                        <li style="margin-left: 10px">የመድን ውል የተገባለት ተሽከርካሪ በዚህ መድን ሰጪ የመድን
+                                            ሽፋን ያልተሰጠው ተሳቢ ወይም በራሱ ሞተር የሚሽከረከር
+                                            የተበላሸ ሌላ ተሽከርካሪ ሲጎተት ለደረሰ ማናቸውም አይነት
+                                            ኃላፊነት ፤
+                                        </li>
+                                        <li style="margin-left: 10px">መድን በተገባለት ተሽከርካሪ ጭነት ክብደት ወይም ውጥረት የተነሳ
+                                            ወይም ተሽከርካራ በባለቤትነት ደብተሩ ላይ ሥልጣን በተሰጠው
+                                            አካል ከተፈቀደለት የተሳፋሪ በላይ ጭኖ ባለበት ሁኔታ ለሚደርስ
+                                            ማናቸውም አይነት ኃላፈነት ፤
+                                        </li>
+                                        <li style="margin-left: 10px">
+                                            በቀጥታ ሆነ በተዘዋዋሪ መንገድ በሚከተሉት ክስተቶች ምክንያት
+                                            የተፈጠረ ወይም አስተዋፆኦ የተደረገበት ማናቸውም አይነት ኃላፊነት፤
+                                            <p>ሀ) በማንኛውም የኑክሊየር ነዳጅን በማቀጣጠል ሂደት በሚፈጠር የኑክሊየር ዝቃጭ 
+                                                ከሚፈጠር የሬዲዮ አክቲቭ በሚከሰት አዮናይዚንግ ጨረር ወይም ብክለት፤</p>
+                                                <p>
+                                                    ለ) የማንኛውም የኑክሊየር ኃይል ማመንጫ ወይም የኑክሊየር ግብአት የራዲዮ 
+                                                    አክቲቭ፤መርዘኛ ፈንጂ ወይም ሌሎች አደገኛ ባህርያት
+                                                </p>
+
+                                            <!-- <ol class="custom-list">
+                                                <li>
+                                                    
+                                                </li>
+                                                <li>
+                                                </li>
+                                              </ol> -->
+                                        </li>
+                                        <li style="margin-left: 10px">ማንኛውም መድን የተገባለት ተሸከርካሪ አካል በሆነ ወይም
+                                            በተገጠመ ወይም በተጫነ ቦይለር ወይም የአየር ግፊት ጋን ፍንዳታ
+                                            ምክንያት የሚፈጠር ማናቸውም አይነት ኃላፊነት፤
+                                         </li>
+                                    </ol>
+                                </div>
+                                <div>
+                                    <h2 class="text-title2" style="text-align: left; margin-top: 5px;">ውለታው የተመሰረተባቸው ሁኔታዎች</h2>
+                                    <ol type="1">
+                                        <li>
+                                            <p class="li-header"><u>የመድን ገቢው ግዴታዎች</u></p>
+                                            <p>የመድን ገቢው ወይም በመድን ውሉ ካሣ የመጠየቅ መብት ያለው ሌላ
+                                                ሰው እንዲፈፅማቸው ወይም ከማድረግ እንዲቆጠብ የሚያስገድዱ የዚህ
+                                                ውል ድንጋጌዎችና ቅድመ ሁኔታዎች መከበር ወይም መማላት፤ እንዲሁም
+                                                በመድን ዋስትና መጠያቂያ ወይም በአደጋ መግለጫ ቅፆች ላይ የተሰጡ
+                                                መረጃና እውነተኛነት መድን ሰጪው በዚህ የመድን ውል ለሚኖርበት
+                                                ኃላፊነት ቅድመ ሁኔታዎች ናቸው፤
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header"><u>ለተሽከርካሪው ስለሚደረግ ጥንቃቄ</u></p>
+                                            <p>መድን ገቢው፤ ወይም ገቢው ሠራተኛ ወይም ተሽከርካሪን ለማሽከርከር
+                                                የተፈቀደለት ማንኛውም አሽከርካሪ ወይም ተሽከርካሪው በኃላፊነት
+                                                የተሰጠው ማንኛውም ሰው ዋስትና የተገባለት ተሽከርካሪ በተሟላ
+                                                የደህንነት ደረጃና መንገድ ላይ በብቃት ሊሽከረካር በሚችልበት ሁኔታ
+                                                እንዲጠበቅ አስፈላጊውን ሁሉ እንዲያደርጉ ኃላፊነት አለባቸው፡፡መድን
+                                                ሰጪው በማንኛውም ጊዜ ዋስትና የተገባለት ተሽከርካሪ በተማላ ወይም
+                                                ማንኛውም የተሽከሪውን ክፍል ለመመርመር ወይም አሽከርካሪውን
+                                                ወይም የመድን ገቢውን ሠራተኛ ለማነጋገርና መረጃ ለመጠየቅ ሙሉ
+                                                መብት አለው::
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header"><u>ሐሰተኛ መግለጫ ስለመስጠት</u></p>
+                                            <p>ማንኛውም ሰው ለተሽከርካሪ የመድን ዋስትና ለማግኘት ሲል ይህንን
+                                                የመድን ውል ዋጋ ሊያሳጣ የሚችል የተሳሳተ ወይም ሀሰተኛ መግለጫ
+                                                መሰጠት ወይም በዚህ የመድን ውል የካሳ ክፍያ መብት ሊያሳጣው
+                                                የሚችል ድርጊት መፈጸም የለበትም ፡፡
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header"><u>ማታለል</u></p>
+                                            <p><u>መድን ገቢው ወይም መድን ገቢውን የሚወክል ሌላ ማንኛውም
+                                                ሰው ያቀረበው ማናቸውም የካሳ ጥያቄ በማናቸውም መልክ
+                                                የማታለል ተግባር ያለበት እንደሆነ ወይም የካሳ ጥያቄውን ተገቢነት
+                                                ለማረጋገጥ ያልተገባ የማታለል ስልት የተጠቀመ እንደሆን በመድን
+                                                ውሉ ተመስርቶ የሚገኝ ማናቸውም ጥቅም ቀሪ የደርጋል፡፡
+                                            </u> </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header"><u>አደጋን ሰለማሳወቅና ሰለካሳ ጥያቄ</u></p>
+                                            <p>ማንኛውም መድን ገቢ መድን ተሽከርካሪ አደጋ ቢያጋጥመው ከቁጥጥር
+                                                በላይ ሁኔታ ካለጋጠመው በስተቀር ወዲያውኑ ወይም እጅግ ቢዘገይ
+                                                አደጋው በደረሰ በ 10 ቀናት ውስጥ ለመድን ሰጪው ማሳወቅ አለበት 
+                                                ፤መድን ገቢው ማንኛውንም አደጋውን የሚመለከት ደብዳቤ፤ የካሳ ጥያቄ
+                                                ፤ ማዘዣ ወይም መጥሪያ እንደደረሰው ወደያውኑ ለመድን ሰጪው
+                                                ማስተላለፍ አለበት፡፡በተጨማሪም ማንኛውም በዚህ የመድን ውል ላይ
+                                                የካሳ የጥያቄ ሊያሰነሳ ከሚችል አደጋ ጋር በተያያዘ የፍርድ ቤት ብያኔ
+                                                በሂደት ላይ ያለ መሆኑን ወይም የነፍስ ማጥፋት ምርመራ ተጀምሮ ቢሆን
+                                                መድን ገቢው እንዳወቀ ወዲያውኑ ለመድን ሰጪው በጽሁፍ ማሳወቅ
+                                                አለበት ፡፡
+                                            </p>
+                                                <!-- <br>
+                                                <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                    <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                                </p> 
+                                                <br>
+                                                <br>
+                                                <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt">
+                                                    <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                                </p> 
+                                                <br>
+                                                <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt; page-break-before: avoid;">
+                                                    <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                                </p> 
+                                                <br> -->
+                                                <p>
+                                                
+                                                </p>
+                                        </li>
+                                        <div>
+                                                <p style="margin-top:5pt; margin-bottom:2pt; font-size:11pt; page-break-before: avoid;">
+                                                    <strong><span style="font-family:'Berlin Sans FB'; ">&#xa0;</span></strong>
+                                                </p> <br><br><br> <br><br><br>
+                                            </div>
+                                        <li>
+                                            <p class="li-header"><u>የአደጋ ኃላፊነት ስለመቀበልና ስለመዳረግ</u></p>
+                                            <p>መድን ገቢውም ሆነ ዋስትና የተሰጠው ሰው ወይም በእነርሱ ስም ሌላ
+                                                ማንኛውም ሰው ከመድን ሰጪው በጹሁፍ ፈቃድ ሳያገኝ በራስ ተነሳሽነት
+                                                ማንኛውም የአደጋ ኃላፊነት መቀበል፤ ቃል መስጠት፤ ቃል መግባት ወይም
+                                                ክፍያ መፈጸም አይቻልም ፡፡በሌላ በኩል መድን ሰጪው ከፈለገ የካሳ
+                                                ጥያቄውን ገቢው ስም በፍትሃብሄር ለመከላከል ወይም ድርድር በማድረግ
+                                                የካሳ ጥያቄውን ለማስተናገድ ወይም ለራሱ ጥቅም ሲል በመድን ገቢው
+                                                ስም ፍትሃብሄር ክስ መስርቶ የከፈለውን ካሳ ከሶስተኛ ወገን መልሶ
+                                                ማስከፈል ይቻላል፡፡መድን ገቢውም ለዚሁ ተብሎ መድን ሰጪው
+                                                የሚጠይቀውን መረጃና ድጋፍ ሁሉ መስጠት አለበት፡፡
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header"><u>ሌላ የመድን ዋስትና</u></p>
+                                            <p>በዚህ የመድን ውል የካሳ ጥያቄ ሊያስነሳ የሚችል አደጋ ባጋጠመ ጊዜ
+                                                ለደረሰው ኪሳራ፤ ጉዳት ወይም ኃላፊነት ሽፋን ሊሰጥ የሚችል ሌላ የመድን
+                                                ውል ያለ እንደሆነ መድን ሰጪው ከጠቅላለ ወጪና ኪሳራው ውስጥ
+                                                ከሚደርሰበት መዋጮ ድርሻ በላይ ኃላፊነት አይኖሪበትም
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header"><u>ግልግል</u></p>
+                                            <p>በዚህ የመድን ውል መሰረት መክፈል በሚገባው የገንዘብ መጠን ላይ
+                                                ልዩነት ከተፈጠረ (ኃላፊነት ላይ ክርክር ሳይኖር ) ይኸው አለመግባባት
+                                                በሁለቱ ተከራካሪ ወገኖቹ በጹሁፍ ለሚሾም የግልግል ዳኛ ወይም ተከራከሪ
+                                                ወገኖቹ በአንድ የግልግል ዳኛ ያልተሰማሙ እንደሆነ እያንዳንዳቸው ከሁለቱ
+                                                አንደኛው ወገን ጥያቄውን ባቀረበ በአንዱ ወር ጊዜ ውስጥ በጹሁፍ
+                                                ለሚሾማቸው ሁለት የግልግል ዳኞች ለውሳኔ ይመራል ፡፡ የግልግል ዳኞቹ
+                                                በራሳቸው መስጠት ባይችሉ ጉዳዩን መመርመር ከመጀመራቸው በፊት
+                                                አንዱ አማካይ ዳኛ ይመርጣሉ፡፡ አማካይ ዳኛውም የግልግል ዳኞቹ
+                                                ያለመግባባት መንስኤውን በሚመረምሩበት ጊዜ ሁሉ አብሮአቸው
+                                                በመቀመጥ ስብሰባቸውን ይመራል፡፡ የግልግል ዳኞቹ ውሣኔ የካሳ
+                                                ጥያቄውን አስመልክቶ በመድን ሰጪው ላይ ክስ ከመመሥረት በፊት
+                                                መሟላት ያለበት ቅድመ ሁኔታ ነው፡፡
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="li-header"><u>የውል መቋረጥ</u></p>
+                                            <p><u>ሀ) መድን ሰጪው የ 15 (አሥር አምሰት) ቀናት ቅድሚያ ማስጠንቀቂያው
+                                                በመስጠት ይህንን የመድን ውል ማቋረጥ ይችላል፡፡ ማስጠንቀቂያው
+                                                በጹሑፍ ሆኖ በአደራ ደብዳቤ መድን ገቢው መጨረሻ ላይ በሰጠው
+                                                አድራሻ ይላካል፡፡ በዚህም መሰረት መድን ሰጪው ከተከፈለው አረቦን
+                                                ለማስላትና በመቀነስ ቀሪውን ለመድን ገቢው ይመልሳል፡፡እንዲሁም
+                                                መድን ገቢው በማንኛውም ጊዜ የጸሑፍ ማስጠንቀቂያ በመስጠት ውሉን
+                                                ሊያቋርጥ ይችላል፡፡ውሉ ጸንቶ በቆየበት ጊዜ የካሳ ጥያቄ ያልቀረበት ከሆነ
+                                                በመድን ሰጪው የአጭር ጊዜ ዋስትና ሽፋን ተመን መሠረት ተሰላጠቶ
+                                                አረቦኑ ከተቀነሰ በኀላ በጥቅም ላይ ያልዋልለ ትርፍ ገንዘብ ካለ ለመድን
+                                                ገቢው ይመለስለታል፡፡</u></p>
+                                                <p><u>ለ) የመድን ዋስትናው ሠርተፍኬት የመድን ሰጪው ንብረት በመሆኑ
+                                                    የተሰጠው የመድን ውል ወዲያውኑ ለመድን ሰጪው መመለስ አለበት፡፡</u></p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+        </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

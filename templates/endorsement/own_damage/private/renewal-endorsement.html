@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+<body>
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center; background: transparent; font-family: "Book Antiqua", serif; line-height: 18.4px;'>
+        <u>&nbsp;<strong style="font-weight: 700;">Renewal Endorsement</strong></u></p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: left; background: transparent; font-family: "Book Antiqua", serif; line-height: 18.4px;'>
+        <br><strong style="font-weight: 700;">Endorsement No: {{endorsementNo}}</strong></p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 18.4px; text-align: justify; background: transparent; font-family: "Book Antiqua", serif;'>
+        <strong style="font-weight: 700;">Policy No: &nbsp;{{policyNo}}</strong></p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 18.4px; text-align: justify; background: transparent; font-family: "Book Antiqua", serif;'>
+        <strong style="font-weight: 700;">Name of insured:</strong> <strong
+            style="font-weight: 700;">{{nameOfInsured}}</strong></p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <br></p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <span style="font-size: 15px;">It is hereby declared and agreed that this Motor Insurance Policy is renewed for a
+            further period of one year with with effective from <strong>{{day}}</strong> day of
+            <strong>{{monthYear}}</strong> to midnight of <strong>{{day}}</strong> day of <strong>{{</strong><span
+                style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'><strong>monthYear</strong></span><strong>}}</strong>
+            in respect of the under mentioned vehicle of the insured.&nbsp;</span></p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <span style="font-size: 15px;">It is further declared and agreed that the Sum Insured in respect of properties of
+            the &nbsp;insured under this Motor Private Vehicle policy is increased as detailed below and the schedule of
+            this policy is revised accordingly with effect from <strong>{{day}}</strong> day of <strong>{{monthyear}}
+                .</strong></span></p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <br></p>
+    <table
+        style='border: none; border-collapse: collapse; empty-cells: show; max-width: 100%; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <tbody>
+            <tr style="user-select: none;">
+                <td
+                    style="min-width: 5px; border-width: 2px 1px 1px 2px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <strong style="font-weight: 700;"><span style="color: rgb(0, 0, 0);">Make and Type of
+                            Vehicle</span></strong></td>
+                <td colspan="2"
+                    style="min-width: 5px; border-width: 2px 1px 1px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <strong style="font-weight: 700;"><span style="color: rgb(0, 0, 0);">Plate No.</span></strong></td>
+                <td
+                    style="min-width: 5px; border-width: 2px 1px 1px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <strong style="font-weight: 700;"><span style="color: rgb(0, 0, 0);">Chassis No.</span></strong></td>
+                <td colspan="2"
+                    style="min-width: 5px; border: 1px solid rgb(0, 0, 0); user-select: text; vertical-align: middle;">
+                    <strong style="font-weight: 700;"><span style="color: rgb(0, 0, 0);">Engine No.</span></strong></td>
+                <td
+                    style="min-width: 5px; border-width: 2px 1px 1px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <strong style="font-weight: 700;"><span style="color: rgb(0, 0, 0);">No. of Seats&nbsp;</span></strong>
+                </td>
+                <td
+                    style="min-width: 5px; border-width: 2px 2px 1px 1px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <strong style="font-weight: 700;"><span style="color: rgb(0, 0, 0);">Use of
+                            vehicle&nbsp;</span></strong></td>
+            </tr>
+            <tr style="user-select: none;">
+                <td
+                    style="min-width: 5px; border-width: 1px 1px 2px 2px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">AUTOBUS</span></td>
+                <td colspan="2"
+                    style="min-width: 5px; border-width: 1px 1px 2px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">&nbsp;03-68010 A.A&nbsp;</span></td>
+                <td
+                    style="min-width: 5px; border-width: 1px 1px 2px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">JTGFY4181B2011436</span></td>
+                <td colspan="2"
+                    style="min-width: 5px; border-width: 1px 1px 2px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">*-//*-*/*-</span></td>
+                <td
+                    style="min-width: 5px; border-width: 1px 1px 2px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <strong style="font-weight: 700;"><span style="color: rgb(0, 0, 0);">1+20&nbsp;</span></strong></td>
+                <td
+                    style="min-width: 5px; border-width: 1px 2px 2px 1px; border-style: solid; border-color: rgb(0, 0, 0); border-image: initial; user-select: text; vertical-align: middle;">
+                    <span style="color: rgb(0, 0, 0);">Own Service Purpose</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <br></p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        In view of the above a renewal preium of Birr <strong>{{birr}}</strong> and a Stamp duty of Birr
+        <strong>{{stamp}}</strong> has been collected from the insured.&nbsp;</p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <br></p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: justify; background: transparent; font-family: "Bookman Old Style", serif;'>
+        <span size="2" style="font-size: 15px;">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed thereon.&nbsp;</span></p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <br></p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: justify; background: transparent; line-height: 16px; margin-left: -0.25in; text-indent: 0.25in;'>
+        <span size="3" style="font-size: 15px;">Signed in <strong style="font-weight: 700;">{{city}}</strong><strong
+                style="font-weight: 700;">&nbsp;</strong>on this<strong
+                style="font-weight: 700;">&nbsp;{{yearAndMonth}}&nbsp;</strong>day of <strong
+                style="font-weight: 700;">{{day}}</strong></span><span style="font-size: 15px;"><strong
+                style="font-weight: 700;">.</strong></span></p>
+    <p
+        style='margin-bottom: 10px !important; color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'>
+        <br></p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: justify; background: transparent; font-family: "Book Antiqua", serif;'>
+        Prepared by: ______________ &nbsp;</p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: justify; background: transparent; font-family: "Book Antiqua", serif;'>
+        <br></p>
+    <p
+        style='margin-bottom: 0.14in; color: rgb(0, 0, 0); font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: justify; background: transparent; font-family: "Book Antiqua", serif;'>
+        Examined by: ______________ &nbsp;</p>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span></h1>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">Zemen Insurance Company S.C</span></span>
+    </h1>
+</body>
+</html>

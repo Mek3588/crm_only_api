@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"  encoding='UTF-8'>
+    <head>
+        <meta charset="utf-8" />
+        <title>Zemen Insurance S.C. Notification Form</title>
+    </head>
+
+<style>
+    @font-face {
+        font-family: 'Berlin Sans FB';
+        src: url('fonts/BRLNSR.TTF');
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1;
+    }
+    td, th {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+    }
+</style> 
+<body>
+    <header>
+        <p style="text-align: center;">
+            <span style="font-size: normal; font-weight: bold;"><u>Theft Endorsement</u></span>
+        </p>
+        <p
+        style='text-align: left;background: transparent;font-family: "Berlin Sans FB", serif;font-size:16px;line-height: 115%;margin-bottom: 0.14in;'>
+        <span style="font-size: 10px;"><br><strong>Name of insured: {{name_of_insured}}</strong></span>
+    </p>
+    <p
+        style='text-align: left;background: transparent;font-family: "Berlin Sans FB", serif;font-size:16px;line-height: 11%;margin-bottom: 0.14in;'>
+        <span style="font-size: 10px;"><br><strong>Policy Number: {{policy_number}}</strong></span>
+    </p>
+    </header>
+
+    <section class="section-intro">
+        <div>
+            <p>
+                <span style="font-size: 12px;"">It is hereby understood & agreed that the above mentioned Third-party policy covers the Damages to the insured vehicles By “Theft or attempted theft” effective from {{startDate}} to midnight of &nbsp;{{endDate}}.</span>
+            </p>
+        </div>
+    </section>
+    <div style="margin-top: 50px;">
+        <p style="text-align: center;"><span style="font-size:12px; font-weight: bold;">Particulars of the vehicle (s)</span></p>
+        <p style="text-align: center; margin-top: -20px;"><span style="font-size:12px; font-weight: bold;"><u>Covered under this Endorsement:</u></span></p>
+        <div>
+            <table >
+                <thead>
+                    <tr><th style="text-align: center;font-size: 10px;"><b>Type of Vehicle</b></th>
+                    <th style="text-align: center;font-size: 10px;"><b>Plate No.</b></th>
+                    <th style="text-align: center;font-size: 10px;"><b>Chassis No.</b></th>
+                    <th style="text-align: center;font-size: 10px;"><b>Engine No.</b></th>
+                    <th style="text-align: center;font-size: 10px;"><b>Sum Insured (In Birr)</b></th></tr>
+                </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;font-size: 10px;">{{type_of_vehicle}}</td>
+                        <td style="text-align: center;font-size: 10px;">{{plate_no}}</td>
+                        <td style="text-align: center;font-size: 10px;">{{chassis_no}}</td>
+                        <td style="text-align: center;font-size: 10px;">{{engine_no}}</td>
+                        <td style="text-align: center;font-size: 10px;">{{sum_insured}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h1
+                style="margin-top:12pt; margin-left:150pt; margin-bottom:3pt; text-indent:36pt; text-align:justify; page-break-after:avoid; font-size: 11px;">
+                <span style="font-family:'Berlin Sans FB'; font-weight:normal; padding-left: 1;font-size: 10px; margin-left: 30px;">For and
+                    on behalf of </span>
+            </h1>
+            <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; font-size: 10px;font-weight:normal;">
+                <span style="font-family:'Berlin Sans FB'; font-size: 10px;">Prepared by: ______________ </span><span
+                    style="width:12.01pt; font-family:'Berlin Sans FB'; display:inline-block">&#xa0;</span><span
+                    style="width:36pt; font-family:'Berlin Sans FB'; display:inline-block">&#xa0;</span><span
+                    style="width:36pt; font-family:'Berlin Sans FB'; display:inline-block">&#xa0;</span><span
+                    style="font-family:'Berlin Sans FB'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span
+                    style="font-family:'Berlin Sans FB';font-size: 10px;">Zemen Insurance S. C</span>
+            </p>
+            <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; font-size: 10px;">
+                <span style="font-family:'Berlin Sans FB'">&#xa0;</span>
+            </p>
+            <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify; font-size: 10px;font-weight:normal;">
+                <span style="font-family:'Berlin Sans FB';font-size: 10px;">Examined by: ______________</span><span
+                    style="width:12.45pt; font-family:'Berlin Sans FB'; display:inline-block">&#xa0;</span><span
+                    style="width:36pt; font-family:'Berlin Sans FB'; display:inline-block">&#xa0;</span><span
+                    style="width:36pt; font-family:'Berlin Sans FB'; display:inline-block">&#xa0;</span><span
+                    style="font-family:'Berlin Sans FB'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;
+                </span><span style="font-family:'Berlin Sans FB';">__________________</span>
+            </p>
+            </div> 
+        </div>
+    
+</body>
+</html>

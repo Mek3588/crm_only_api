@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p
+        style='text-align: center; background: transparent; font-family: "Book Antiqua", serif; font-size: 16px; line-height: 115%; margin-bottom: 0.14in;'>
+        <u>&nbsp;<strong>Refund of Premium Endorsement</strong></u></p>
+    <p
+        style='text-align: left;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;line-height: 115%;margin-bottom: 0.14in;'>
+        <br><strong>Endorsement No: {{endorsementNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Attaching to and forming part of Policy No: &nbsp;{{policyNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Name of insured:</strong> <strong>{{nameOfInsured}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-top: 0.17in;'>
+        <br></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-top: 0.17in;'>
+        <span size="2" style="font-size:15px;">It is hereby declared and agreed that&nbsp;</span></p>
+    <p><br></p>
+    <p><span size="2" style="font-size:15px;">In view of the above, a premium of&nbsp;</span><span size="2"
+            style="font-size:15px;"><strong>Birr {{birr}}&nbsp;</strong></span><span size="2"
+            style="font-size:15px;">and Revenue Stamp of&nbsp;</span><span size="2" style="font-size:15px;"><strong>Birr
+               {{stamp}}</strong></span><span size="2" style="font-size:15px;">&nbsp;has been collected from the
+            insured.&nbsp;</span></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <br>&nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span size="2" style="font-size:15px;">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed there on.&nbsp;</span></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        &nbsp;</p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Signed in<strong>&nbsp;{{year}}&nbsp;</strong>on this<strong>&nbsp; &nbsp;{{month}}&nbsp;</strong>day of
+        <strong>{{day}}&nbsp;</strong><strong>.</strong></p>
+    <h1
+        style='line-height: 100%;text-align: justify;margin-top: 0in;margin-bottom: 0in;background: transparent;font-family: "Times New Roman", serif;font-size:16px;font-weight: bold;margin-left: 3.5in;text-indent: 0.5in;'>
+        <br></h1>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Prepared by: ______________ &nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Examined by: ______________ &nbsp;</p>
+<h1
+    style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+    <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+</h1>
+<h1
+    style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+    <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">Zemen Insurance Company
+            S.C</span></span>
+</h1>
+</body>
+
+</html>

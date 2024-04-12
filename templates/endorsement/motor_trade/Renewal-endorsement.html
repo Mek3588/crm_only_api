@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p
+        style='text-align: center; background: transparent; font-family: "Book Antiqua", serif; font-size: 16px; line-height: 115%; margin-bottom: 0.14in;'>
+        <u>&nbsp;<strong>Renewal Endorsement</strong></u></p>
+    <p
+        style='text-align: left;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;line-height: 115%;margin-bottom: 0.14in;'>
+        <br><strong>Endorsement No: {{endorsementNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Attaching to and forming part of Policy No: &nbsp;{{policyNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Name of insured:</strong> <strong>{{nameOfInsured}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-top: 0.17in;'>
+        It is hereby declared and agreed that this Motor Trade Insurance Policy is renewed for a further period
+        of<strong>&nbsp;{{period}}</strong> effective from {{date}}<strong>&nbsp;</strong>of <strong>{{year and
+            month}}&nbsp;</strong>to midnight of <strong>{{date}}</strong><strong>&nbsp;</strong>of
+        <strong>{{until}}&nbsp;</strong>as per the details here under.</p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;margin-top: 0.17in;'>
+        <br></p>
+    <table style="width: 3.6e+2pt" dir="ltr" cellpadding="7" cellspacing="1">
+        <tbody>
+            <tr>
+                <td
+                    style="border-top: 1.50pt ridge #000000;border-bottom: 1px solid #000000;border-left: 1.50pt ridge #000000;border-right: 1px solid #000000;padding: 0in 0.08in;">
+                    <p
+                        style='line-height: 100%;text-align: center;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        <strong>No.</strong></p>
+                </td>
+                <td
+                    style="border-top: 1.50pt ridge #000000;border-bottom: 1px solid #000000;border-left: 1px solid #000000;border-right: 1px solid #000000;padding: 0in 0.08in;">
+                    <p
+                        style='line-height: 100%;text-align: center;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        <strong>Description</strong></p>
+                </td>
+                <td
+                    style="border-top: 1.50pt ridge #000000;border-bottom: 1px solid #000000;border-left: 1px solid #000000;border-right: 1.50pt ridge #000000;padding: 0in 0.08in;">
+                    <p
+                        style='line-height: 100%;text-align: center;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        <strong>Sum Insured (In Birr)</strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td
+                    style="border-top: 1px solid #000000;border-bottom: 1px solid #000000;border-left: 1.50pt ridge #000000;border-right: 1px solid #000000;padding: 0in 0.08in;">
+                    <p
+                        style='line-height: 100%;text-align: left;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        1</p>
+                </td>
+                <td style="border: 1px solid #000000;padding: 0in 0.08in;">
+                    <p
+                        style='line-height: 100%;text-align: left;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        {{product}}</p>
+                </td>
+                <td
+                    style="border-top: 1px solid #000000;border-bottom: 1px solid #000000;border-left: 1px solid #000000;border-right: 1.50pt ridge #000000;padding: 0in 0.08in;">
+                    <p
+                        style='line-height: 100%;text-align: center;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        {{suminsured}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"
+                    style="border-top: 1px solid #000000;border-bottom: 1.50pt ridge #000000;border-left: 1.50pt ridge #000000;border-right: 1px solid #000000;padding: 0in 0.08in;">
+                    <p
+                        style='line-height: 100%;text-align: center;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        <strong>Total</strong></p>
+                </td>
+                <td
+                    style="border-width: 1px 1.5pt 1.5pt 1px;border-style: solid ridge ridge solid;border-color: rgb(0, 0, 0);padding: 0in 0.08in;vertical-align: top;">
+                    <p
+                        style='line-height: 100%;text-align: center;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+                        {{total}}</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span size="2" style="font-size:15px;">In view of the above, a premium of&nbsp;</span><span size="2"
+            style="font-size:15px;"><strong>Birr 1,200.00&nbsp;</strong></span><span size="2"
+            style="font-size:15px;">and Revenue Stamp of&nbsp;</span><span size="2" style="font-size:15px;"><strong>Birr
+                5.00</strong></span><span size="2" style="font-size:15px;">&nbsp;has been collected from the
+            insured.&nbsp;</span></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <br>&nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span size="2" style="font-size:15px;">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed there on.&nbsp;</span></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        &nbsp;</p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Signed in<strong>&nbsp;{{year}}&nbsp;</strong>on this<strong>&nbsp; &nbsp;{{month}}&nbsp;</strong>day of
+        <strong>{{day}}&nbsp;</strong><strong>.</strong></p>
+    <h1
+        style='line-height: 100%;text-align: justify;margin-top: 0in;margin-bottom: 0in;background: transparent;font-family: "Times New Roman", serif;font-size:16px;font-weight: bold;margin-left: 3.5in;text-indent: 0.5in;'>
+        <br></h1>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Prepared by: ______________ &nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Examined by: ______________ &nbsp;</p>
+    <p
+        style='color: #000000;line-height: 100%;margin-bottom: 0in;background: transparent;font-family: "Times New Roman", serif;font-size:16px;'>
+        <br></p>
+<h1
+    style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+    <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+</h1>
+<h1
+    style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+    <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">Zemen Insurance Company
+            S.C</span></span>
+</h1>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p style="line-height: 100%; text-align: left; margin-bottom: 0.14in; background: transparent; margin-left: 140px;">
+        <strong><u>Decrease in Sum Insured Endorsement</u></strong></p>
+    <table style="float: left;width: 2.8e+2pt;" dir="ltr" cellpadding="7">
+        <tbody>
+            <tr>
+                <td colspan="2" style="background: transparent;border: none;padding: 0in;"></td>
+                <td style="background: transparent;border: none;padding: 0in;"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="line-height: 150%;text-align: left;margin-bottom: 0in;background: transparent;"><br></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-right: -0.06in; margin-bottom: 0.14in; margin-left: 20px;">
+        <br><strong>Endorsement No: {{endorsementNo}}</strong></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-right: -0.06in; margin-bottom: 0.14in; margin-left: 20px;">
+        <strong>Attaching to and forming part of Policy No: &nbsp;{{Attaching}}</strong></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-right: -0.06in; margin-bottom: 0.14in; margin-left: 20px;">
+        <strong>Name of insured: {{nameOfInsured}}</strong></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-right: -0.06in; margin-bottom: 0.14in; margin-left: 20px;">
+        <br></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-right: -0.06in; margin-bottom: 0.14in; margin-left: 20px;">
+        <span style="color: rgb(0, 0, 0);">It is hereby declared and agreed that the Sum Insured in respect of the
+            undermentioned risk is decreased and the schedule of this policy is revised accordingly with effect from
+            &nbsp;{{date}}.</span></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-right: -0.19in; margin-bottom: 0.14in; margin-left: 20px;">
+        <br></p>
+    <table style="float: left; width: 370pt; border-collapse: collapse; border: 1px solid rgb(0, 0, 0);" dir="ltr"
+        cellpadding="7" cellspacing="1">
+        <tbody>
+            <tr>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;">
+                        <strong>S/No.</strong></p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; width: 19.4725%;">
+                    <p
+                        style="line-height: 115%; text-align: center; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <strong>Description</strong></p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top; width: 34.28%;">
+                    <p
+                        style="line-height: 115%; text-align: center; background: transparent; margin-bottom: 0in; margin-left: 20px;">
+                        <strong>Previous Sum Insured</strong></p>
+                    <p
+                        style="line-height: 115%; text-align: center; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <strong>(ETB)</strong></p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style="line-height: 115%; text-align: center; background: transparent; margin-bottom: 0in; margin-left: 20px;">
+                        <strong>Adjusted Sum Insured</strong></p>
+                    <p
+                        style="line-height: 115%; text-align: center; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <strong>(ETB)</strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;"><br>
+                    </p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top; width: 19.4725%;">
+                    <p
+                        style="line-height: 115%; text-align: justify; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <br></p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top; width: 34.28%;">
+                    <p
+                        style="line-height: 115%; text-align: right; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <br></p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style="line-height: 115%; text-align: right; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <br></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p style="line-height: 115%;text-align: center;margin-bottom: 0.08in;background: transparent;"><br>
+                    </p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top; width: 19.4725%;">
+                    <p
+                        style="line-height: 115%; text-align: justify; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <br></p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in; vertical-align: top; width: 34.28%;">
+                    <p
+                        style="line-height: 115%; text-align: right; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <br></p>
+                </td>
+                <td style="border: 1px solid rgb(0, 0, 0); padding: 0in 0.08in;">
+                    <p
+                        style="line-height: 115%; text-align: right; margin-bottom: 0.08in; background: transparent; margin-left: 20px;">
+                        <br></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="margin-left: 20px;">&nbsp;</p>
+    <p style="margin-left: 20px;"><br></p>
+    <p
+        style="text-align: justify; background: transparent; line-height: 100%; margin-right: -0.5in; margin-bottom: 0.14in; margin-left: 20px;">
+        <br>&nbsp;</p>
+    <p
+        style="text-align: justify; background: transparent; line-height: 100%; margin-right: -0.5in; margin-bottom: 0.14in; margin-left: 20px;">
+        <br>&nbsp;</p>
+    <p
+        style="text-align: justify; background: transparent; line-height: 100%; margin-right: -0.5in; margin-bottom: 0.14in; margin-left: 20px;">
+        <br>&nbsp;</p>
+    <p
+        style="text-align: justify; background: transparent; line-height: 100%; margin-right: -0.5in; margin-bottom: 0.14in; margin-left: 20px;">
+        <span style="color: rgb(0, 0, 0);">In view of the above a refund premium of ETB<u>&nbsp;{{etb}} &nbsp;</u>has
+            been paid to the insured.</span> (Ref. UW PV No. <u>&nbsp; &nbsp;{{uwPV}} &nbsp;</u>)</p>
+    <p
+        style="text-align: justify; background: transparent; line-height: 100%; margin-right: -0.19in; margin-bottom: 0.14in; margin-left: 20px;">
+        <span style="color: rgb(0, 0, 0);">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed there</span><span style="color: rgb(0, 0, 0);"><em>&nbsp;</em></span><span
+            style="color: rgb(0, 0, 0);">on.</span><span style="color: rgb(0, 0, 0);"><em>&nbsp;</em></span></p>
+    <p
+        style="text-align: justify; background: transparent; line-height: 100%; margin-bottom: 0.14in; margin-left: 20px;">
+        Signed in <strong>&nbsp;<u>&nbsp;</u></strong><u>{{date}}&nbsp;</u><strong><u>&nbsp;&nbsp;</u>&nbsp;</strong>on
+        this <u>&nbsp; {{month}} &nbsp;</u><strong>&nbsp;</strong>day of <u>&nbsp;{{day}}</u> <strong>.</strong></p>
+    <h1
+        style='line-height: 100%; text-align: justify; margin-top: 0in; margin-bottom: 0in; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold; margin-left: 356px; text-indent: 0.5in;'>
+        <br></h1>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-bottom: 0.14in; margin-left: 20px;">
+        Prepared by:&nbsp; <u>&nbsp;{{preparedBy}} &nbsp; &nbsp;</u></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-bottom: 0.14in; margin-left: 20px;">
+        <br></p>
+    <p
+        style="line-height: 115%; text-align: justify; background: transparent; margin-bottom: 0.14in; margin-left: 20px;">
+        Examined by: <u>{{examinedBy}}</u></p>
+<h1
+    style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+    <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+</h1>
+<h1
+    style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: center; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold;'>
+    <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">Zemen Insurance Company
+            S.C</span></span>
+</h1>
+</body>
+
+</html>

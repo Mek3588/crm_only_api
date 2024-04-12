@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #watermark-text {
+        position: absolute;
+        font-size: 60px;
+        color: hsl(0, 75%, 49%);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        opacity: 0.3;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+    {{#if status}}
+    <div id="watermark">
+        <!-- <img src="../assets/logo_long.png"> -->
+        <p id="watermark-text">Draft </p>
+    </div>
+    {{/if}}
+    <p
+        style='text-align: center; background: transparent; font-family: "Book Antiqua", serif; font-size: 16px; line-height: 115%; margin-bottom: 0.14in;'>
+        <u>&nbsp;<strong>PBA Endorsement</strong></u></p>
+    <p
+        style='text-align: left;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;line-height: 115%;margin-bottom: 0.14in;'>
+        <br><strong>Endorsement No: {{endorsementNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Attaching to and forming part of Policy No: &nbsp;{{policyNo}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <strong>Name of insured:</strong> <strong>{{nameOfInsured}}</strong></p>
+    <p
+        style='line-height: 115%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p>Without Payment of an additional Premium, it is hereby declared and agreed that the company undertakes to pay
+        compensation for bodily injury as hereinafter defined sustained by: one Driver and Other Four Occupants (i.e
+        family members of the insured).</p>
+    <p>In the event of an accident happening to any motor vehicle (excluding motor- cycle) described in the schedule to
+        the policy caused by violent, accidental, external and visible means which, independently of any other cause,
+        shall within three calendar months of the occurrence of the occurrence of such injury result in:</p>
+    <p>1. DEATH: Maximum Amount of Birr <strong>{{deathBirr}}</strong> per Seat/Vehicle</p>
+    <p>2. PERMANENT DISABLEMENT: Birr <strong>{{disablementBirr}}&nbsp;</strong>multiplied by a percentage of amount
+        stated under the scale of benefit described below.</p>
+    <p>3. MEDICL EXPENSE &nbsp;Birr <strong>{{medicalBirr}}</strong> per person/per accident</p>
+    <p style="margin-left: 20px;">Provided always that:-&nbsp;</p>
+    <p style="margin-left: 20px;">a) Compensation shall be payable under only one of items 1 to 3 of above in respect of
+        any person arising out of any one occurrence and &nbsp;the Total Liability of the Company shall not in the
+        aggregate exceeds the Sum of Birr 50,000.00 during any one period of Insurance. &nbsp; &nbsp; &nbsp; &nbsp;</p>
+    <p style="margin-left: 20px;">b) No weekly compensation shall become payable until the total amount shall have been
+        ascertained and agreed.</p>
+    <p style="margin-left: 20px;">c) Such insured person is not less than 16 years or over 65 years of age at the time
+        of such injury.</p>
+    <p style="margin-left: 20px;">d) No compensation shall be payable in respect of death or injury directly or
+        indirectly, wholly or in part arising or resulting from or traceable to;</p>
+    <p style="margin-left: 40px;">i. intentional self-injury, suicide or attempt suicide or previous physical defect or
+        infirmity or insanity,</p>
+    <p style="margin-left: 40px;">ii. any accidental happening whilst such person is under the influence of intoxicating
+        liquor or drugs. &nbsp;</p>
+    <p style="margin-left: 40px;">iii. If the claim is repudiated by driving license, carrying capacity, purpose, any
+        form of limitations, etc.&nbsp;</p>
+    <p style="margin-left: 20px;">e) Such compensation shall be payable only to the injured person or to his or her
+        legal representative, to the insured with the approval of the injured person or his or her legal representative
+        and whose receipt shall be a full discharge in respect of the injury to such person.&nbsp;</p>
+    <p style="margin-left: 20px;"><br></p>
+    <p>If the number of persons (including the driver) in the said motor vehicle, at the time of the occurrence, exceeds
+        the seating capacity of the vehicle described in the Schedule of the policy, the Company shall be liable only
+        for a pro-rata proportion of the compensation that would otherwise have been payable.</p>
+    <p style="text-align: center;">Scale of Benefit / Compensation for Permanent Total Disability (PTD) &nbsp; &nbsp;
+        &nbsp;</p>
+    <table style="border: none;">
+        <tbody>
+            <tr>
+                <td style="border-top: 1px solid rgb(0, 0, 0);border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><strong><span size="3" style="color: rgb(0, 0, 0);">Description of Percentage of
+                            Sum&nbsp;</span></strong></td>
+                <td style="border-top: 1px solid rgb(0, 0, 0);border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><strong><span size="3" style="color: rgb(0, 0, 0);">Description of Percentage of
+                            Sum&nbsp;</span></strong></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><strong><u><span size="3" style="color: rgb(0, 0, 0);">&nbsp;Permanent Disablement Under
+                                Item 1</span></u></strong></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><strong><u><span size="3" style="color: rgb(0, 0, 0);">&nbsp;Permanent Disablement Under
+                                Item 1</span></u></strong></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of two limbs &hellip;..</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><strong><u><span size="3" style="color: rgb(0, 0, 0);"><br></span></u></strong></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of both hands, or of all&nbsp;</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of ring Finger, three Phalanges &hellip;.
+                        10</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;Fingers and both thumbs &hellip;..</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of ring Finger, two Phalanges &hellip;....
+                        7</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Total loss of sight of both eyes&hellip;</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of ring Finger, one Phalanx
+                        &hellip;&hellip;.&hellip;.. 5</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Total Paralysis
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.
+                        100</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of little Finger, three Phalanges &hellip;..
+                        7</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Injuries resulting in being Permanent&nbsp;</span>
+                </td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of little Finger, two Phalanges
+                        &hellip;&hellip;. 5</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;Bedridden
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span>
+                </td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of little Finger, one Phalanx
+                        ...&hellip;&hellip;... 3</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Any other injury causing Permanent&nbsp;</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;Total Disablement
+                        &hellip;&hellip;&hellip;&hellip;&hellip;..</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Metacarpals,&nbsp;</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Arm at Shoulder
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.
+                        60&nbsp;</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;- First or second (additional)
+                        &hellip;&hellip;&hellip;&hellip;.... 5</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;-third, fourth or fifth (additional)
+                        &hellip;&hellip;&hellip; 3</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Arm between elbow &amp; Shoulder&hellip;..
+                        50</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Leg at Hip,
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;...
+                        70</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Arm at Elbow
+                        &hellip;&hellip;&hellip;&hellip;&hellip;.&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+                        45</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Leg, between Knee and Hip, &hellip;...
+                        50</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Leg below Knee,
+                        .&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;... 35</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Arm between wrist and Elbow
+                        &hellip;&hellip;&hellip; 45</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Toes all,
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;...
+                        15</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Toes,</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Hand at Wrist
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.... 40</span>
+                </td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;- Great- both Phalanges
+                        .&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;... 10</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;-other than Great-if other than one toe</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of four Fingers &amp; thumb of one Hand&hellip;
+                        40</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;Lost, each
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.
+                        5</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of four Fingers
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+                        35</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of thumb, both Phalanges
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 25</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Eyes:</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of thumb, one Phalanx
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 15</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">-Loss of whole eye
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+                        30</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of index finger, three Phalanges
+                        &hellip;&hellip;&hellip;.. 10</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">-Loss of sight of
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..
+                        30</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of index finger, two Phalanges
+                        &hellip;&hellip;&hellip;&hellip;.. 8</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">-Loss of sight of, except perception of
+                        light&hellip;. 20</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of index finger, one Phalanx
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 5</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">-Loss of lens of
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+                        20</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;Loss of middle Finger, three Phalanges
+                        &hellip;&hellip; 6</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Hearing, both ears
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 50</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of middle Finger, two Phalanges
+                        &hellip;&hellip;.&hellip; 6</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of Hearing, one ear
+                        &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.
+                        15</span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Loss of middle Finger, three Phalanx
+                        &hellip;&hellip;.&hellip; 6</span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">Permanent Total Loss of use of&nbsp;</span></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid rgb(0, 0, 0);border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);"><br></span></td>
+                <td style="border-bottom: 1px solid rgb(0, 0, 0);border-left: 1px solid rgb(0, 0, 0);border-right: 1px solid rgb(0, 0, 0);vertical-align: middle;"
+                    colspan="3"><span style="color: rgb(0, 0, 0);">&nbsp;Member shall be treated as loss of
+                        Member</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p><br></p>
+    <p style="line-height: 115%;text-align: left;margin-bottom: 0.08in;background: transparent;">Where the injury is not
+        specified, the Company will adopt a percentage of disablement which by its opinion not inconsistent with
+        provisions of this schedule.</p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-right: -0.19in;margin-bottom: 0.14in;">
+        <span style="font-size: 15px;"><br></span></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span size="2" style="font-size:15px;">Subject otherwise to the terms, conditions and exceptions stated in the
+            Policy or endorsed thereon.&nbsp;</span></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <span style="font-size: 15px;">&nbsp;</span></p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <span size="3" style="font-size: 15px;">Signed in <strong>{{city}}</strong><strong>&nbsp;</strong>on
+            this<strong>&nbsp;{{yearAndMonth}}&nbsp;</strong>day of <strong>{{day}}</strong></span><strong><span
+                style="font-size: 15px;">.</span></strong></p>
+    <p
+        style="text-align: justify;background: transparent;line-height: 100%;margin-left: -0.25in;text-indent: 0.25in;margin-bottom: 0.14in;">
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Bookman Old Style", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Prepared by: ______________ &nbsp;</p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        <br></p>
+    <p
+        style='line-height: 100%;text-align: justify;margin-bottom: 0.14in;background: transparent;font-family: "Book Antiqua", serif;font-size:16px;'>
+        Examined by: ______________ &nbsp;</p>
+    <p
+        style='color: #000000;line-height: 100%;margin-bottom: 0in;background: transparent;font-family: "Times New Roman", serif;font-size:16px;'>
+        <br></p>
+    <h1
+        style='margin: 0in 0px 0in 3.5in; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: 16px; text-align: justify; background: transparent; font-family: "Times New Roman", serif; font-size: 16px; font-weight: bold; text-indent: 0.5in;'>
+        <span size="2" style="font-size: 15px;"><span style="font-weight: normal;">For and on behalf of</span></span>
+    </h1>
+    <p><span size="2" style="font-size: 15px;"><span style="font-weight: normal;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Zemen
+                Insurance Company S.C</span></span></p>
+</body>
+
+</html>
