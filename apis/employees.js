@@ -21,8 +21,8 @@ const upload= multer({storage:storage}).single('profile_picture')
 const emailUpload = require('../utils/fileUpload').array('uploads') 
 const accessRight = require("./middlewares/authorization")
 //not all done
-router.route("/").get(protectedRoute, getEmployees);
 router.route("/branchEmployees").get(protectedRoute, getBranchEmployee);
+router.route("/").get(protectedRoute, getEmployees);
 router.route("/branchId/:id").get(protectedRoute, getEmployeesbyBranch);
 router.route("/activeEmployees").get(protectedRoute, getActiveEmployees);
 router.route("/group/:id").get(protectedRoute, employeeByGroup);

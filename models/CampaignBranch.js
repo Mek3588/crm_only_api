@@ -3,6 +3,7 @@ const sequelize = require("../database/connections");
 const Campaign = require("./Campaign");
 const Employee = require("./Employee");
 const CampaignTeam = require("./CampaignTeam");
+const Branch = require("./Branch");
 const CampaignBranch = sequelize.define("campaign_branches", {
     id: {
         type: INTEGER,
@@ -85,6 +86,11 @@ CampaignTeam.belongsTo(Campaign);
 CampaignBranch.belongsTo(Campaign, {
     foreignKey: "campaignId",
     as: "mainCampaign",
+  });
+
+  CampaignBranch.belongsTo(Branch, {
+    foreignKey: "branchId",
+    as: "campaignBranches",
   });
 
 module.exports = CampaignBranch

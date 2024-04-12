@@ -345,7 +345,7 @@ const getCampaignByPk = async (req, res) => {
 
         let broker = campaign.brokerId ? campaign.brokerId.split(",") : [];
         broker = broker.map(a => Number(a));
-        console.log("brokerbroker", broker, campaign.brokerId)
+        console.log("customercustomer", customer)
 
         let branch = []
         branch = await Branch.findAll({
@@ -381,7 +381,7 @@ const getCampaignByPk = async (req, res) => {
         })
 
         const customers = await Customer.findAll({
-          where: { id: { [Op.in]: customer } },
+          where: { contactId: { [Op.in]: customer } },
           include: [{ model: Contact }]
         })
 
@@ -404,12 +404,12 @@ const getCampaignByPk = async (req, res) => {
         // const campaigBroker = await CampaignBroker.findAll({
         //   where: { brokerId: { [Op.in]: brokersId }, campaignId: campaign.id }
         // })
-        console.log("campaigBrokercampaigBroker",campaign.id, campaigBroker)
+        // console.log("campaigBrokercampaigBroker",campaign.id, campaigBroker)
 
         
 
 
-        let customerContacts = customers.map(customer => customer.contact);
+        let Customers = customers.map(customer => customer.contact);
         
 
         // 
@@ -470,7 +470,7 @@ const getCampaignByPk = async (req, res) => {
           console.log("brokerNamesbrokerNames", brokerNames)
 
           res.status(200).json({
-            campaign, branchNames, campaignBranch, productNames, leads, accounts, customerContacts,
+            campaign, branchNames, campaignBranch, productNames, leads, accounts, Customers,
             agentNames, campaignAgent, campaigBroker, brokerNames
           });
         
@@ -748,15 +748,14 @@ const getBranchCampaign = async (req, res) => {
 const getTeamCampaign = async (req, res) => {
 
   try {
-    let emp = await Employee.findOne({ where: { userId: req.user.id } })
+    const role = req.user.role;
+    const { f, r, st, sc, sd } = req.query;
 
-    let leaderTeams = await CampaignTeam.findAll({
-      // include: User,
-      where: { teamLeader: { [Op.in]: [emp.id] }, isExpectedSet: true },
-      // { activated: true },
-
-
+    if(role == Role.superAdmin){
+    const leaderTeams = await CampaignTeam.findAll({
+      where: {isExpectedSet: true },
     });
+    console.log("getTeamCampaign==========================", leaderTeams.length)
 
     let campaigns = [];
 
@@ -765,23 +764,56 @@ const getTeamCampaign = async (req, res) => {
         campaigns.push(leaderTeams[i].campaignId)
       }
     }
+    console.log("getTeamCampaign campaignsId==========================", campaigns)
+
+    const teamLeaderCampaigns = await Campaign.findAndCountAll({
+      where: { 
+        id: { [Op.in]: campaigns },
+        ...getSearch(st)
+     },
+     offset: Number(f),
+     limit: Number(r),
+     order: [[sc || "createdAt", sd == 1 ? "DESC" : "ASC"]],
+    });  
+      return res.status(200).json(teamLeaderCampaigns);
+
+    }else if(role == Role.staff){
+      let emp = await Employee.findOne({ where: { userId: req.user.id } })
+    // console.log("getTeamCampaign========================== for team",  emp)
 
 
-    let teamLeaderCampaigns = await Campaign.findAll({
+    let leaderTeams = await CampaignTeam.findAll({
       // include: User,
-      where: { id: { [Op.in]: campaigns } },
-      order: [["updatedAt", "DESC"]]
+      where: { teamLeader: { [Op.in]: [emp.id] }, isExpectedSet: true },
       // { activated: true },
 
 
     });
+    // console.log("getTeamCampaign========================== for team",  leaderTeams)
 
-   const formattedResponse = {
-        count : teamLeaderCampaigns?.length,
-        rows: teamLeaderCampaigns
+
+    let campaigns = [];
+
+    for (let i = 0; i < leaderTeams.length; i++) {
+      if (!campaigns.includes(leaderTeams[i].campaignId)) {
+        campaigns.push(leaderTeams[i].campaignId)
       }
-      
-      res.status(200).json(formattedResponse);
+    }
+    // console.log("getTeamCampaign========================== for team",  campaigns)
+
+    let teamLeaderCampaigns = await Campaign.findAndCountAll({
+      // include: User,
+      where: { 
+         [Op.in]: campaigns ,
+        ...getSearch(st)
+       },
+      offset: Number(f),
+      limit: Number(r),
+      order: [[sc || "createdAt", sd == 1 ? "DESC" : "ASC"]],
+
+    });  
+      res.status(200).json(teamLeaderCampaigns);
+    }
 
   }
 
@@ -792,58 +824,60 @@ const getTeamCampaign = async (req, res) => {
 }
 
 const getIndividualCampaign = async (req, res) => {
-
   try {
-    let emp = await Employee.findOne({ where: { userId: req.user.id } })
+    const { f, r, st, sc, sd } = req.query;
+    const role = req.user.role;
 
-    let IndCamps = await CampaignIndividual.findAll({
-      // include: User,
-      where: { teamMemberId: { [Op.in]: [emp.id] }, isExpectedSet: true },
-      // { activated: true },
+    if (role === Role.superAdmin) {
+      console.log("for admin");
+      const IndCamps = await CampaignIndividual.findAll({
+        where: { isExpectedSet: true },
+      });
 
+      const IndCampaignIds = [...new Set(IndCamps.map(camp => camp.campaignId))];
+      console.log("for admin", IndCampaignIds);
 
-    });
+      const individualCampaigns = await Campaign.findAndCountAll({
+        where: {
+          id: { [Op.in]: IndCampaignIds },
+          ...getSearch(st)
+        },
+        offset: Number(f),
+        limit: Number(r),
+        order: [[sc || "createdAt", sd == 1 ? "DESC" : "ASC"]],
+      });
 
-    let IndCampaigns = [];
+      res.status(200).json(individualCampaigns);
+    } else if (role === Role.staff) {
+      const emp = await Employee.findOne({ where: { userId: req.user.id } });
 
-    for (let i = 0; i < IndCamps.length; i++) {
-      if (!IndCampaigns.includes(IndCamps[i].campaignId)) {
-        IndCampaigns.push(IndCamps[i].campaignId)
-      }
+      const IndCamps = await CampaignIndividual.findAll({
+        where: { teamMemberId: emp.id, isExpectedSet: true },
+      });
+
+      const IndCampaignIds = [...new Set(IndCamps.map(camp => camp.campaignId))];
+
+      const individualCampaigns = await Campaign.findAndCountAll({
+        where: { id: { [Op.in]: IndCampaignIds } },
+        order: [["updatedAt", "DESC"]],
+      });
+
+      res.status(200).json(individualCampaigns);
     }
-
-
-    let individualCampaigns = await Campaign.findAll({
-      // include: User,
-      where: { id: { [Op.in]: IndCampaigns } },
-      order: [["updatedAt", "DESC"]]
-      // { activated: true },
-
-
-    });
-    
-    const formattedResponse = {
-      count : individualCampaigns?.length,
-      rows: individualCampaigns
-    }
-    
-    res.status(200).json(formattedResponse);
-
-  }
-
-
-  catch (error) {
+  } catch (error) {
+    console.log('Error:', error);
     res.status(400).json({ msg: error.message });
   }
-}
+};
+
 
 const getAgentCampaign = async (req, res) => {
   const {f, r, st, sc, sd} = req.query
 
   try {
    const userId = req.user.id
-    let agent = await Agent.findOne({ where: { accountId: userId } })
-    if(req.user.type = "all"){
+   const role = req.user.role;
+    if(role == Role.superAdmin){
       const agentCampaigns = await Campaign.findAndCountAll({
         where: { 
           isAgentExpectedSet: true,
@@ -855,8 +889,8 @@ const getAgentCampaign = async (req, res) => {
       });
       res.status(200).json(agentCampaigns);
 
-    } else
-
+    } else if(role == Role.agent) {
+      let agent = await Agent.findOne({ where: { accountId: userId } })
 
     if (agent) {
 
@@ -889,17 +923,12 @@ const getAgentCampaign = async (req, res) => {
       res.status(200).json(formattedResponse);
 
 
-    }
-
-    else {
+    } else {
       res.status(400).json({ msg: "No campaign for this agent" });
-
     }
-
-
   }
 
-
+  }
   catch (error) {
     res.status(400).json({ msg: error.message });
   }
@@ -1003,6 +1032,8 @@ const reportCampaign = async (req, res) => {
 };
 
 
+
+
 module.exports = {
   getCampaign,
   createCampaign,
@@ -1015,5 +1046,5 @@ module.exports = {
   reportCampaign,
   editCampaignFeaturedAsset,
   getAgentCampaign,
-  getBrokerCampaign
+  getBrokerCampaign,
 };

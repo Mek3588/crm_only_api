@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const accessRight = require("./middlewares/authorization");
-const {getCampaignBranch, createCampaignBranch, getCampaignBranchByPk,  editCampaignBranch, deleteCampaignBranch, filterCampaignBranch, getCampaignBranchMembers, getSingleBranchMembers, getSingleCampaignBranch, reportCampaignBranch, getOneCampaignBranch, totalCampaignBranch, updateExpectedValues} = require("./handlers/campaignBranchHandler");
+const {getCampaignBranch, createCampaignBranch, getCampaignBranchByPk,  editCampaignBranch, deleteCampaignBranch, filterCampaignBranch, getCampaignBranchMembers, getSingleBranchMembers, getSingleCampaignBranch, reportCampaignBranch, getOneCampaignBranch, totalCampaignBranch, updateExpectedValues, getSinglecampaignbranches} = require("./handlers/campaignBranchHandler");
 const protectedRoute = require("./middlewares/protectedRoute");
 
 router.route("/single").get(protectedRoute,accessRight.canUserRead(["campaigns/branch","campaigns/headOffice"]),getSingleCampaignBranch);
@@ -16,5 +16,7 @@ router.route("/").post(protectedRoute, accessRight.canUserEdit(["campaigns/headO
 router.route("/").put(protectedRoute,accessRight.canUserEdit(["campaigns/branch","campaigns/headOffice"]),editCampaignBranch);
 router.route("/:id").delete(protectedRoute,accessRight.canUserDelete(["campaigns/headOffice"]),deleteCampaignBranch);
 router.route("/search/all").get(protectedRoute,accessRight.canUserRead(["campaigns/headOffice"]),filterCampaignBranch); 
+
+router.route("/singlecampaignbranches").get(protectedRoute,accessRight.canUserRead(["campaigns/headOffice"]),getSinglecampaignbranches);
 
 module.exports = router;

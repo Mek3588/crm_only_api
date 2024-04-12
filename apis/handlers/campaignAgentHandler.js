@@ -9,6 +9,7 @@ const sequelize = require("../../database/connections");
 const Campaign = require("../../models/Campaign");
 const CampaignAgent = require("../../models/CampaignAgent");
 const Agent = require("../../models/agent/Agent");
+const { Role } = require("../../utils/constants");
 
 
 const getCampaignBranch = async (req, res) => {
@@ -64,10 +65,19 @@ const editCampaignBranch = async (req, res) => {
 
   try {
     // 
-    const body = req.body
-    // 
-    const campaignId = req.body.campaignId
-    const agentId = req.body.agentId
+    const { selectedAgentId } = req.query
+    const body = req.body;
+    const role = req.user.role;
+    const campaignId = req.body.campaignId;
+    if(role===Role.superAdmin){
+      if(selectedAgentId == 0){
+        return res.status(400).json({msg: "please select Agent"})
+      }
+      const updated = await CampaignAgent.update(body, { where: { campaignId: campaignId, agentId: selectedAgentId } });
+        return res.status(200).json({ msg: "Success" })
+
+    } else if (role === Role.agent){
+      const agentId = req.body.agentId
     // 
 
     const emp = await Employee.findAll({ where: { userId: req.user.id } })
@@ -76,10 +86,11 @@ const editCampaignBranch = async (req, res) => {
 
     // const campaign = CampaignBranch.findAll({where: {campaignId}});
     const updated = await CampaignAgent.update(body, { where: { campaignId: campaignId, agentId: agentId } });
-    res.status(200).json({ msg: "Success" })
+    return res.status(200).json({ msg: "Success" })
+    }    
   }
   catch (error) {
-    res.status(400).json({ msg: error.message });
+    return res.status(400).json({ msg: error.message });
   }
 };
 
@@ -145,32 +156,63 @@ const getCampaignBranchMembers = async (req, res) => {
 };
 
 const getSingleCampaignAgent = async (req, res) => {
-  const { campaignId } = req.query;
+  const { campaignId, agentId } = req.query;
   const userId = req.user.id;
+  const role = req.user.role;
 
-
-  let Agentt = await Agent.findOne({ where: { accountId: req.user.id } })
-
-  
-
-  if (Agentt) {
     try {
-      const campaign = await CampaignAgent.findAll({ where: { campaignId: campaignId, agentId: Agentt.id } }).then(function (
-        campaign
-      ) {
-        if (!campaign) {
-          res.status(400).json({ message: "No Data Found" });
-        }
-        else {
-          res.status(200).json(campaign[0]);
-        }
+      if(role === Role.superAdmin){
+        // console.log("==============campaign", role, campaignId, agentId)
 
-      });
+        if(!agentId){
+          const campaign = await CampaignAgent.findAll({ where: { campaignId: campaignId } }).then(function (
+            campaign
+          ) {
+            if (!campaign) {
+              return res.status(400).json({ message: "No Data Found" });
+            }
+            else {
+              return res.status(200).json(campaign);
+            }
+    
+          });
+        }else if(agentId){
+          const campaign = await CampaignAgent.findAll({ where: { campaignId: campaignId, agentId: agentId } }).then(function (
+            campaign
+          ) {
+            if (!campaign) {
+              return res.status(400).json({ message: "No Data Found" });
+            }
+            else {
+              // console.log("==============campaign", campaign[0])
+              return res.status(200).json(campaign[0]);
+            }
+    
+          });
+        }
+      } 
+        else if (role === Role.agent){
+          let Agentt = await Agent.findOne({ where: { accountId: req.user.id } })
+
+          if (Agentt) {
+
+              const campaign = await CampaignAgent.findAll({ where: { campaignId: campaignId, agentId: Agentt.id } }).then(function (
+                campaign
+              ) {
+                if (!campaign) {
+                  res.status(400).json({ message: "No Data Found" });
+                }
+                else {
+                  res.status(200).json(campaign[0]);
+                }
+
+              });
+            }
+          }
 
     } catch (error) {
       res.status(400).json({ msg: error.message });
     }
-  }
 };
 
 // const getSingleCampaignAgent = async (req, res) => {
@@ -197,6 +239,22 @@ const getSingleCampaignAgent = async (req, res) => {
 //     res.status(400).json({ msg: error.message });
 //   }
 // };
+
+const getAgentsOfCampaign = async (req, res) =>{
+  const { campaignAgentId } = req.query;
+  const user = req.user;
+  const role = user.role;
+  try {
+    const agentCampaign = await CampaignAgent.findAll({where:{campaignId: campaignAgentId}})
+    const agentsId = agentCampaign.map(agent => agent.agentId);
+
+    const agents = await Agent.findAll({where: {id: agentsId}})
+    return res.status(200).json(agents)
+
+  } catch (error) {
+    return res.status(400).json({msg: error.msg}) 
+  }
+}
 
 const getSingleCampaignBranch = async (req, res) => {
   const { campaignId } = req.query;
@@ -225,12 +283,19 @@ const getSingleCampaignBranch = async (req, res) => {
 
 const reportCampaignAgent = async (req, res) => {
   const campIndId = req.body.id;
+  const { selectedAgentId } = req.query;
+  const role = req.user.role;
   
 
   try {
-    const report = await CampaignAgent.update({ isReported: true }, { where: { id: campIndId } });
+    if(role === Role.superAdmin){
+      const report = await CampaignAgent.update({ isReported: true }, { where: { id: campIndId } });
 
     res.status(200).json(report);
+    } else if (role === Role.agent){
+      const report = await CampaignAgent.update({ isReported: true }, { where: { id: campIndId } });
+    res.status(200).json(report);
+    }
   } catch (error) {
     res.status(400).json({ msg: error.message });
   }
@@ -353,5 +418,6 @@ module.exports = {
   reportCampaignBranch,
   totalCampaignAgent,
   updateExpectedValues,
-  reportCampaignAgent
+  reportCampaignAgent,
+  getAgentsOfCampaign
 };

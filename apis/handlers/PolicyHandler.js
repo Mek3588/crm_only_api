@@ -75,15 +75,29 @@ const getMultiplePolicy = async (req, res) => {
         order: sc
           ? [[sc, sd == 1 ? "ASC" : "DESC"]]
           : [["createdAt", sd == 1 ? "DESC" : "ASC"]],
+          include: [{
+            model: Proposal,
+            include: [{
+              model: Contact,
+            }]
+          }],
         where: {
           [Op.and]: [
             {
+              // [Op.or]: [
+              //   { '$proposal.contact.accountId$': currentUser.id }
+              //   //{ assignedTo: { [Op.like]: `%${currentUser.id}%` } },
+              // ],
               [Op.or]: [
-                { '$proposal.contact.accountId$': currentUser.id }
-                //{ assignedTo: { [Op.like]: `%${currentUser.id}%` } },
+                { '$proposal.userId$': req.user.id },
+                { '$proposal.contact.accountId$': currentUser.id },
               ],
             },
-            { ...getSearch(st), policyStatus: status },
+            { 
+              // ...getSearch(st), 
+              status: status 
+
+             },
 
           ],
         },
@@ -208,11 +222,15 @@ const getPolicy = async (req, res) => {
           [Op.and]: [
             {
               [Op.or]: [
+                { '$proposal.userId$': req.user.id },
                 { '$proposal.contact.accountId$': currentUser.id }
                 //{ assignedTo: { [Op.like]: `%${currentUser.id}%` } },
               ],
             },
-            { ...getSearch(st), policyStatus: status },
+            {
+              //  ...getSearch(st), 
+              policyStatus: status, 
+            },
 
           ],
         },
@@ -368,7 +386,7 @@ const getPolicyByPk = async (req, res) => {
       return res.status(404).json({ message: "No Data Found" });
     }
 
-    if (req.type === 'customer' && (policy.proposal.contact.accountId != req.user.id)) {
+    if (req.type === 'customer' && (policy.proposal.contact.accountId != req.user.id && policy.proposal.userId != req.user.id)) {
       return res.status(401).json({ msg: "unauthorized access" });
     }
     // if (req.type == 'self' && (policy.proposal.contact.accountId != req.user.id)){

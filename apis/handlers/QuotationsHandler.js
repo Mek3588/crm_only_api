@@ -116,6 +116,9 @@ const getQuotations = async (req, res) => {
           //     { userId: currentUser.id },
           //   ]
           // },
+          where: {
+            userId: req.user.id
+          }
         });
 
         

@@ -14,6 +14,7 @@ const CustomerContact = require("./CustomerContact");
 const CustomerProposal = require("./CustomerProposal");
 const MotorProposal = require("../proposals/MotorProposal");
 const CustomerUser = require("./CustomerUser");
+const Opportunity = require("../Opportunity");
 
 const Customer = sequelize.define("customers", {
   id: {
@@ -50,6 +51,9 @@ const Customer = sequelize.define("customers", {
     type: INTEGER,
 
   },
+  opportunityId: {
+    type: INTEGER,
+  },
 });
 
 
@@ -83,5 +87,8 @@ CompanyContact.belongsToMany(Customer, { through: CustomerContact });
 
 // Customer.belongsToMany(Employee, { through: CustomerEmployee })
 // Employee.belongsToMany(Customer, { through: CustomerEmployee })
+
+Customer.belongsTo(Opportunity, { foreignKey: 'opportunityId' });
+Opportunity.hasOne(Customer);
 
 module.exports = Customer;

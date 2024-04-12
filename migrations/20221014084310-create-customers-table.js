@@ -29,6 +29,9 @@ module.exports = {
         type: INTEGER,
 
       },
+      opportunityId: {
+        type: INTEGER,
+      },
       createdAt: DATE,
       updatedAt: DATE,
     });

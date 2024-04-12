@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {getCampaign, createCampaign, getCampaignByPk,  editCampaign, deleteCampaign,getBranchCampaign, getTeamCampaign, getIndividualCampaign, reportCampaign,editCampaignFeaturedAsset, getAgentCampaign, getBrokerCampaign} = require("./handlers/CampaignHandler");
+const {getCampaign, createCampaign, getCampaignByPk,  editCampaign, deleteCampaign,getBranchCampaign, getTeamCampaign, getIndividualCampaign, reportCampaign,editCampaignFeaturedAsset, getAgentCampaign, getBrokerCampaign, } = require("./handlers/CampaignHandler");
 const protectedRoute = require("./middlewares/protectedRoute");
 
 const multer = require("multer");

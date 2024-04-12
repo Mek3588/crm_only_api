@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const accessRight = require("./middlewares/authorization");
-const {getCampaignIndividual, createCampaignIndividual, getCampaignIndividualByPk,  editCampaignIndividual, deleteCampaignIndividual, filterCampaignIndividual,getSingleCampaignIndividual, reportCampaignIndividual, getIndividualResult, totalCampaignIndividual, updateExpectedValues} = require("./handlers/CampaignIndividualHandler");
+const {getCampaignIndividual, createCampaignIndividual, getCampaignIndividualByPk,  editCampaignIndividual, deleteCampaignIndividual, filterCampaignIndividual,getSingleCampaignIndividual, reportCampaignIndividual, getIndividualResult, totalCampaignIndividual, updateExpectedValues, getMembersOfCampiagnTeam} = require("./handlers/CampaignIndividualHandler");
 const protectedRoute = require("./middlewares/protectedRoute");
+
+router.route("/membersofcampaignteam").get(protectedRoute,accessRight.canUserRead(["campaigns/individual","campaigns/teamLeader"]),getMembersOfCampiagnTeam);
 
 router.route("/single").get(protectedRoute,accessRight.canUserRead(["campaigns/individual","campaigns/teamLeader"]),getSingleCampaignIndividual);
 router.route("/report").put(protectedRoute,accessRight.canUserEdit(["campaigns/individual"]),reportCampaignIndividual);

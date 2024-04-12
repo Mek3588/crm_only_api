@@ -12,6 +12,7 @@ const Agent = require("../../models/agent/Agent");
 const CampaignBroker = require("../../models/CampaignBroker");
 const Broker = require("../../models/broker/Broker");
 const Organization = require("../../models/broker/Organization");
+const { Role } = require("../../utils/constants");
 
 
 const getCampaignBranch = async (req, res) => {
@@ -67,21 +68,32 @@ const editCampaignBroker = async (req, res) => {
 
     try {
         // 
+        const { brokerOrgId } = req.query
+        const role = req.user.role
         const body = req.body
         // 
-        const campaignId = req.body.campaignId
-        const brokerId = req.body.brokerId
+        const campaignId = body.campaignId
+        const brokerId = body.brokerId
         // 
+        if(role == Role.superAdmin){
+            console.log("editCampaignBroker forsuperAdmin", role, campaignId, brokerOrgId)
 
-        const emp = await Employee.findAll({ where: { userId: req.user.id } })
-        // 
+            const updated = await CampaignBroker.update(body, { where: { campaignId: campaignId, brokerId: brokerOrgId } });
+            return  res.status(200).json({ msg: "Success" })
+        }
+        else if(role == Role.broker) {
+            console.log("editCampaignBroker forbroker", role, brokerOrgId)
 
+            // const emp = await Employee.findAll({ where: { userId: req.user.id } })
 
-        // const campaign = CampaignBranch.findAll({where: {campaignId}});
-        const updated = await CampaignBroker.update(body, { where: { campaignId: campaignId, brokerId: brokerId } });
-      return  res.status(200).json({ msg: "Success" })
+            // const campaign = CampaignBranch.findAll({where: {campaignId}});
+            const updated = await CampaignBroker.update(body, { where: { campaignId: campaignId, brokerId: brokerId } });
+            return  res.status(200).json({ msg: "Success" })
+        }
     }
     catch (error) {
+        console.log("editCampaignBroker errrrr", error, )
+
        return res.status(400).json({ msg: error.message });
     }
 };
@@ -179,12 +191,67 @@ const getCampaignBranchMembers = async (req, res) => {
 //         }
 //     }
 // };
+
+const getSinglecampaignbrokers = async (req, res) => {
+    let { campaignbrokerId } = req.query;
+    // console.log("getSingleCampaignBranchforbrancherror", campaignbrokerId)
+  
+    campaignbrokerId = campaignbrokerId.split(",").map(id => parseInt(id.trim()));
+    // campaignbrokerId = Array.isArray(campaignbrokerId) ? campaignbrokerId : [campaignbrokerId];
+    console.log("getSingleCampaignBranchforbrancherror", campaignbrokerId)
+    try {
+      const brokersId = {
+        [Op.and]: [
+          campaignbrokerId && campaignbrokerId.length !== 0 && campaignbrokerId[0] !== 0
+            ? {
+              id: {
+                [Op.in]: campaignbrokerId,
+              },
+            }
+            : {},
+        ],
+      };
+  
+      const data = await Organization.findAll({
+        where: {
+          ...brokersId,
+        },
+      });
+    //   console.log("getSingleCampaignBranchforbrancherror", data)
+  
+      res.status(200).json(data);
+    } catch (error) {
+      res.status(400).json({ msg: error.message });
+    }
+  };
+
 const getSingleCampaignBroker = async (req, res) => {
     try {
-        const { campaignId } = req.query;
+        const { campaignId, brokerorganizationId } = req.query;
         const userId = req.user.id;
+        const role = req.user.role;
+        console.log("getSingleCampaignBrokerreqbody", brokerorganizationId);
 
-        console.log("getSingleCampaignBrokerreqbody", req.body);
+        if(role == Role.superAdmin){
+            if(brokerorganizationId !== 0 && brokerorganizationId !== '0' && brokerorganizationId !== null ){
+
+                const campaignBroker = await CampaignBroker.findOne({ where: { campaignId: campaignId, brokerId: brokerorganizationId} });
+        
+                if (!campaignBroker) {
+                    return res.status(404).json({ message: "No Data Found" });
+                }
+        console.log("getSingleCampaignBrokerreqbody", campaignBroker);
+
+                return res.status(200).json(campaignBroker);
+            } else if(brokerorganizationId == 0 || brokerorganizationId == null){
+                const campaignBroker = await CampaignBroker.findAll({ where: { campaignId: campaignId } });
+                if (!campaignBroker) {
+                    return res.status(404).json({ message: "No Data Found" });
+                }
+                return res.status(200).json(campaignBroker);
+                
+            }
+        }else if(role == Role.broker){
 
         const broker = await Broker.findOne({ where: { accountId: userId } });
 
@@ -200,8 +267,9 @@ const getSingleCampaignBroker = async (req, res) => {
             return res.status(404).json({ message: "No Data Found" });
         }
 
-        console.log("getSingleCampaignBrokerthecampaign", campaignBroker);
+        // console.log("getSingleCampaignBrokerthecampaign", campaignBroker);
         return res.status(200).json(campaignBroker);
+    }
     } catch (error) {
         console.error("errrrrrogetSingleCampaignBroker", error);
         return res.status(500).json({ msg: "Internal server error." });
@@ -235,12 +303,21 @@ const getSingleCampaignBranch = async (req, res) => {
 
 const reportCampaignBroker = async (req, res) => {
     const campIndId = req.body.id;
+    const { brokerOrgId } = req.query;
+    const user = req.user;
+    const role = req.user.role;
+
     
 
     try {
+        if(role == Role.superAdmin){
         const report = await CampaignBroker.update({ isReported: true }, { where: { id: campIndId } });
 
         res.status(200).json(report);
+        }else if(role == Role.broker){
+        const report = await CampaignBroker.update({ isReported: true }, { where: { id: campIndId } });
+        res.status(200).json(report);
+        }
     } catch (error) {
         res.status(400).json({ msg: error.message });
     }
@@ -437,6 +514,7 @@ module.exports = {
     filterCampaignBranch,
     getCampaignBranchMembers,
     // getSingleBranchMembers,
+    getSinglecampaignbrokers,
     getSingleCampaignBroker,
     getSingleCampaignBranch,
     reportCampaignBranch,

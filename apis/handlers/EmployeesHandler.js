@@ -15,7 +15,7 @@ const { Op } = require("sequelize");
 const { QueryTypes } = require("sequelize");
 const sequelize = require("../../database/connections");
 const Department = require("../../models/Department");
-const { eventResourceTypes, eventActions } = require("../../utils/constants");
+const { eventResourceTypes, eventActions, Role } = require("../../utils/constants");
 const Emailcc = require("../../models/EmailCc");
 const Document = require("../../models/Document");
 const EmailDocument = require("../../models/EmailDocument");
@@ -113,10 +113,11 @@ const getEmployeebyContact = async (req, res) => {
 };
 
 const getActiveEmployees = async (req, res) => {
+  console.log("heeeeeeeeeeeeeeeeeeereeeeee", req.user.role)
   try {
     const { f, r, st, sc, sd } = req.query;
 
-    let datas = await Employee.findAndCountAll({
+    const datas = await Employee.findAndCountAll({
       include: [User],
       offset: Number(f),
       limit: Number(r),
@@ -129,7 +130,7 @@ const getActiveEmployees = async (req, res) => {
     //   "select e.id, e.employeeId, e.gender, e.isActive, e.father_name,e.first_name,e.grandfather_name,e.email,e.position,e.userId,e.phone from  employees e Inner join users u on e.userId = u.id where u.activated = 1 and e.isActive = 1;",
     //   { type: QueryTypes.SELECT }
     // );
-
+console.log("ddataaaaaaaaaaaaaatat", datas.count)
     res.status(200).json(datas);
   } catch (error) {
     
@@ -247,17 +248,43 @@ const filterEmployee = async (req, res) => {
 };
 
 const getBranchEmployee = async (req, res) => {
+  
+  // console.log("branchIdbranchIdbranchId===================", )
+
   try {
-    let emp = await Employee.findOne({ where: { userId: req.user.id } });
-    let branchId = await emp.branchId;
-    const employees = await Employee.findAll({
-      order: [["employeeId", "ASC"]],
-      where: { branchId: branchId },
-    });
-    if (!employees) {
-      res.status(404).json({ message: "No Data Found" });
-    } else res.status(200).json(employees);
+    const {branchId} = req.query;
+    const role = req.user.role;
+    if(role == Role.superAdmin){
+      console.log("branchIdbranchIdbranchId", branchId)
+
+      const employees = await Employee.findAll({
+        where: { branchId: branchId },
+        order: [["employeeId", "ASC"]],
+
+      });
+      if (!employees) {
+        return res.status(404).json({ message: "No Data Found" });
+      } else {
+        return res.status(200).json(employees);
+      }
+    }
+    else if (role == Role.staff){
+      let emp = await Employee.findOne({ where: { userId: req.user.id } });
+      let branchId = await emp.branchId;
+      const employees = await Employee.findAll({
+        order: [["employeeId", "ASC"]],
+        where: { branchId: branchId },
+      });
+      if (!employees) {
+        res.status(404).json({ message: "No Data Found" });
+      } else {
+      // console.log("branchIdbranchIdbranchId", employees[0])
+
+        res.status(200).json(employees);
+      }
+    }
   } catch (error) {
+    console.log(error)
     res.status(400).json({ msg: error.message });
   }
 };

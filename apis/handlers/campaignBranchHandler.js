@@ -23,13 +23,24 @@ const {
 
 const getCampaignBranch = async (req, res) => {
   try {
-    // { include: [SalesPerson, CampaignSales, SalesPerson ]}
+    const role = req.user.role;
+    
+    if(role == Role.superAdmin){
+      const data = await CampaignBranch.findAll({order: [["createdAt", "DESC"]], });
+      res.status(200).json(data);
+    }
+    else if (role ==Role.staff){
+      // { include: [SalesPerson, CampaignSales, SalesPerson ]}
     let emp = await Employee.findOne({ where: { userId: req.user.id } })
     //  .branchId; 
     let branchId = await emp.branchId;
+    if(emp){
     const data = await CampaignBranch.findAll({ where: { branchId }, order: [["createdAt", "DESC"]], });
     res.status(200).json(data);
+    }
+    }
   } catch (error) {
+    console.log("getCampaignBranch", error)
     res.status(400).json({ msg: error.message });
   }
 };
@@ -71,8 +82,10 @@ const getOneCampaignBranch = async (req, res) => {
 
 const editCampaignBranch = async (req, res) => {
 
-console.log("editCampaignBranch", req.body)
+console.log("editCampaignBranch", req.query)
   try {
+    const { branchId } = req.query
+    const role = req.user.role;
     // 
     const body = req.body
     // 
@@ -81,13 +94,19 @@ console.log("editCampaignBranch", req.body)
 
     const emp = await Employee.findAll({ where: { userId: req.user.id } })
     // 
+    if(role == Role.superAdmin){
+      const updated = await CampaignBranch.update(body, { where: { campaignId: campaignId, branchId: branchId } });
+      res.status(200).json({ msg: "Success" })
 
-
+    }
+    else if(role == Role.staff && emp){
     // const campaign = CampaignBranch.findAll({where: {campaignId}});
     const updated = await CampaignBranch.update(body, { where: { campaignId: campaignId, branchId: emp[0].branchId } });
     res.status(200).json({ msg: "Success" })
+    }
   }
   catch (error) {
+    console.log("editCampaignBranch error", error)
     res.status(400).json({ msg: error.message });
   }
 };
@@ -181,57 +200,98 @@ const getSingleBranchMembers = async (req, res) => {
 };
 
 const getSingleCampaignBranch = async (req, res) => {
-  const { campaignId } = req.query;
+  const { campaignId, campaignbranchId } = req.query
+  // const { campaignId } = req.query;
   const role = req.user.role;
   
   const userId = req.user.id;
   let emp = await Employee.findOne({ where: { userId } })
   // 
-  console.log("getSingleCampaignBranch", req.query, userId, emp)
+  // console.log("getSingleCampaignBranch", req.query, userId, emp)
 
 
   try {
     if(role == Role.superAdmin){
-      console.log("getSingleCampaignBranchforhead", role)
 
-      const campaigns = await CampaignBranch.findAll({ 
-        where: { 
-          campaignId: campaignId, 
-        },
-        include: {
-          model: Campaign,
-          as: "mainCampaign"
+      if(campaignbranchId == 0 || null) {
+        const  campaigns = await CampaignBranch.findAll({ 
+            where: { 
+              campaignId: campaignId,
+            },
+            include:[ 
+              {
+              model: Campaign,
+              as: "mainCampaign"
+            },
+            // {
+            //   model: Branch,
+            //   as : "campaignBranches"
+            // }
+          ]
+        });
+
+        if (!campaigns || campaigns.length === 0) {
+          return res.status(400).json({ message: "No Data Found" });
+        } else {
+          let ipAddress = getIpAddress(req.ip);
+        
+          // Create event logs for each campaign found
+          for (let i = 0; i < campaigns.length; i++) {
+            const eventLog = await createEventLog(
+              req.user.id,
+              eventResourceTypes.campaign,
+              campaigns[i].mainCampaign.campaignName,
+              campaigns[i].id,
+              eventActions.view,
+              "",
+              ipAddress
+            );
+          }
+        
+          // console.log("getSingleCampaignBranchforhead 2",  campaigns);
         }
-      });
+        return  res.status(200).json(campaigns);
+     }
+      else if(campaignbranchId != 0 || campaignbranchId != null){
+        const campaign = await CampaignBranch.findAll({ 
+            where: { 
+              campaignId: campaignId, branchId: campaignbranchId
+            },
+            include:[ 
+              {
+              model: Campaign,
+              as: "mainCampaign"
+            },
+            // {
+            //   model: Branch,
+            //   as : "campaignBranches"
+            // }
+          ]
+        });
+        if (!campaign) {
+          return res.status(400).json({ message: "No Data Found" });
+        }
+        else {
       
-      if (!campaigns || campaigns.length === 0) {
-        res.status(400).json({ message: "No Data Found" });
-      } else {
-        let ipAddress = getIpAddress(req.ip);
-      
-        // Create event logs for each campaign found
-        for (let i = 0; i < campaigns.length; i++) {
+          let ipAddress = getIpAddress(req.ip);
           const eventLog = await createEventLog(
             req.user.id,
             eventResourceTypes.campaign,
-            campaigns[i].mainCampaign.campaignName,
-            campaigns[i].id,
+            "",
+            0,
             eventActions.view,
             "",
             ipAddress
           );
+        return  res.status(200).json(campaign[0]);
         }
-      
-        console.log("getSingleCampaignBranchforhead", campaigns[0].branchId, campaigns[1].branchId, campaigns.branchId);
-        res.status(200).json(campaigns);
-      }
-      
+    }
     }else if (emp) {    
           const campaign = await CampaignBranch.findAll({ where: { campaignId: campaignId, branchId: emp.branchId },
           include: {model: Campaign, as: "mainCampaign"} })
 
             if (!campaign) {
-              res.status(400).json({ message: "No Data Found" });
+              return res.status(400).json({ message: "No Data Found" });
             }
             else {
               
@@ -246,15 +306,47 @@ const getSingleCampaignBranch = async (req, res) => {
                 "",
                 ipAddress
               );
-  console.log("getSingleCampaignBranchforbranch", campaign[0])
+            // console.log("getSingleCampaignBranchforbranch", campaign[0])
 
-              res.status(200).json(campaign[0]);
+            return  res.status(200).json(campaign[0]);
             }
       }
  
 
   } catch (error) {
-  console.log("getSingleCampaignBranchforbranch", error)
+  console.log("getSingleCampaignBranchforbrancherror", error)
+   return res.status(400).json({ msg: error.message });
+  }
+};
+
+const getSinglecampaignbranches = async (req, res) => {
+  let { campaignbranchId } = req.query;
+  console.log("getSingleCampaignBranchforbrancherror", campaignbranchId)
+
+  campaignbranchId = campaignbranchId.split(",").map(id => parseInt(id.trim()));
+  // campaignbranchId = Array.isArray(campaignbranchId) ? campaignbranchId : [campaignbranchId];
+  console.log("getSingleCampaignBranchforbrancherror", campaignbranchId)
+  try {
+    const branchIds = {
+      [Op.and]: [
+        campaignbranchId && campaignbranchId.length !== 0 && campaignbranchId[0] !== 0
+          ? {
+            id: {
+              [Op.in]: campaignbranchId,
+            },
+          }
+          : {},
+      ],
+    };
+
+    const data = await Branch.findAll({
+      where: {
+        ...branchIds,
+      },
+    });
+
+    res.status(200).json(data);
+  } catch (error) {
     res.status(400).json({ msg: error.message });
   }
 };
@@ -274,10 +366,13 @@ const getSingleCampaignBranch = async (req, res) => {
 
 const reportCampaignBranch = async (req, res) => {
   const { campBranchId, type, total } = req.body;
+  const role = req.user.role;
   // const type = req.body.type;
   // 
 
   try {
+  const { branchId } = req.query;
+  if(role == Role.superAdmin){
     if (type == "Branch") {
       const report = await CampaignBranch.update({ isBranchReported: true }, { where: { id: campBranchId } });
      return res.status(200).json(report);
@@ -295,7 +390,30 @@ const reportCampaignBranch = async (req, res) => {
 
 
    return res.status(200).json(report);
+  }
+  if(role == Role.staff){
+
+
+    if (type == "Branch") {
+      const report = await CampaignBranch.update({ isBranchReported: true }, { where: { id: campBranchId } });
+     return res.status(200).json(report);
+    } else if (type == "Team") {
+      const body = {
+        actualCost: total.total_actualCost,
+        actualSalesCount: total.total_actualSalesCount,
+        actualResponseCount: total.total_actualResponseCount,
+        actualROI: total.total_actualROI,
+        actualRevenue: total.total_actualRevenue,
+      }
+      const report = await CampaignBranch.update({ isTeamTotalReported: true, ...body }, { where: { id: campBranchId } });
+     return res.status(200).json(report);
+    }
+
+
+   return res.status(200).json(report);
+  }
   } catch (error) {
+    console.log("errrrrrrrrrrrrrrr", error)
    return res.status(400).json({ msg: error.message });
   }
 };
@@ -367,6 +485,7 @@ module.exports = {
   filterCampaignBranch,
   getCampaignBranchMembers,
   getSingleBranchMembers,
+  getSinglecampaignbranches,
   getSingleCampaignBranch,
   reportCampaignBranch,
   totalCampaignBranch,

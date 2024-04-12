@@ -68,6 +68,7 @@ const getCustomer = async (req, res) => {
   try {
     let data;
     const currentUser = req.user;
+    const role = req.user.role
 
     if (!currentUser) {
       return res.status(401).json({ message: "Unauthorized" });
@@ -76,12 +77,14 @@ const getCustomer = async (req, res) => {
     if (req.type === "all") {
       data = await Customer.findAndCountAll({
         include: [
-          { model: Contact }, // attributes: [] }, // Include Contact table without selecting any attributes
+         Contact  // attributes: [] }, // Include Contact table without selecting any attributes
         ],
-        where: getSearch(st),
+        where: {...getSearch(st)},
         offset: Number(f),
         limit: Number(r),
+        // order: [[sc || "createdAt", sd == 1 ? "DESC" : "ASC"]],
         order: [[sc || "createdAt", sd == 1 ? "DESC" : "ASC"]],
+
       });
     } else {
       let includeOptions = [{ model: Contact }]; //, attributes: [] }];

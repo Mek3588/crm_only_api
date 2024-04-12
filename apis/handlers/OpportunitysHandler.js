@@ -1,4 +1,4 @@
-const { Op, Sequelize } = require('sequelize');
+const { Op, where, Sequelize } = require('sequelize');
 const User = require("../../models/acl/user");
 const Campaign = require("../../models/Campaign");
 const Contact = require("../../models/Contact");
@@ -18,6 +18,7 @@ const {
   Role,
   eventResourceTypes,
   eventActions,
+  ContactStatus,
 } = require("../../utils/constants");
 const {
   isEmailValid,
@@ -27,6 +28,7 @@ const {
   getIpAddress,
 } = require("../../utils/GeneralUtils");
 const FireRateCategory = require("../../models/fire/FireRateCategory");
+const Customer = require("../../models/customer/Customer");
 
 
 /**
@@ -482,11 +484,13 @@ const getOpportunity = async (req, res) => {
  * @returns 
  */
 const editOpportunity = async (req, res) => {
-  //  Replaced by middleware
+  // Replaced by middleware
   // if (!(await canUserEdit(req.user, "opportunitys"))) {
   //   return res.status(400).json({ msg: "unauthorized access!" });
   // }
-  // 
+
+  console.log("editOpportunity derso neber");
+
   const {
     id,
     subject,
@@ -520,6 +524,20 @@ const editOpportunity = async (req, res) => {
       { where: { id: id } }
     );
     const newOpportunity = await Opportunity.findByPk(id);
+
+    if (newOpportunity.probablity === 100) {
+      const newCustomer = await Customer.create({
+        contactId: newOpportunity.accountId,
+        userId: newOpportunity.userId,
+        opportunityId: id,
+      });
+
+      const newStatus = ContactStatus.customer;
+      const updatedContact = await Contact.update(
+        { status: newStatus },
+        { where: { id: newOpportunity.accountId } }
+      );
+    }
     if (updateOpportunity) {
       const changedFieldValues = getChangedFieldValues(
         previousOpportunity,
